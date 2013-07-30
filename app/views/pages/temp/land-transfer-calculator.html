@@ -1,0 +1,105 @@
+<style>
+.button {
+	border-top: 1px solid #63080c;
+	background: #a61e25;
+	background: -webkit-gradient(linear, left top, left bottom, from(#76080d), to(#a61e25));
+	background: -webkit-linear-gradient(top, #76080d, #a61e25);
+	background: -moz-linear-gradient(top, #76080d, #a61e25);
+	background: -ms-linear-gradient(top, #76080d, #a61e25);
+	background: -o-linear-gradient(top, #76080d, #a61e25);
+	padding: 5px 10px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	-webkit-box-shadow: rgba(0,0,0,1) 0 1px 0;
+	-moz-box-shadow: rgba(0,0,0,1) 0 1px 0;
+	box-shadow: rgba(0,0,0,1) 0 1px 0;
+	text-shadow: rgba(0,0,0,.4) 0 1px 0;
+	color: white;
+	font-size: 12px;
+	font-family: Georgia, serif;
+	text-decoration: none;
+	vertical-align: middle;
+	cursor:pointer;
+	float: right;
+	margin-top: 10px;
+	margin-bottom: 25px;
+}
+.button:hover {
+   border-top-color: #76080d;
+   background: #76080d;
+   color: #ffffff;
+}
+.button:active {
+   border-top-color: #76080d;
+   background: #76080d;
+}
+
+td input[type="text"] {
+	margin-top: 8px;
+	margin-left: 3px;
+}
+</style>
+
+
+<div class="gradient colelem" id="u16510"><!-- simple frame --></div>
+<div class="clearfix colelem" id="u13935-4"><!-- content -->
+ <p>Land Transfer Calculator</p>
+</div>
+<div class="colelem" id="u13936"><!-- simple frame --></div>
+
+<div style="display:table; margin:0 auto;  padding-top:35px;">
+
+<form name="calculator" style="width:400px; margin:0 auto">
+		<table cellpadding="4" cellspacing="0" border="0" style="border-color:green;">
+			<tr>
+				<td>Purchase Price:</td>
+				<td>$<input type="text" size="30" class="input" value="" name="price"></td>
+			</tr>
+			<tr>
+				<td colspan="2"><input type="checkbox" class="input" value="1" name="firsttimehomebuyer"> - I am a first time home buyer</td>
+			</tr>
+			<tr>
+				<td colspan="2"><input type="checkbox" class="input" value="1" name="torontopurchase"> - I am purchasing a property located in Toronto</td>
+			</tr>
+			<tr>
+				<td colspan="2" align="left"><input type="button" class="button" value="Calculate" onclick="calculate();"></td>
+			</tr>
+			<tr>
+				<td>Total Land Transfer Tax: </td>
+				<td>&nbsp$<input type="text" size="30" class="input" value="" name="tax"></td>
+			</tr>
+		</table>
+	</form>
+
+<br/><br/><br/><br/><br/><br/>
+	<table width="100%" cellpadding="3" cellspacing="0" border="0" style="border-color:yellow;">
+		<tr>
+			<td width="50%">
+			<p>
+			<b>Ontario Land Transfer Tax</b>
+			<br><br>
+			0.5% - on the first $55,000<br>
+			1.0% - on portion between $55,000 - $250,000<br>
+			1.5% - on balance over $250,000<br>
+			2.0% - on anything over $400,000<br>
+			<i>Qualifying first time buyers receive up to a $2000 credit</i>
+			</p></td>
+			<td>
+			<p>
+			<b>Toronto Land Transfer Tax</b>
+			<br><br>
+			0.5% - on the first $55,000<br>
+			1.0% - on portion between $55,000 - $400,000<br>
+			2.0% - on anything over $400,000<br>
+			<i>First time buyers are exempt on the first $400,000</i>
+			</p>
+			</td>
+		</tr>
+	</table>
+</div>
+
+
+
+
+</div>

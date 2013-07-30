@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+
+		<meta http-equiv="Content-type" content="text/html;charset=UTF-8"/>
+		<meta name="generator" content="5.0.704.218"/>
+		<!-- CSS -->
+
+		<%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+		
+		<%= csrf_meta_tags %>
+
+
+		<meta http-equiv="Content-type" content="text/html;charset=UTF-8"/>
+		<meta name="generator" content="5.0.704.218"/>
+		<title>Stats</title>
+
+
+   </head>
+ 	<body>
+
+  		<%= yield %>
+
+		  	<!-- Other scripts -->
+	  	<%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+
+
+
+
+	  <!-- Other scripts -->
+	  <script type="text/javascript">
+		   $(document).ready(function() { try {
+				Muse.Utils.transformMarkupToFixBrowserProblemsPreInit();/* body */
+				Muse.Utils.prepHyperlinks();/* body */
+				Muse.Utils.initWidget('.MenuBar', function(elem) { return $(elem).museMenu(); });/* unifiedNavBar */
+				Muse.Utils.initWidget('#slideshowu6475', function(elem) { new WebPro.Widget.ContentSlideShow(elem, {autoPlay:true,displayInterval:3000,slideLinkStopsSlideShow:false,transitionStyle:'fading',lightboxEnabled_runtime:false,shuffle:false,transitionDuration:500,enableSwipe:true}); });/* #slideshowu6475 */
+				Muse.Utils.initWidget('#widgetu6528', function(elem) { new WebPro.Widget.Form(elem, {validationEvent:'submit',errorStateSensitivity:'high',fieldWrapperClass:'fld-grp',formSubmittedClass:'frm-sub-st',formErrorClass:'frm-subm-err-st',formDeliveredClass:'frm-subm-ok-st',notEmptyClass:'non-empty-st',focusClass:'focus-st',invalidClass:'fld-err-st',requiredClass:'fld-err-st',ajaxSubmit:true}); });/* #widgetu6528 */
+				Muse.Utils.fullPage('#page');/* 100% height page */
+				Muse.Utils.showWidgetsWhenReady();/* body */
+				Muse.Utils.transformMarkupToFixBrowserProblems();/* body */
+			} catch(e) { Muse.Assert.fail('Error calling selector function:' + e); }});
+		</script>
+	</body>
+</html>

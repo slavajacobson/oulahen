@@ -1,0 +1,55 @@
+
+#pu8993
+{
+	width: 0.01px;
+	margin-left: 23px;
+	margin-top: 45px;
+	position: relative;
+}
+
+#u8993
+{
+	z-index: 224;
+	width: 300px;
+	border-style: none;
+	border-color: transparent;
+	background-color: transparent;
+	position: relative;
+	margin-right: -10000px;
+	left: 1px;
+}
+
+#u8996
+{
+	z-index: 225;
+	width: 508px;
+	position: relative;
+	margin-right: -10000px;
+	margin-top: 501px;
+}
+
+#u9001-4
+{
+	z-index: 227;
+	width: 300px;
+	min-height: 22px;
+	text-align: right;
+	color: #8E060C;
+	position: relative;
+	margin-right: -10000px;
+	margin-top: 513px;
+	left: 619px;
+}
+
+#u9002-4
+{
+	z-index: 231;
+	width: 919px;
+	min-height: 40px;
+	text-align: center;
+	font-size: 9px;
+	margin-left: 24px;
+	margin-top: 18px;
+	position: relative;
+}
+

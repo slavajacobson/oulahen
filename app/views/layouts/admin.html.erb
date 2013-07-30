@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+
+	<meta http-equiv="Content-type" content="text/html;charset=UTF-8"/>
+
+	<!-- CSS -->
+
+	<%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+	<%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+	<%= csrf_meta_tags %>
+
+
+	<meta http-equiv="Content-type" content="text/html;charset=UTF-8"/>
+	<meta name="generator" content="5.0.704.218"/>
+	<title>Stats</title>
+
+
+	</head>
+ 	<body>
+ 		<div class="container">
+ 			<div id="admin_logo">
+	 			<%= image_tag 'oulahen-logo.gif' %>
+	 		</div>
+	    <div id="notice_message">
+	      <% flash.each do |key, value| %>
+	        <div class="<%= flash_class(key) %> fade in">
+	          <a href="#" data-dismiss="alert" class="close">×</a>
+	          <%= value %>
+	        </div>
+	      <% end %>
+	    </div>
+
+			<%= yield %>
+		</div> <!-- /container -->
+		  	
+	</body>
+</html>
