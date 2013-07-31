@@ -9,5 +9,32 @@
  * compiled file, but it's generally better to create a new file per style scope.
  *
  *= require_self
- *= require_tree .
+ *= require about-us.css                 
+ *= require main.css.scss
+ *= require admin.css                     
+ *= require map.css
+ *= require ajay-aheer.css                
+ *= require market-evaluation.css
+ *= require andreia.css                   
+ *= require mark-oulahen.css
+ *= require application.css               
+ *= require marquis.css
+ *= require awards.css                    
+ *= require master_a-master.css
+ *= require blog.css                      
+ *= require master_b-master.css
+ *= require bravo-boutique.css            
+ *= require meridian.css
+ *= require buying-contact-form.css       
+ *= require monet.css
+ *= require buying.css                    
+ *= require mortgage-calculator.css
+ *= require carly.css                     
+ *= require norah-oulahen.css
+ *= require c-condos.css                  
+ *= require palm-condos.css
+ *= require charitable-work.css           
+ *= require park-lane.css
+ *= require chicago.css                   
+ *= require paul-oulahen.css
  */
