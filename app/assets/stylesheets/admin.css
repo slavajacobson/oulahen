@@ -9,10 +9,11 @@
  * compiled file, but it's generally better to create a new file per style scope.
  *
  *= require_self
+ *= require bootstrap.min
  */
 
 #admin_logo {
-	margin:0 auto;
+	margin:25px auto;
 	width:222px;
 	height:46px;
 }

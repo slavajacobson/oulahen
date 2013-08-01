@@ -13,7 +13,7 @@
 
 		<meta http-equiv="Content-type" content="text/html;charset=UTF-8"/>
 		<meta name="generator" content="5.0.704.218"/>
-		<title>layout</title>
+		<title><%= yield(:page_title) %></title>
 
 
    </head>
@@ -122,7 +122,7 @@
         <a class="nonblock nontext MenuItem MenuItemWithSubMenu clearfix colelem" id="u27077" href="/pages/buying.html"><!-- horizontal box --><div class="MenuItemLabel NoWrap clearfix grpelem" id="u27078-4"><!-- content --><p>Buying</p></div></a>
        </li>
        <li class="MenuItemContainer clearfix grpelem" id="u27102"><!-- vertical box -->
-        <a class="nonblock nontext MenuItem MenuItemWithSubMenu MuseMenuActive clearfix colelem" id="u27105" href="/pages/stats.html"><!-- horizontal box --><div class="MenuItemLabel NoWrap clearfix grpelem" id="u27107-4"><!-- content --><p>Stats</p></div></a>
+        <a class="nonblock nontext MenuItem MenuItemWithSubMenu clearfix colelem" id="u27105" href="/pages/stats.html"><!-- horizontal box --><div class="MenuItemLabel NoWrap clearfix grpelem" id="u27107-4"><!-- content --><p>Stats</p></div></a>
        </li>
        <li class="MenuItemContainer clearfix grpelem" id="u27081"><!-- vertical box -->
         <a class="nonblock nontext MenuItem MenuItemWithSubMenu clearfix colelem" id="u27084" href="/pages/condo-profiles.html"><!-- horizontal box --><div class="MenuItemLabel NoWrap clearfix grpelem" id="u27086-4"><!-- content --><p>Condo Profiles</p></div></a>
@@ -218,6 +218,62 @@
 		Muse.Utils.fullPage('#page');/* 100% height page */
 		Muse.Utils.showWidgetsWhenReady();/* body */
 		Muse.Utils.transformMarkupToFixBrowserProblems();/* body */
+
+    var about_us = ['ajay-aheer', 'mark-oulahen', 'andreia','awards', 'norah-oulahen', 'carly', 'charitable-work', 'paul-oulahen', 'claire', 'testimonials', 'thanh-nguyen', 'in-the-news ', 'jeff-oulahen', 'victor', 'vinay-lakhani','about-us'];
+    var contact_us = ['contact-us-form', 'contact-us'];
+    var condos_profiles = ['meridian', 'monet', 'bravo-boutique', 'chicago', 'marquis', 'pulse-towers', 'dia-condos', 'grand-triomphe', 'c-condos', 'triomphe-grand-triomphe-i', 'condo-profiles', 'park-lane', 'princess-place-tower', 'platinum', 'palm-condos' ];
+    var helpful_tools = ['land-transfer-calculator', 'helpful-tools', 'mortgage-calculator'];
+    var stats = ['stats-condos', 'stats'];
+
+    page = "<%= params[:id] %>";
+
+    if (page.indexOf(".") > -1)
+      page = page.substring(0,page.indexOf("."));
+
+
+    
+    if (page == 'index') {
+      $("ul.MenuBar > li").eq(0).find("a").addClass("MuseMenuActive");
+      
+    }
+    else if (page == 'selling') {
+      $("ul.MenuBar > li").eq(2).find("a").addClass("MuseMenuActive");
+      
+    }
+    else if (page == 'marketevaluation') {
+      $("ul.MenuBar > li").eq(2).find("a").addClass("MuseMenuActive");
+      
+    }
+    else if (page == 'buying') {
+      $("ul.MenuBar > li").eq(3).find("a").addClass("MuseMenuActive");
+      
+    }
+    else if ($.inArray(page,stats) > -1) {
+      $("ul.MenuBar > li").eq(4).find("a").addClass("MuseMenuActive");
+      
+    }
+    else if ($.inArray(page,condos_profiles) > -1) {
+      $("ul.MenuBar > li").eq(5).find("a").addClass("MuseMenuActive");
+      
+    }
+    else if ($.inArray(page,helpful_tools) > -1) {
+      $("ul.MenuBar > li").eq(6).find("a").addClass("MuseMenuActive");
+      
+    }
+    else if (page == 'blog') {
+      $("ul.MenuBar > li").eq(7).find("a").addClass("MuseMenuActive");
+      
+    }
+    else if ($.inArray(page,about_us) > -1) {
+      $("ul.MenuBar > li").eq(8).find("a").addClass("MuseMenuActive");
+    
+    }
+    else if ($.inArray(page,contact_us) > -1) {
+      $("ul.MenuBar > li").eq(9).find("a").addClass("MuseMenuActive");
+    }
+
+
+    
 	} catch(e) { Muse.Assert.fail('Error calling selector function:' + e); }});
 	</script>
    </body>
