@@ -1,0 +1,145 @@
+
+
+
+<p id="notice"><%= notice %></p>
+
+<h2><%= "#{listing.unit_number}-" unless @listing.unit_number.blank? %><%= @listing.street_number %> <%= @listing.address %>, <%= @listing.postal_code %></h2>
+
+
+<%= link_to 'Edit listing', edit_listing_path(@listing), class:'btn btn-primary' %>
+<%= link_to 'Return to all listings', listings_path, class:'btn btn-primary' %>
+
+<div class="row" style="margin-top:25px;">
+  <div class="col-lg-6">
+
+
+
+
+    <p>
+      <strong>Show street number:</strong>
+      <%= @listing.show_street_number ? "Yes" : "No"  %>
+    </p>
+
+    <p>
+      <strong>Show unit number:</strong>
+      <%= @listing.show_unit_number ? "Yes" : "No" %>
+    </p>
+
+    <p>
+      <strong>Neighbourhood:</strong>
+      <%= @listing.neighbourhood %>
+    </p>
+
+    <p>
+      <strong>Lot frontage:</strong>
+      <%= @listing.lot_frontage %>
+    </p>
+
+    <p>
+      <strong>Lot depth:</strong>
+      <%= @listing.lot_depth %>
+    </p>
+
+    <p>
+      <strong>Sqft:</strong>
+      <%= @listing.sqft %>
+    </p>
+
+    <p>
+      <strong>Bedrooms:</strong>
+      <%= @listing.bedrooms %>
+    </p>
+
+    <p>
+      <strong>Bathrooms:</strong>
+      <%= @listing.bathrooms %>
+    </p>
+
+    <p>
+      <strong>Price:</strong>
+      <%= @listing.price %>
+    </p>
+
+    <p>
+      <strong>Sold?:</strong>
+      <%= @listing.sold ? "Sold" : "Not Sold" %>
+    </p>
+
+    <p>
+      <strong>Sold price:</strong>
+      <%= @listing.sold_price %>
+    </p>
+
+    <p>
+      <strong>Show sold price:</strong>
+      <%= @listing.show_sold_price  ? "Yes" : "No"  %>
+    </p>
+
+  </div>
+  <div class="col-lg-6">
+
+    <p>
+      <strong>Sold status:</strong>
+      <%= @listing.sold_status %>
+    </p>
+
+    <p>
+      <strong>Maintenance fee:</strong>
+      <%= @listing.maintenance_fee %>
+    </p>
+
+    <p>
+      <strong>Virtual tour url:</strong>
+      <%= @listing.virtual_tour_url %>
+    </p>
+
+    <p>
+      <strong>Map url:</strong>
+      <%= @listing.map_url %>
+    </p>
+
+    <p>
+      <strong>Realtor url:</strong>
+      <%= @listing.realtor_url %>
+    </p>
+
+    <p>
+      <strong>Facebook url:</strong>
+      <%= @listing.facebook_url %>
+    </p>
+
+    <p>
+      <strong>Description:</strong>
+      <%= @listing.description %>
+    </p>
+
+    <p>
+      <strong>Inclusions:</strong>
+      <%= @listing.inclusions %>
+    </p>
+
+    <p>
+      <strong>Exclusions:</strong>
+      <%= @listing.exclusions %>
+    </p>
+
+
+    <p>
+      <strong>Floor Plan:</strong>
+      <%= link_to "link", @listing.floor_plan.file_url if @listing.floor_plan %>
+    </p>
+
+    <p>
+      <strong>Feature Sheet:</strong>
+      <%= link_to "link", @listing.feature_sheet.file_url.to_s if @listing.floor_plan %>
+    </p>
+  </div>
+
+</div>
+<h3>Photos</h3>
+<div id="photos">
+  <div class="row">
+      <%= render @photos %> 
+  </div>
+</div>
+

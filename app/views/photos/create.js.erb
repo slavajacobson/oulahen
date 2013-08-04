@@ -1,0 +1,9 @@
+<% if @photo.new_record? %>
+	alert("failed to upload: " + <%= j @photo.errors.full_messages.join(',').html %>);
+<% else %>
+	if ($("#photos .row").last().find(".col-lg-3").length > 3) {
+		$("#photos").append("<div class='row'></div>");
+	}
+
+	$("#photos .row").last().append("<%= j render(@photo, as: 'photo') %>");
+<% end %>

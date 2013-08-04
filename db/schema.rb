@@ -11,7 +11,72 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130729171421) do
+ActiveRecord::Schema.define(version: 20130801233717) do
+
+  create_table "categories", force: true do |t|
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "feature_sheets", force: true do |t|
+    t.string   "file"
+    t.text     "description"
+    t.integer  "listing_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "floor_plans", force: true do |t|
+    t.string   "file"
+    t.text     "description"
+    t.integer  "listing_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "listings", force: true do |t|
+    t.string   "address"
+    t.string   "street_number"
+    t.boolean  "show_street_number", default: true
+    t.string   "unit_number"
+    t.boolean  "show_unit_number",   default: true
+    t.string   "postal_code"
+    t.string   "neighbourhood"
+    t.integer  "lot_frontage"
+    t.integer  "lot_depth"
+    t.integer  "sqft"
+    t.integer  "bedrooms"
+    t.integer  "bathrooms"
+    t.float    "price"
+    t.float    "sold_price"
+    t.boolean  "show_sold_price",    default: false
+    t.boolean  "sold"
+    t.string   "sold_status"
+    t.float    "maintenance_fee"
+    t.string   "virtual_tour_url"
+    t.string   "map_url"
+    t.string   "realtor_url"
+    t.string   "facebook_url"
+    t.text     "description"
+    t.text     "inclusions"
+    t.text     "exclusions"
+    t.boolean  "active",             default: true
+    t.boolean  "draft",              default: true
+    t.integer  "draft_by"
+    t.integer  "category_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "photos", force: true do |t|
+    t.string   "image"
+    t.text     "description"
+    t.boolean  "main_photo"
+    t.integer  "listing_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "users", force: true do |t|
     t.string   "email",                  default: "", null: false

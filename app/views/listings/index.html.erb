@@ -1,0 +1,48 @@
+<h1>Listings</h1>
+
+
+<% if @listings.blank? %>
+
+  <div class="alert alert-info">
+    There are no listings. Create a new listing by clicking on <strong>Manage Listings</strong> and then <strong>Create new listing</strong>
+
+  </div>
+<% else %>
+  <table class="table table-striped table-hover">
+    <thead>
+      <tr>
+        <th>Address</th>
+        <th>Posted on:</th>
+        <th>Last updated:</th>
+        <th style="width:220px;">Take Action</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @listings.each do |listing| %>
+        <tr>
+          <td>
+            <%= link_to listing do %>
+              <%= "#{listing.unit_number}-" unless listing.unit_number.blank? %><%= listing.street_number %> <%= listing.address %>, <%= listing.postal_code %>
+            <% end %>
+          </td>
+          <td>
+            <%= listing.created_at.to_formatted_s(:long)  %>
+          </td>
+          <td>
+            <%= listing.updated_at.to_formatted_s(:long)  %>
+          </td>
+          <td>
+            <%= link_to 'Edit Listing', edit_listing_path(listing), class:'btn btn-primary btn-small' %>
+            <%= link_to 'Delete Listing', listing, method: :delete, data: { confirm: 'Are you sure?' }, class:'btn btn-danger btn-small' %>
+          </td>
+        </tr>
+      <% end %>
+
+
+
+    </tbody>
+  </table>
+
+<% end %>
+

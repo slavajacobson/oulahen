@@ -1,5 +1,13 @@
 Oulahen::Application.routes.draw do
+  resources :photos do
+    collection do
+      get 'delete_multiple'
+    end
+  end
+  
+  resources :listings
 
+  
   get "admin" => "main#admin", as: 'admin'
   devise_for :users
   get "/pages/*id" => 'pages#show', :as => :view, :format => false

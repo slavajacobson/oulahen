@@ -8,6 +8,7 @@ gem 'rails', '4.0.0'
 gem 'sqlite3', group: [:development, :test]
 group :development do
   gem 'guard-livereload'
+  gem "rails-erd"
 end
 
 group :production do
@@ -28,7 +29,7 @@ gem 'coffee-rails', '~> 4.0.0'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails', '2.1.4'
-
+gem 'jquery-fileupload-rails'
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 gem 'turbolinks'
 
@@ -51,6 +52,8 @@ end
 
 gem 'high_voltage'
 gem 'devise'
+gem 'carrierwave'
+gem "rmagick"
 # Use debugger
 gem 'debugger', group: [:development, :test]
 gem 'rails_12factor'

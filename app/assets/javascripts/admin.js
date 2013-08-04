@@ -10,6 +10,12 @@
 // Read Sprockets README (https://github.com/sstephenson/sprockets#sprockets-directives) for details
 // about supported directives.
 //
-//= require jquery
+//= require jquery-latest.min
 //= require jquery_ujs
 //= require bootstrap.min
+//= require bootstrap-switch
+//= require jquery-fileupload/basic
+//= require jquery-fileupload/vendor/tmpl
+//= require lightbox-2.6.min
+//= require listings
+

@@ -15,13 +15,41 @@
 	<meta name="generator" content="5.0.704.218"/>
 	<title>Oulahen.com Admin Portal</title>
 
+	<style>
+		.brand_logo {
+			width: 90%;
+			margin-top: -11px;
+			position: relative;
+			top: 3px;
+		}
+
+	</style>
 
 	</head>
  	<body>
  		<div class="container">
- 			<div id="admin_logo">
-	 			<%= image_tag 'oulahen-logo.gif' %>
-	 		</div>
+
+
+			<div class="navbar">
+			  <a class="navbar-brand" href="#">
+
+			 			<%= image_tag 'oulahen-logo.gif', class: 'brand_logo' %>
+
+			  </a>
+			  <ul class="nav navbar-nav">
+					<li class="dropdown">
+					  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Manage Listings <b class="caret"></b></a>
+					  <ul class="dropdown-menu">
+					    <li><%= link_to 'Create new listing', new_listing_path %></li>
+					    <li><%= link_to 'View all listings', listings_path %></li>
+
+					    
+					  </ul>
+					</li>
+			  </ul>
+			</div>
+
+
 	    <div id="notice_message">
 	      <% flash.each do |key, value| %>
 	        <div class="<%= flash_class(key) %> fade in">
@@ -32,7 +60,18 @@
 	    </div>
 
 			<%= yield %>
+
+
+
+
+			<!-- Site footer -->
+			<div class="footer">
+			  <p>&copy; The Oulahen Team 2013 <%= "2013" != Time.now.year.to_s ? " - " + Time.now.year.to_s : "" %></p>
+			</div>
+
 		</div> <!-- /container -->
+
+
 		  	
 	</body>
 </html>
