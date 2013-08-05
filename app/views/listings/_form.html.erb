@@ -43,7 +43,7 @@
         $("#general_tab_button").addClass("active");
 
         $("#photos_tab").slideUp();
-        $("#files_tab").slideUp();
+
         $("#general_tab").slideDown();
       }
     }); 
@@ -57,21 +57,10 @@
         
         $("#photos_tab").slideDown();
         $("#general_tab").slideUp();
-        $("#files_tab").slideUp();
+
       }
     }); 
 
-    $("#files_tab_button").click(function() {
-      if (!$("#files_tab_button").hasClass("active")) {
-        $(".nav-tabs li").removeClass("active");
-        
-        $("#files_tab_button").addClass("active");
-        
-        $("#photos_tab").slideUp();
-        $("#general_tab").slideUp();
-        $("#files_tab").slideDown();
-      }
-    }); 
 
 
 
@@ -97,13 +86,15 @@
   #photos_tab {
     display:none;
   }
+  .gritter-with-image {
+    font-size:14px;
+  }
 </style>
 
 
 <ul class="nav nav-tabs">
   <li id="general_tab_button" class="active"><a href="#">General</a></li>
   <li id="photos_tab_button" ><a href="#">Photos</a></li>
-  <li id="files_tab_button" ><a href="#">Floorplan and Featuresheet</a></li>
 </ul>
 
 <div class="well well-large">
@@ -139,6 +130,13 @@
 
                 <div class="make-switch" data-on-label="Yes" data-off-label="No" data-off="danger" data-on="success" style="margin-right:25px;">
                    <%= f.check_box :active %> 
+                </div> 
+              </div>
+              <div class="form-group">
+                <%= f.label :featured_listing, "Featured listing" %>
+
+                <div class="make-switch" data-on-label="Yes" data-off-label="No" data-off="danger" data-on="success" style="margin-right:25px;">
+                   <%= f.check_box :featured_listing %> 
                 </div> 
               </div>
 
@@ -278,7 +276,12 @@
      
   <% end %>
 
-  <div id="photos_tab" class="clearfix">
+  <div id="photos_tab" class="clearfix" style="position:relative;">
+    <% unless @listing.draft? %>
+      <div class="alert alert-warning clearfix" style="display: table;">
+        <span>Changes done to the photos are permanent <strong>BEFORE</strong> the "Update" button is clicked!</span>
+      </div>
+    <% end %>
 
     <%= form_for Photo.new, :html => {multipart: true} do |f| %>
       <div class="form-group">
@@ -292,19 +295,22 @@
     <% end %> 
 
     
-    
-    <div class="alert alert-info">
-      <span>Drag and drop photos anywhere on the document to upload</span>
-    </div>
+    <% if @photos.blank? %>
+      <div class="alert alert-info">
+        <span>Drag and drop photos anywhere on the document to upload</span>
+      </div>
+    <% end %>
+
     <div id="progress_bars"></div>
 
 
     <%= form_for :photo, url: delete_multiple_photos_path, :html => {method: 'get'}, remote: true do |f| %>
       <%= f.hidden_field :listing_id, value: @listing.id %>
-      <%= submit_tag "Delete selected photos", data: { disable_with: "Please wait..." }, class: 'btn' %>
+      <%= f.submit "Delete selected photos", data: { disable_with: "Please wait..." }, class: 'btn btn-small btn-primary', style:'margin-bottom:20px;' %>
 
 
-      <div id="photos">
+
+      <div id="photos" class="clearfix">
         <div class="row">
             <%= render @photos %> 
         </div>
@@ -316,9 +322,7 @@
 
 
 
-  <div id="files_tab" class="clearfix">
-    files
-  </div>
+
 </div>
 
 

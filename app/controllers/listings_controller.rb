@@ -34,7 +34,8 @@ class ListingsController < ApplicationController
   def edit
 
     @photos = @listing.photos
-
+    @listing.build_floor_plan
+    @listing.build_feature_sheet
   end
 
   # POST /listings
@@ -105,6 +106,6 @@ class ListingsController < ApplicationController
       params.require(:listing).permit({photos_attributes: [:id,:image]}, {feature_sheet_attributes: [:id,:file]}, {floor_plan_attributes: [:id,:file]}, :active, :address, :street_number, :show_street_number, :unit_number, :show_unit_number, 
                                       :postal_code, :neighbourhood, :lot_frontage, :lot_depth, :sqft, :bedrooms, :bathrooms, :price, :sold_price, 
                                       :show_sold_price, :sold, :sold_status, :maintenance_fee, :virtual_tour_url, :map_url, :realtor_url, :facebook_url, 
-                                      :description, :inclusions, :exclusions, :category_id)
+                                      :description, :inclusions, :exclusions, :category_id, :featured_listing)
     end
 end

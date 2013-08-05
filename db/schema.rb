@@ -38,6 +38,7 @@ ActiveRecord::Schema.define(version: 20130801233717) do
   create_table "listings", force: true do |t|
     t.string   "address"
     t.string   "street_number"
+    t.boolean  "featured_listing",   default: false
     t.boolean  "show_street_number", default: true
     t.string   "unit_number"
     t.boolean  "show_unit_number",   default: true
@@ -72,7 +73,7 @@ ActiveRecord::Schema.define(version: 20130801233717) do
   create_table "photos", force: true do |t|
     t.string   "image"
     t.text     "description"
-    t.boolean  "main_photo"
+    t.boolean  "main_photo",  default: false
     t.integer  "listing_id"
     t.datetime "created_at"
     t.datetime "updated_at"

@@ -16,6 +16,12 @@ jQuery ->
 				data.context.find('.progress-bar').css('width', progress + '%')
 		complete: (e, data) ->
 			$(this).hide()
+		stop: (e) ->
+			$.gritter.add
+			  title: "Photos"
+			  text: "All photos have been finished uploading."
+			  image: '/assets/success.png'
+			
 			
 
 

@@ -63,6 +63,7 @@ GEM
       multi_json (~> 1.0)
     ffi (1.9.0)
     formatador (0.2.4)
+    gritter (1.0.3)
     guard (1.8.2)
       formatador (>= 0.2.4)
       listen (>= 1.0.0)
@@ -185,6 +186,7 @@ DEPENDENCIES
   coffee-rails (~> 4.0.0)
   debugger
   devise
+  gritter
   guard-livereload
   high_voltage
   jbuilder (~> 1.2)

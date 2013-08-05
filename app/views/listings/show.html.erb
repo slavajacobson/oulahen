@@ -7,13 +7,16 @@
 
 
 <%= link_to 'Edit listing', edit_listing_path(@listing), class:'btn btn-primary' %>
-<%= link_to 'Return to all listings', listings_path, class:'btn btn-primary' %>
+<%= link_to 'View all listings', listings_path, class:'btn btn-primary' %>
 
 <div class="row" style="margin-top:25px;">
   <div class="col-lg-6">
 
 
-
+    <p>
+      <strong>Featured listing:</strong>
+      <%= @listing.featured_listing ? "Yes" : "No"  %>
+    </p>
 
     <p>
       <strong>Show street number:</strong>
@@ -139,7 +142,7 @@
 <h3>Photos</h3>
 <div id="photos">
   <div class="row">
-      <%= render @photos %> 
+      <%= render @photos, hide_check_box: true %> 
   </div>
 </div>
 

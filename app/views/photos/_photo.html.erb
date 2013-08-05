@@ -4,9 +4,11 @@
 			<%= image_tag photo.image_url(:thumb), class:'img-thumbnail' %>
 		<% end %>
 
-
-			<%= check_box_tag "photo_ids[]", photo.id %> Select Photo
-
+		<% unless defined?(hide_check_box) %>
+			<div>
+				<%= check_box_tag "photo_ids[]", photo.id %> Select Photo
+			</div>
+		<% end %>
 	</div>
 <% end %>
 
@@ -15,6 +17,8 @@
     </div>
     <div class="row">
 <% end %>
+
+
 
 
 

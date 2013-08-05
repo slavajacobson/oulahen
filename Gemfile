@@ -54,6 +54,7 @@ gem 'high_voltage'
 gem 'devise'
 gem 'carrierwave'
 gem "rmagick"
+gem "gritter"
 # Use debugger
 gem 'debugger', group: [:development, :test]
 gem 'rails_12factor'

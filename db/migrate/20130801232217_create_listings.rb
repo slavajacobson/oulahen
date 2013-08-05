@@ -3,6 +3,7 @@ class CreateListings < ActiveRecord::Migration
     create_table :listings do |t|
       t.string :address
       t.string :street_number
+      t.boolean :featured_listing, default: false
       t.boolean :show_street_number, default: true
       t.string :unit_number
       t.boolean :show_unit_number, default: true

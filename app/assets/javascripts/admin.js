@@ -17,5 +17,6 @@
 //= require jquery-fileupload/basic
 //= require jquery-fileupload/vendor/tmpl
 //= require lightbox-2.6.min
+//= require gritter
 //= require listings
 
