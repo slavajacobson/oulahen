@@ -16,3 +16,5 @@
 /tmp
 
 /public_html/assets/*
+/public_html/uploads/*
+/config/database.yml
