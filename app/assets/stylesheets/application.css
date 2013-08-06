@@ -10,8 +10,7 @@
  *
  *= require_self
  *= require about-us.css                 
- *= require main.css.scss
- *= require admin.css                     
+ *= require main.css                    
  *= require map.css
  *= require ajay-aheer.css                
  *= require market-evaluation.css
