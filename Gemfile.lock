@@ -95,6 +95,9 @@ GEM
       railties (>= 3.0, < 5.0)
       thor (>= 0.14, < 2.0)
     json (1.8.0)
+    kaminari (0.14.1)
+      actionpack (>= 3.0.0)
+      activesupport (>= 3.0.0)
     kgio (2.8.0)
     listen (1.2.2)
       rb-fsevent (>= 0.9.3)
@@ -104,6 +107,8 @@ GEM
     mail (2.5.4)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
+    mailjet (0.0.4)
+      activesupport (>= 3.1.0)
     method_source (0.8.2)
     mime-types (1.23)
     minitest (4.7.5)
@@ -215,6 +220,8 @@ DEPENDENCIES
   jbuilder (~> 1.2)
   jquery-fileupload-rails
   jquery-rails (= 2.1.4)
+  kaminari
+  mailjet
   pg
   rails (= 4.0.0)
   rails-erd

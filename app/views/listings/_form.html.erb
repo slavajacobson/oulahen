@@ -3,34 +3,17 @@
     $("input[name='listing[category_id]']:radio").change( function() {
 
 
-      
-
-
       //Home selected
       if ($(this).val() == 1) {
-        $("#listing_unit_number").parent().hide();
-        $("#listing_hide_unit_number").parent().hide();
-        $("#listing_lot_frontage").parent().show();
-        $("#listing_lot_depth").parent().show();
-        $("#listing_maintenance_fee").parent().hide();
-
-
+        admin_home_selected();
       }
       //Condo selected
       else if ($(this).val() == 2) {
-        $("#listing_unit_number").parent().show();
-        $("#listing_hide_unit_number").parent().show();
-        $("#listing_lot_frontage").parent().hide();
-        $("#listing_lot_depth").parent().hide();
-        $("#listing_maintenance_fee").parent().show();
+        admin_condo_selected();
       }
       //Commercial selected
       else {
-        $("#listing_unit_number").parent().show();
-        $("#listing_hide_unit_number").parent().show();
-        $("#listing_lot_frontage").parent().show();
-        $("#listing_lot_depth").parent().show();
-         $("#listing_maintenance_fee").parent().show();
+        admin_commercial_selected();
       }
     });
 
@@ -61,10 +44,56 @@
       }
     }); 
 
+    if ($("input[name='listing[category_id]']:checked").val() == 1)
+      admin_home_selected();
+    else if ($("input[name='listing[category_id]']:checked").val() == 2)
+      admin_condo_selected();
+    else
+      admin_commercial_selected();
 
+
+
+    $( "input[name='listing[sold]']" ).change(function() {
+
+      if ($(this).is(':checked'))
+        $("#sold_properties").slideDown();
+      else
+        $("#sold_properties").slideUp();
+    });
+
+    if ($("input[name='listing[sold]']:checked").length == 0)
+      $("#sold_properties").hide();
+
+
+    $('#toggle_all_photos').click(function(){
+      $(":checkbox[name='photo_ids[]']").prop('checked', !$(":checkbox[name='photo_ids[]']").eq(0).is(':checked'));
+    });
 
 
   });
+
+  function admin_home_selected() {
+    $("#listing_unit_number").parent().hide();
+    $("#listing_hide_unit_number").parent().hide();
+    $("#listing_lot_frontage").parent().show();
+    $("#listing_lot_depth").parent().show();
+    $("#listing_maintenance_fee").parent().hide();
+  }
+  function admin_condo_selected() {
+    $("#listing_unit_number").parent().show();
+    $("#listing_hide_unit_number").parent().show();
+    $("#listing_lot_frontage").parent().hide();
+    $("#listing_lot_depth").parent().hide();
+    $("#listing_maintenance_fee").parent().show();
+  }
+  function admin_commercial_selected() {
+    $("#listing_unit_number").parent().show();
+    $("#listing_hide_unit_number").parent().show();
+    $("#listing_lot_frontage").parent().show();
+    $("#listing_lot_depth").parent().show();
+    $("#listing_maintenance_fee").parent().show();
+  }
+
 </script>
 
 <style>
@@ -89,9 +118,31 @@
   .gritter-with-image {
     font-size:14px;
   }
+  .main_photo_label {
+    position: absolute;
+    bottom: 30px;
+    left: 20px;
+    width: 235px;
+    height: 26px;
+    background: rgba(53, 126, 189, 0.7);
+    text-align: center;
+    line-height: 25px;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+  }
 </style>
 
+<% if @listing.errors.any? %>
+  <div id="error_explanation">
+    <h2><%= pluralize(@listing.errors.count, "error") %> prohibited this listing from being saved:</h2>
 
+    <ul>
+    <% @listing.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+    </ul>
+  </div>
+<% end %>
 <ul class="nav nav-tabs">
   <li id="general_tab_button" class="active"><a href="#">General</a></li>
   <li id="photos_tab_button" ><a href="#">Photos</a></li>
@@ -102,17 +153,7 @@
 
     <div id="general_tab">
         <%= f.hidden_field :draft, value: "false" %>
-        <% if @listing.errors.any? %>
-          <div id="error_explanation">
-            <h2><%= pluralize(@listing.errors.count, "error") %> prohibited this listing from being saved:</h2>
 
-            <ul>
-            <% @listing.errors.full_messages.each do |msg| %>
-              <li><%= msg %></li>
-            <% end %>
-            </ul>
-          </div>
-        <% end %>
 
         <div class="form-group">
           <span style="font-weight:bold;">Select listing type:</span> 
@@ -140,25 +181,41 @@
                 </div> 
               </div>
 
-              <div class="form-group">
-                <%= f.label :sold, "Listing status" %>
 
-                <div class="make-switch" data-on-label="Sold" data-off-label="Listed" data-off="warning" data-on="info">
-                   <%= f.check_box :sold %> 
+              <div class="well" style="margin-left: -20px;">
+                <div class="form-group">
+                  <%= f.label :sold, "Listing status" %>
+
+                  <div class="make-switch" data-on-label="Sold" data-off-label="Listed" data-off="warning" data-on="info">
+                     <%= f.check_box :sold %> 
+                  </div>
+
+                </div>
+                <div id="sold_properties">
+
+                  <div class="form-group">
+                    <%= f.label :sold_price %>
+                    <%= f.text_field :sold_price, class: 'form-control input-small', style:'display:inline-block' %>
+                    <div class="make-switch" data-on-label="Show" data-off-label="Hide">
+                       <%= f.check_box :show_sold_price %> 
+                    </div>
+                  </div>
+
+
+                  <div class="form-group">
+                    <%= f.label :corner_label %>
+                    <%= f.select :transaction_label, [['None',''],['Sold','sold'],['Leased','leased']], class: 'form-control' %> 
+                  </div>
+
+
+                  <div class="form-group">
+                    <%= f.label :label %>
+                    <%= f.text_field :sold_status, class: 'form-control input-small', style:'display:inline-block' %>
+                  </div>
                 </div>
               </div>
 
-              <div class="form-group">
-                <%= f.label :sold_price %>
-                <%= f.text_field :sold_price, class: 'form-control input-small', style:'display:inline-block' %>
-                <div class="make-switch" data-on-label="Show" data-off-label="Hide">
-                   <%= f.check_box :show_sold_price %> 
-                </div>
-              </div>
-              <div class="form-group">
-                <%= f.label :sold_label %>
-                <%= f.text_field :sold_status, class: 'form-control input-small', style:'display:inline-block' %>
-              </div>
+
               <div class="form-group">
                 <%= f.label :price %>
                 <%= f.text_field :price, class: 'form-control input-small', style:'display:inline-block' %>
@@ -178,8 +235,12 @@
                 </div>
               </div>
               <div class="form-group">
-                <%= f.label :address %>
+                <%= f.label :street_name %>
                 <%= f.text_field :address, class: 'form-control input-small', style:'display:inline-block' %>
+              </div>
+              <div class="form-group">
+                <%= f.label :city_province,"City/Province" %>
+                <%= f.text_field :city_province, class: 'form-control input-small', style:'display:inline-block' %>
               </div>
               <div class="form-group">
                 <%= f.label :postal_code %>
@@ -198,12 +259,30 @@
                 <%= f.number_field :lot_depth, class: 'form-control input-small', style:'display:inline-block' %>
               </div>
 
+
+              <%  unless @listing.floor_plan.new_record? %>
+                <div class="form-group">
+                  <%= f.label :check_to_delete %>
+                  <%= check_box_tag :delete_floor_plan %>
+                  <%= link_to "Floor Plan", @listing.floor_plan.file_url, :target => "_blank" %> or Upload a different one:
+                </div>
+              <% end %>
+
               <div class="form-group">
                 <%= f.label :floor_plan %>
                 <%= f.fields_for :floor_plan do |floor_plan| %>
                   <%= floor_plan.file_field :file, style: 'display:inline-block' %>
                 <% end %>
+                
               </div>
+
+              <%  unless @listing.feature_sheet.new_record? %>
+                <div class="form-group">
+                  <%= f.label :check_to_delete %>
+                  <%= check_box_tag :delete_feature_sheet %>
+                  <%= link_to "Feature Sheet", @listing.feature_sheet.file_url, :target => "_blank" %> or Upload a different one:
+                </div>
+              <% end %>
 
               <div class="form-group">
                 <%= f.label :feature_sheet %>
@@ -248,7 +327,7 @@
             </div>
             <div class="form-group">
               <%= f.label :description %>
-              <%= f.text_area :description, class: 'form-control', style:'display:inline-block' %>
+              <%= f.text_area :description, class: 'form-control', style:'display:inline-block', rows: '7' %>
             </div>
             <div class="form-group">
               <%= f.label :inclusions %>
@@ -278,7 +357,7 @@
 
   <div id="photos_tab" class="clearfix" style="position:relative;">
     <% unless @listing.draft? %>
-      <div class="alert alert-warning clearfix" style="display: table;">
+      <div class="alert alert-warning clearfix" style="display: table; margin: 0 auto; margin-bottom: 15px;">
         <span>Changes done to the photos are permanent <strong>BEFORE</strong> the "Update" button is clicked!</span>
       </div>
     <% end %>
@@ -304,10 +383,11 @@
     <div id="progress_bars"></div>
 
 
-    <%= form_for :photo, url: delete_multiple_photos_path, :html => {method: 'get'}, remote: true do |f| %>
+    <%= form_for :photo, url: manipulate_photos_path, :html => {method: 'get'}, remote: true do |f| %>
       <%= f.hidden_field :listing_id, value: @listing.id %>
-      <%= f.submit "Delete selected photos", data: { disable_with: "Please wait..." }, class: 'btn btn-small btn-primary', style:'margin-bottom:20px;' %>
-
+      <div id="toggle_all_photos" class="btn btn-small btn-primary" style="margin-bottom:20px;">Toggle All</div>
+      <%= f.submit "Delete selected photos", name:'delete_photos', data: { disable_with: "Please wait..." }, class: 'btn btn-small btn-primary', style:'margin-bottom:20px;' %>
+      <%= f.submit "Set selected as Main photo", name:'set_main_photo', data: { disable_with: "Please wait..." }, class: 'btn btn-small btn-primary', style:'margin-bottom:20px;' %>
 
 
       <div id="photos" class="clearfix">

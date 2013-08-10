@@ -4,6 +4,10 @@ class PagesController < HighVoltage::PagesController
   def index
 
   end
+  def contact_us_form
+    c = 12
+    debugger
+  end
 
   protected
     def layout_for_page
@@ -13,7 +17,7 @@ class PagesController < HighVoltage::PagesController
       when 'index'
         'home_layout'
       when 'index.html'
-    	'home_layout'
+    	  'home_layout'
       when nil
       	'home_layout'
       else

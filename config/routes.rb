@@ -1,14 +1,22 @@
 Oulahen::Application.routes.draw do
   resources :photos do
     collection do
-      get 'delete_multiple'
+      get 'manipulate', as: 'manipulate'
     end
   end
   
-  resources :listings
 
-  
-  get "admin" => "main#admin", as: 'admin'
+  resources :listings do
+    collection do
+      get 'residential'
+      get 'commercial'
+      get 'transactions(/:id)' => 'listings#transactions'
+    end
+
+  end
+
+  match "/contact-us-form-sendmail" => "main#contact_us_form", as: 'contact_us_sendmail', via:[:post]
+  get "admin" => "listings#index", as: 'admin'
   devise_for :users
   get "/pages/*id" => 'pages#show', :as => :view, :format => false
   #root 'pages#index'
@@ -16,6 +24,10 @@ Oulahen::Application.routes.draw do
   root 'pages#index'
   match "/" => redirect("/pages/index"), via: [:get, :post]
 
+
+  # namespace :admin do
+  #   root to: "listings#index"
+  # end
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

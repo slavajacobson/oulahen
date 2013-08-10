@@ -4,6 +4,10 @@
 			<%= image_tag photo.image_url(:thumb), class:'img-thumbnail' %>
 		<% end %>
 
+		<% if photo.main_photo %>
+			<div class="main_photo_label">Main Image</div>
+		<% end %>
+
 		<% unless defined?(hide_check_box) %>
 			<div>
 				<%= check_box_tag "photo_ids[]", photo.id %> Select Photo
@@ -14,8 +18,8 @@
 
 
 <% if defined?(photo_counter) && (photo_counter+1)%4 == 0 %>
-    </div>
-    <div class="row">
+  </div>
+  <div class="row">
 <% end %>
 
 

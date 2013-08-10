@@ -1,148 +1,270 @@
+<% if current_user %>
+  <div id="admin_nav"><span style="font-weight:bold;">Admin:</span> <%= link_to "Edit Listing", edit_listing_path(@listing) %> | <%= link_to "Manage Listings", listings_path %> </div>
+<% end %>
+<div class="clearfix colelem" id="pslideshowu38145"><!-- group -->
+
+
+  <% unless @photos.blank? %>
+
+
+    <div class="SlideShowWidget clearfix widget_invisible grpelem" id="slideshowu38145"><!-- group -->
 
 
 
-<p id="notice"><%= notice %></p>
-
-<h2><%= "#{listing.unit_number}-" unless @listing.unit_number.blank? %><%= @listing.street_number %> <%= @listing.address %>, <%= @listing.postal_code %></h2>
 
 
-<%= link_to 'Edit listing', edit_listing_path(@listing), class:'btn btn-primary' %>
-<%= link_to 'View all listings', listings_path, class:'btn btn-primary' %>
 
-<div class="row" style="margin-top:25px;">
-  <div class="col-lg-6">
+    <div class="popup_anchor" id="u38203popup">
+     <div class="SlideShowContentPanel rgba-background clearfix" id="u38203"><!-- stack box -->
 
 
-    <p>
-      <strong>Featured listing:</strong>
-      <%= @listing.featured_listing ? "Yes" : "No"  %>
-    </p>
 
-    <p>
-      <strong>Show street number:</strong>
-      <%= @listing.show_street_number ? "Yes" : "No"  %>
-    </p>
 
-    <p>
-      <strong>Show unit number:</strong>
-      <%= @listing.show_unit_number ? "Yes" : "No" %>
-    </p>
+        <%= render partial: 'photos/photo_listing', collection: @photos, as: 'photo' %>
 
-    <p>
-      <strong>Neighbourhood:</strong>
-      <%= @listing.neighbourhood %>
-    </p>
+     </div>
+    </div>
 
-    <p>
-      <strong>Lot frontage:</strong>
-      <%= @listing.lot_frontage %>
-    </p>
 
-    <p>
-      <strong>Lot depth:</strong>
-      <%= @listing.lot_depth %>
-    </p>
 
-    <p>
-      <strong>Sqft:</strong>
-      <%= @listing.sqft %>
-    </p>
 
-    <p>
-      <strong>Bedrooms:</strong>
-      <%= @listing.bedrooms %>
-    </p>
+    <div class="popup_anchor" id="u38146popup">
+     <div class="SSSlideLinks clearfix" id="u38146"><!-- horizontal-rows box -->
 
-    <p>
-      <strong>Bathrooms:</strong>
-      <%= @listing.bathrooms %>
-    </p>
 
-    <p>
-      <strong>Price:</strong>
-      <%= @listing.price %>
-    </p>
+        <%= render partial: 'photos/photo_listing_thumb', collection: @photos, as: 'photo' %>
 
-    <p>
-      <strong>Sold?:</strong>
-      <%= @listing.sold ? "Sold" : "Not Sold" %>
-    </p>
 
-    <p>
-      <strong>Sold price:</strong>
-      <%= @listing.sold_price %>
-    </p>
 
-    <p>
-      <strong>Show sold price:</strong>
-      <%= @listing.show_sold_price  ? "Yes" : "No"  %>
-    </p>
+     </div>
+    </div>
+
+
+
+    <div class="popup_anchor" id="u38241-4popup">
+     <div class="SSPreviousButton clearfix" id="u38241-4"><!-- content -->
+      <p>&lt;</p>
+     </div>
+    </div>
+    <div class="popup_anchor" id="u38240-4popup">
+     <div class="SSNextButton clearfix" id="u38240-4"><!-- content -->
+      <p>&gt;</p>
+     </div>
+    </div>
+    <div class="popup_anchor" id="u38261-4popup">
+     <div class="SlideShowLabel SSSlideCount clearfix" id="u38261-4"><!-- content -->
+      <p>1 &#45; 18</p>
+     </div>
+    </div>
+
+
+
+    <div class="popup_anchor">
+     <div class="SSCloseButton popup_element clearfix" id="u38183"><!-- group -->
+      <div class="clearfix grpelem" id="u38184-4"><!-- content -->
+       <p>x</p>
+      </div>
+     </div>
+    </div>
+
+
+    </div>
+<% end %>
+
+<% if @listing.sold %>
+ <div style="position: absolute; z-index: 500; margin-left: 3px;">
+  <% if @listing.transaction_label == 'sold' %>
+    <img src="/images/big_sold.png" alt="sold_label" />
+  <% elsif @listing.transaction_label == 'leased' %>
+    <img src="/images/big_leased.png" alt="sold_label" />
+  <% end %>
+ </div>
+<% end %>
+
+ <img class="grpelem" id="u38267" src="<%= @main_photo %>" alt="" width="513" height="347"/><!-- rasterized frame -->
+
+
+<style>
+  #admin_nav {
+    position: relative;
+    top: 150px;
+    float: right;
+    right: 10px;
+  }
+  #u38133-14 {
+    width:370px;
+  }
+  #u38133-14 label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: inline-block;
+    width: 125px;
+  }
+
+  #u38133-14 span {
+    font-weight: normal;
+    color: black;
+    display: inline-block;
+    width: 235px;
+    vertical-align: top;
+  }
+</style>
+
+ <div class="rounded-corners clearfix grpelem" id="u38142"><!-- column -->
+  <div class="Headings-Submenus clearfix colelem" id="u38136-6"><!-- content -->
+   <h1><%= "#{@listing.street_number}" if @listing.show_street_number %> <%= "#{@listing.address}" %></h1>
+   <h1><%= "Unit #{@listing.unit_number}, " unless @listing.unit_number.blank? || !@listing.show_unit_number %><%= "#{@listing.city_province}" %></h1>
+   
+   <% if @listing.sold %>
+     <div style="margin-top: 8px;">
+      <h1><%= "#{@listing.transaction_label.upcase}" %></h1>
+      <h1><%= "#{@listing.sold_status}" %></h1>
+     </div>
+   <% end %>
+
 
   </div>
-  <div class="col-lg-6">
-
-    <p>
-      <strong>Sold status:</strong>
-      <%= @listing.sold_status %>
-    </p>
-
-    <p>
-      <strong>Maintenance fee:</strong>
-      <%= @listing.maintenance_fee %>
-    </p>
-
-    <p>
-      <strong>Virtual tour url:</strong>
-      <%= @listing.virtual_tour_url %>
-    </p>
-
-    <p>
-      <strong>Map url:</strong>
-      <%= @listing.map_url %>
-    </p>
-
-    <p>
-      <strong>Realtor url:</strong>
-      <%= @listing.realtor_url %>
-    </p>
-
-    <p>
-      <strong>Facebook url:</strong>
-      <%= @listing.facebook_url %>
-    </p>
-
-    <p>
-      <strong>Description:</strong>
-      <%= @listing.description %>
-    </p>
-
-    <p>
-      <strong>Inclusions:</strong>
-      <%= @listing.inclusions %>
-    </p>
-
-    <p>
-      <strong>Exclusions:</strong>
-      <%= @listing.exclusions %>
-    </p>
-
-
-    <p>
-      <strong>Floor Plan:</strong>
-      <%= link_to "link", @listing.floor_plan.file_url if @listing.floor_plan %>
-    </p>
-
-    <p>
-      <strong>Feature Sheet:</strong>
-      <%= link_to "link", @listing.feature_sheet.file_url.to_s if @listing.floor_plan %>
-    </p>
+  <div class="Headings-Submenus clearfix colelem" id="u38264-4"><!-- content -->
+   <h1 style="font-size:110%;">List Price: <%= number_to_currency(@listing.price, :unit => "$", precision: 0) %></h1>
   </div>
+  <div class="clearfix colelem" id="pu38133-14"><!-- group -->
+   <div class="clearfix grpelem" id="u38133-14"><!-- content -->
+      <% unless @listing.address.blank? %>
+        <div>
+          <label>Address:</label> <span><%= "#{@listing.street_number}" if @listing.show_street_number %> <%= "#{@listing.address}, #{@listing.city_province}" %></span>
+        </div>
+      <% end %>
+      <% unless @listing.postal_code.blank? %>
+        <div>
+          <label>Postal Code:</label> <span><%= "#{@listing.postal_code}" %></span>
+        </div>
+      <% end %>
+      <% unless @listing.neighbourhood.blank? %>
+        <div>
+          <label>Neighbourhood:</label> <span><%= "#{@listing.neighbourhood}" %></span>
+        </div>
+      <% end %>
+      <% unless @listing.sqft.blank? %>
+        <div>
+          <label>Square Feet:</label> <span><%= "#{@listing.sqft} sqft" %></span>
+        </div>
+      <% end %>
+      <% unless @listing.bedrooms.blank? %>
+        <div>
+          <label>Bedrooms:</label>  <span><%= "#{@listing.bedrooms}" %></span>
+        </div>
+      <% end %>
+      <% unless @listing.bathrooms.blank? %>
+        <div>
+          <label>Bathrooms:</label> <span><%= "#{@listing.bathrooms}" %></span>
+        </div>
+      <% end %>
+      <% unless @listing.maintenance_fee.blank? %>
+        <div>
+          <label>Maintenance fee:</label> <span><%= "#{@listing.maintenance_fee}" %></span>
+        </div>
+      <% end %>
+      <% unless @listing.lot_frontage.blank? || @listing.lot_depth.blank? %>
+        <div>
+          <label>Lot:</label> <span><%= "#{@listing.lot_frontage*@listing.lot_depth}" %></span>
+        </div>
+      <% end %>
+   </div>
+  </div>
+
+  <div class="colelem" id="u38141"><!-- simple frame --></div>
+  <div class="clearfix colelem" id="u38137-14"><!-- content -->
+   <p id="u38137-2">Description:</p>
+   <p><%= "#{@listing.description}" %></p>
+   <% unless @listing.sold %>
+      <% unless @listing.inclusions.blank? %>
+        <p>&nbsp;</p>
+        <p><span id="u38137-6">Inclusions:</span>&nbsp;<%= "#{@listing.inclusions}"  %></p>
+      <% end %>
+      <% unless @listing.exclusions.blank? %>
+        <p>&nbsp;</p>
+        <p><span id="u38137-10">Exclusions:</span>&nbsp;<%= "#{@listing.exclusions}" %></p>
+      <% end %>
+    <% end %>
+  </div>
+
+  <div class="colelem" id="u38390"><!-- simple frame --></div>
+
+  <div class="clearfix colelem" id="pu38134" style="<%= 'left: -96px;;' if @listing.sold %>"><!-- group -->
+
+    <% unless @listing.sold %>
+
+      <% if @listing.feature_sheet.nil? %>
+        <div class="nonblock nontext grpelem" id="u38134" style="opacity:0.6"><!-- image -->
+          <img class="block" id="u38134_img" src="/images/feature%20sheet_icon.gif" alt="" width="78" height="30"/>
+        </div>
+      <% else %>
+        <a class="nonblock nontext grpelem" id="u38134" href="<%= @listing.feature_sheet.file_url %>" target="_blank"><!-- image --><img class="block" id="u38134_img" src="/images/feature%20sheet_icon.gif" alt="" width="78" height="30"/></a>
+      <% end %>
+
+
+      <% if @listing.floor_plan.nil? %>
+        <div class="nonblock nontext grpelem" id="u38265" style="opacity:0.6"><!-- image -->
+          <img class="block" id="u38265_img" src="/images/floor%20plan_icon.gif" alt="" width="78" height="30"/>
+        </div>
+      <% else %>
+        <a class="nonblock nontext grpelem" id="u38265" href="<%= @listing.floor_plan.file_url %>"><!-- image -->
+          <img class="block" id="u38265_img" src="/images/floor%20plan_icon.gif" alt="" width="78" height="30"/>
+        </a>
+      <% end %>
+
+
+      <% if @listing.realtor_url.blank? %>
+        <div class="nonblock nontext grpelem" id="u38131" style="opacity:0.6">
+          <!-- image --><img class="block" id="u38131_img" src="/images/mls_icon.gif" alt="" width="78" height="30"/>
+        </div>
+      <% else %>
+        <a class="nonblock nontext grpelem" id="u38131" href="<%= @listing.realtor_url %>" target="_blank"><!-- image -->
+          <img class="block" id="u38131_img" src="/images/mls_icon.gif" alt="" width="78" height="30"/>
+        </a>
+      <% end %>
+    <% end %>
+
+    <a class="nonblock nontext grpelem" id="u38410" href="/pages/contact-us.html"><!-- image -->
+      <img class="block" id="u38410_img" src="/images/contact-us-button.gif" alt="" width="78" height="30"/>
+    </a>
+
+  </div>
+  <div class="clearfix colelem" id="pu38143" style="<%= 'margin-top:-30px;' if @listing.sold %>"><!-- group -->
+
+    <% if @listing.facebook_url.blank? %>
+      <div class="nonblock nontext grpelem" id="u38143" style="opacity:0.6">
+        <img class="block" id="u38143_img" src="/images/facebook_icon.gif" alt="" width="78" height="30"/>
+      </div>
+    <% else %>
+      <a class="nonblock nontext grpelem" id="u38143" href="<%= @listing.facebook_url %>" target="_blank"><!-- image --><img class="block" id="u38143_img" src="/images/facebook_icon.gif" alt="" width="78" height="30"/></a>
+    <% end %>
+
+    <% unless @listing.sold %>
+      <% if @listing.virtual_tour_url.blank? %>
+        <div class="nonblock nontext grpelem" id="u38129" style="opacity:0.6">
+          <img class="block" id="u38129_img" src="/images/virtual%20tour_icon.gif" alt="" width="78" height="30"/>
+        </div>
+      <% else %>
+        <a class="nonblock nontext grpelem" id="u38129" href="<%= @listing.virtual_tour_url %>" target="_blank"><!-- image -->
+          <img class="block" id="u38129_img" src="/images/virtual%20tour_icon.gif" alt="" width="78" height="30"/>
+        </a>
+      <% end %>
+    <% end %>
+
+
+    <% if @listing.map_url.blank? %>
+      <div class="nonblock nontext grpelem" id="u38262" style="opacity:0.6; <%= 'left: 95px;;' if @listing.sold %>"><!-- image -->
+        <img class="block" id="u38262_img" src="/images/map_icon.gif" alt="" width="78" height="30"/>
+      </div>
+    <% else %>
+      <a class="nonblock nontext grpelem" id="u38262" style="<%= 'left: 95px;' if @listing.sold %>" href="<%= @listing.map_url %>" target="_blank"><!-- image -->
+        <img class="block" id="u38262_img" src="/images/map_icon.gif" alt="" width="78" height="30"/>
+      </a>
+    <% end %>
+  </div>
+
+ </div>
+
 
 </div>
-<h3>Photos</h3>
-<div id="photos">
-  <div class="row">
-      <%= render @photos, hide_check_box: true %> 
-  </div>
-</div>
-

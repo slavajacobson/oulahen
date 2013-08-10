@@ -60,3 +60,6 @@ gem 'debugger', group: [:development, :test]
 gem 'rails_12factor'
 
 gem 'rvm-capistrano'
+gem 'mailjet'
+
+gem 'kaminari'

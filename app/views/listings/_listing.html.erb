@@ -1,0 +1,154 @@
+<style>
+  #u31187:hover {
+    box-shadow: 0px 0px 12px black;
+    cursor: pointer;
+  }
+  #u31187 {
+    z-index:777;
+  }
+</style>
+
+<div class="clearfix colelem" id="u31294"><!-- group -->
+   <div class="clearfix grpelem" id="u31195"><!-- group -->
+    <div class="grpelem" id="pu31210"><!-- inclusion -->
+    <div class="rounded-corners shadow" id="u31210"><!-- simple frame -->
+      <div class="_u31210 f3s_top" id="_u31210-f3s_top"></div>
+      <div class="_u31210 f3s_mid" id="_u31210-f3s_mid"></div>
+      <div class="_u31210 f3s_bot" id="_u31210-f3s_bot"></div>
+    </div>
+     <div class="clearfix" id="ppu31206"><!-- column -->
+    <div class="clearfix colelem" id="pu31206"><!-- group -->
+
+
+    <% if listing.realtor_url.blank? %>
+      <div class="grpelem" id="u30974"><!-- image -->
+        <img class="block" id="u30974_img" src="/images/mls_icon.gif" alt="" width="78" height="30">
+      </div>
+    <% else %>
+      <a class="nonblock nontext grpelem" id="u31206" href="<%= listing.realtor_url %>" target="_blank"><!-- image -->
+        <img class="block" id="u31206_img" src="/images/mls_icon.gif" alt="" width="78" height="30"/>
+      </a>
+    <% end %>
+
+
+    <% if listing.map_url.blank? %>
+      <div class="grpelem" id="u30978"><!-- image -->
+        <img class="block" id="u30978_img" src="/images/map_icon.gif" alt="" width="78" height="30">
+      </div>
+
+    <% else %>
+      <a class="nonblock nontext grpelem" id="u31204" href="<%= listing.map_url %>" target="_blank"><!-- image -->
+        <img class="block" id="u31204_img" src="/images/map_icon.gif" alt="" width="78" height="30"/>
+      </a>
+    <% end %>
+
+
+
+
+
+    </div>
+
+
+    <div class="clearfix colelem" id="pu31196"><!-- group -->
+
+      <!--- FEATURE SHEET -->
+
+     <% if listing.feature_sheet && listing.feature_sheet.file_url != '' %>
+       <a class="nonblock nontext grpelem" id="u31196" href="<%= listing.feature_sheet.file_url %>" target="_blank"><!-- image -->
+        <img class="block" id="u31196_img" src="/images/feature%20sheet_icon.gif" alt="" width="78" height="30"/>
+       </a>
+     <% else %>
+
+      <div class="grpelem" id="u30991"><!-- image -->
+       <img class="block" id="u30991_img" src="/images/feature%20sheet_icon.gif" alt="" width="78" height="30">
+      </div>
+
+     <% end %>
+
+
+    <% if listing.floor_plan && listing.floor_plan.file_url != '' %>
+      <a class="nonblock nontext grpelem" id="u30932" href="<%= listing.floor_plan.file_url %>" target="_blank">
+        <img class="block" id="u31198_img" src="/images/floor%20plan_icon.gif" alt="" width="78" height="30"/>
+      </a>
+    <% else %>
+      <div class="grpelem" id="u31198"><!-- image -->
+        <img class="block" id="u31198_img" src="/images/floor%20plan_icon.gif" alt="" width="78" height="30"/>
+      </div>
+    <% end %>
+
+
+
+
+    </div>
+    <div class="clearfix colelem" id="pu31202"><!-- group -->
+
+
+
+    <% unless listing.facebook_url.blank? %>
+      <a class="nonblock nontext grpelem" id="u31202" href="<%= listing.facebook_url %>" target="_blank"><!-- image -->
+        <img class="block" id="u31202_img" src="/images/facebook_icon.gif" alt="" width="78" height="30"/>
+      </a>
+
+    <% else %>
+      <div class="grpelem" id="u30980"><!-- image -->
+        <img class="block" id="u30980_img" src="/images/facebook_icon.gif" alt="" width="78" height="30">
+      </div>
+    <% end %>
+
+
+
+
+
+    <% unless listing.virtual_tour_url.blank? %>
+      <a class="nonblock nontext grpelem" id="u31208" href="<%= listing.virtual_tour_url %>" target="_blank"><!-- image --><img class="block" id="u31208_img" src="/images/virtual%20tour_icon.gif" alt="" width="78" height="30"/></a>
+
+    <% else %>
+      <div class="grpelem" id="u31267"><!-- image -->
+        <img class="block" id="u31267_img" src="/images/virtual%20tour_icon.gif" alt="" width="78" height="30">
+      </div>
+    <% end %>
+
+    </div>
+      <a class="nonblock nontext colelem" id="u30941" href="/pages/contact-us-form.html"><!-- image -->
+        <img class="block" id="u30941_img" src="/images/info_icon.gif" alt="" width="78" height="30">
+      </a>
+    </div>
+
+    </div>
+   </div>
+
+   <%= link_to listing_path(listing) do %>
+
+     <div class="grpelem" id="pu31187"><!-- inclusion -->
+      <div class="rounded-corners shadow" id="u31187"><!-- simple frame -->
+       <div class="_u31187 f3s_top" id="_u31187-f3s_top"></div>
+       <div class="_u31187 f3s_mid" id="_u31187-f3s_mid"></div>
+      </div>
+      <div class="clearfix" id="pu31190-4"><!-- column -->
+       <div class="clearfix colelem" id="u31190-4"><!-- content -->
+      <p><%= listing.street_number %> <%= listing.address %>, <%= "Unit #{listing.unit_number}," unless listing.unit_number.blank? %> <%= listing.city_province %></p>
+       </div>
+       <div class="clearfix colelem" id="u31188-4"><!-- content -->
+      <p><%= truncate(listing.description, length: 350, seperator: ' ', omission: ' ...Click to read more!') %></p>
+       </div>
+      </div>
+     </div>
+
+   <% end %>
+
+   <div class="grpelem" id="u31192"><!-- image -->
+
+    <% unless listing.photos.where(main_photo: true).blank? %>
+      <img class="block" id="u31192_img" src="<%= listing.photos.where(main_photo: true).first.image_url(:thumb) %>" alt="" width="235" height="170"/>
+    <% else %>
+      <div class="no_photo_listing">No Photo Available</div>
+    <% end %>
+   </div>
+
+   <% unless listing.price.blank? %>
+     <div class="clearfix grpelem" id="u31191-4"><!-- content -->
+      <p>Price:&nbsp; <%= number_to_currency(listing.price, :unit => "$", precision: 0) %></p>
+     </div>
+   <% end %>
+
+  </div>

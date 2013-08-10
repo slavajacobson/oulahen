@@ -33,11 +33,43 @@ class PhotosController < ApplicationController
 
   end
 
-  def delete_multiple
-    Photo.destroy_all(id: params.require(:photo_ids))
-    #debugger
-    @photos = Photo.find_all_by_listing_id(photo_params[:listing_id]) #Listing.find(photo_params[:listing_id]).photos
-    
+  def manipulate
+
+   
+
+    if params[:delete_photos]
+
+      Photo.destroy_all(id: params.require(:photo_ids))
+
+      #if the deleted photo was the main photo, pick a new main photo
+      unless Photo.where(listing_id: photo_params[:listing_id], main_photo: true).first
+        @photos = Photo.find_all_by_listing_id(photo_params[:listing_id])
+        
+        if @photos[0]
+          @photos[0].main_photo = true
+          @photos[0].save
+        end
+      end
+      
+    elsif params[:set_main_photo]
+
+      @current_main_photo = Photo.find_by_main_photo(true)
+
+      if @current_main_photo
+        @current_main_photo.main_photo = false
+        @current_main_photo.save
+      end
+
+
+      @photo = Photo.find(params[:photo_ids][0])
+      @photo.main_photo = true
+      @photo.save
+
+    end
+
+
+    @photos = Photo.find_all_by_listing_id(photo_params[:listing_id])
+
   end
 
 

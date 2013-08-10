@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130801233717) do
+ActiveRecord::Schema.define(version: 20130808161220) do
 
   create_table "categories", force: true do |t|
     t.string   "name"
@@ -41,6 +41,7 @@ ActiveRecord::Schema.define(version: 20130801233717) do
     t.boolean  "featured_listing",   default: false
     t.boolean  "show_street_number", default: true
     t.string   "unit_number"
+    t.string   "city_province"
     t.boolean  "show_unit_number",   default: true
     t.string   "postal_code"
     t.string   "neighbourhood"
@@ -53,6 +54,7 @@ ActiveRecord::Schema.define(version: 20130801233717) do
     t.float    "sold_price"
     t.boolean  "show_sold_price",    default: false
     t.boolean  "sold"
+    t.string   "transaction_label",  default: ""
     t.string   "sold_status"
     t.float    "maintenance_fee"
     t.string   "virtual_tour_url"
@@ -68,7 +70,10 @@ ActiveRecord::Schema.define(version: 20130801233717) do
     t.integer  "category_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "slug"
   end
+
+  add_index "listings", ["slug"], name: "index_listings_on_slug"
 
   create_table "photos", force: true do |t|
     t.string   "image"

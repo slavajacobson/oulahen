@@ -22,3 +22,4 @@
 //= require jquery.watch
 //= require mortgage_calculator
 //= require landtransfer_calculator
+//= require gritter

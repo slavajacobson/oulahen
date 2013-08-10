@@ -6,6 +6,7 @@ class CreateListings < ActiveRecord::Migration
       t.boolean :featured_listing, default: false
       t.boolean :show_street_number, default: true
       t.string :unit_number
+      t.string :city_province
       t.boolean :show_unit_number, default: true
       t.string :postal_code
       t.string :neighbourhood
@@ -18,6 +19,7 @@ class CreateListings < ActiveRecord::Migration
       t.float :sold_price
       t.boolean :show_sold_price, default: false
       t.boolean :sold
+      t.string :transaction_label, default: ''
       t.string :sold_status
       t.float :maintenance_fee
       t.string :virtual_tour_url

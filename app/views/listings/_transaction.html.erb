@@ -1,0 +1,35 @@
+<style>
+  .picture-frame:hover {
+    box-shadow: 0px 0px 6px 1px rgb(228, 228, 228);
+  }
+</style>
+
+<%= link_to listing_path(transaction) do %>
+  <div class="picture-frame">
+
+    <% if transaction.transaction_label == 'sold' %>
+      <div class="listing_sold_label"></div>
+    <% elsif transaction.transaction_label == 'leased' %>
+      <div class="listing_leased_label"></div>
+    <% end %>
+
+
+    <% unless transaction.photos.where(main_photo: true).blank? %>
+      <img src="<%= transaction.photos.where(main_photo: true).first.image_url(:thumb) %>" alt="img" class="listing_picture" />
+    <% else %>
+      <div class="no_listing_picture">
+        No Photo Available
+      </div>
+    <% end %>
+
+    <% unless transaction.sold_status.blank? %>
+      <div class="listing_status">
+        <%= transaction.sold_status.upcase %>
+      </div>
+    <% end %>
+    <div class="listing_address">
+      <%= transaction.address.upcase %>, <%= transaction.city_province.upcase %>
+    </div>
+  </div>
+
+<% end %>

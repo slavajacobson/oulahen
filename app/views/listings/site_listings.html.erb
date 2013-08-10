@@ -1,0 +1,16 @@
+
+
+<div class="gradient colelem" id="u16510"><!-- simple frame --></div>
+
+<%= render 'site_listings_nav', header: @header %>
+
+<div class="pagination_container">
+  <%= paginate @listings %>
+</div>
+
+<%= render @listings %>
+
+
+<div class="pagination_container" style="margin-top:0px;">
+  <%= paginate @listings %>
+</div>

@@ -19,6 +19,8 @@
    </head>
  <body>
 
+
+
   <div class="clearfix" id="page"><!-- column -->
    <div class="position_content" id="page_position_content">
     <div class="clearfix colelem" id="pu27196"><!-- group -->
@@ -80,31 +82,36 @@
 
        </li>
        <li class="MenuItemContainer clearfix grpelem" id="u27123"><!-- vertical box -->
-        <a class="nonblock nontext MenuItem MenuItemWithSubMenu clearfix colelem" id="u27124" href="/pages/listings.html"><!-- horizontal box --><div class="MenuItemLabel NoWrap clearfix grpelem" id="u27126-4"><!-- content --><p>Listings</p></div></a>
+        <a class="nonblock nontext MenuItem MenuItemWithSubMenu clearfix colelem" id="u27124" href="/listings/residential"><!-- horizontal box --><div class="MenuItemLabel NoWrap clearfix grpelem" id="u27126-4"><!-- content --><p>Listings</p></div></a>
         <div class="SubMenu  MenuLevel1 clearfix" id="u27128"><!-- vertical box -->
          <ul class="SubMenuView clearfix colelem" id="u27129"><!-- vertical box -->
           <li class="MenuItemContainer clearfix colelem" id="u27130"><!-- horizontal box -->
            <a class="nonblock nontext MenuItem MenuItemWithSubMenu clearfix grpelem" id="u27140" href="/pages/commercial.html"><!-- horizontal box --><div class="MenuItemLabel NoWrap clearfix grpelem" id="u27143-4"><!-- content --><p>Commercial</p></div></a>
           </li>
           <li class="MenuItemContainer clearfix colelem" id="u31731"><!-- horizontal box -->
-           <a class="nonblock nontext MenuItem MenuItemWithSubMenu clearfix grpelem" id="u31741" href="/pages/commercial-listings.html"><!-- horizontal box --><div class="MenuItemLabel NoWrap clearfix grpelem" id="u31743-4"><!-- content --><p>Commercial Listings</p></div></a>
+           <a class="nonblock nontext MenuItem MenuItemWithSubMenu clearfix grpelem" id="u31741" href="/listings/commercial"><!-- horizontal box --><div class="MenuItemLabel NoWrap clearfix grpelem" id="u31743-4"><!-- content --><p>Commercial Listings</p></div></a>
           </li>
           <li class="MenuItemContainer clearfix colelem" id="u31829"><!-- horizontal box -->
-           <a class="nonblock nontext MenuItem MenuItemWithSubMenu clearfix grpelem" id="u31832" href="/pages/transactions.html"><!-- horizontal box --><div class="MenuItemLabel NoWrap clearfix grpelem" id="u31833-4"><!-- content --><p>Transactions</p></div></a>
+           <a class="nonblock nontext MenuItem MenuItemWithSubMenu clearfix grpelem" id="u31832" href="/listings/transactions"><!-- horizontal box --><div class="MenuItemLabel NoWrap clearfix grpelem" id="u31833-4"><!-- content --><p>Transactions</p></div></a>
            <div class="SubMenu  MenuLevel2 clearfix" id="u31830"><!-- vertical box -->
             <ul class="SubMenuView clearfix colelem" id="u31831"><!-- vertical box -->
+
+
              <li class="MenuItemContainer clearfix colelem" id="u31836"><!-- horizontal box -->
-              <a class="nonblock nontext MenuItem MenuItemWithSubMenu clearfix grpelem" id="u31837" href="/pages/condos.html"><!-- horizontal box --><div class="MenuItemLabel NoWrap clearfix grpelem" id="u31839-4"><!-- content --><p>Condos</p></div></a>
+              <a class="nonblock nontext MenuItem MenuItemWithSubMenu clearfix grpelem" id="u31837" href="/listings/transactions/homes"><!-- horizontal box --><div class="MenuItemLabel NoWrap clearfix grpelem" id="u31839-4"><!-- content --><p>Homes</p></div></a>
              </li>
+             <li class="MenuItemContainer clearfix colelem" id="u31836"><!-- horizontal box -->
+              <a class="nonblock nontext MenuItem MenuItemWithSubMenu clearfix grpelem" id="u31837" href="/listings/transactions/condos"><!-- horizontal box --><div class="MenuItemLabel NoWrap clearfix grpelem" id="u31839-4"><!-- content --><p>Condos</p></div></a>
+             </li>
+            <li class="MenuItemContainer clearfix colelem" id="u31787"><!-- horizontal box -->
+             <a class="nonblock nontext MenuItem MenuItemWithSubMenu clearfix grpelem" id="u31788" href="/listings/transactions/commercial"><!-- horizontal box --><div class="MenuItemLabel NoWrap clearfix grpelem" id="u31789-4"><!-- content --><p>Commercial</p></div></a>
+            </li>
+
+
             </ul>
            </div>
           </li>
-          <li class="MenuItemContainer clearfix colelem" id="u31787"><!-- horizontal box -->
-           <a class="nonblock nontext MenuItem MenuItemWithSubMenu clearfix grpelem" id="u31788" href="/pages/commercial-transations.html"><!-- horizontal box --><div class="MenuItemLabel NoWrap clearfix grpelem" id="u31789-4"><!-- content --><p>Commercial Transations</p></div></a>
-          </li>
-          <li class="MenuItemContainer clearfix colelem" id="u33974"><!-- horizontal box -->
-           <a class="nonblock nontext MenuItem MenuItemWithSubMenu clearfix grpelem" id="u33977" href="/pages/ct-under-construction.html"><!-- horizontal box --><div class="MenuItemLabel NoWrap clearfix grpelem" id="u33979-4"><!-- content --><p>CT&#45;under construction</p></div></a>
-          </li>
+
          </ul>
         </div>
        </li>
@@ -211,7 +218,20 @@
 		Muse.Utils.transformMarkupToFixBrowserProblemsPreInit();/* body */
 		Muse.Utils.prepHyperlinks();/* body */
 		Muse.Utils.initWidget('.MenuBar', function(elem) { return $(elem).museMenu(); });/* unifiedNavBar */
-		Muse.Utils.initWidget('#' + $("[id^=slideshowu]").attr("id"), function(elem) { new WebPro.Widget.ContentSlideShow(elem, {autoPlay:true,displayInterval:7000,slideLinkStopsSlideShow:false,transitionStyle:'horizontal',lightboxEnabled_runtime:false,shuffle:false,transitionDuration:500,enableSwipe:true}); });/* #slideshowu8187 */
+		
+
+    if ($("#pslideshowu38145").length == 1) {
+      Muse.Utils.initWidget('#slideshowu38145', function(elem) { new WebPro.Widget.ContentSlideShow(elem, {autoPlay:false,displayInterval:3000,slideLinkStopsSlideShow:false,transitionStyle:'fading',lightboxEnabled_runtime:true,shuffle:false,transitionDuration:500,enableSwipe:true}); });/* #slideshowu38145 */
+    }
+    else {
+      Muse.Utils.initWidget('#' + $("[id^=slideshowu]").attr("id"), function(elem) { new WebPro.Widget.ContentSlideShow(elem, {autoPlay:true,displayInterval:7000,slideLinkStopsSlideShow:false,transitionStyle:'horizontal',lightboxEnabled_runtime:false,shuffle:false,transitionDuration:500,enableSwipe:true}); });/* #slideshowu8187 */
+    }
+
+
+
+
+
+
 		Muse.Utils.initWidget('#widgetu25844', function(elem) { new WebPro.Widget.Form(elem, {validationEvent:'submit',errorStateSensitivity:'high',fieldWrapperClass:'fld-grp',formSubmittedClass:'frm-sub-st',formErrorClass:'frm-subm-err-st',formDeliveredClass:'frm-subm-ok-st',notEmptyClass:'non-empty-st',focusClass:'focus-st',invalidClass:'fld-err-st',requiredClass:'fld-err-st',ajaxSubmit:true}); });/* #widgetu25844 */
 
 		Muse.Utils.initWidget('#accordionu7523', function(elem) { return new WebPro.Widget.Accordion(elem, {canCloseAll:false,defaultIndex:0}); });/* #accordionu7523 */
@@ -227,12 +247,31 @@
 
     page = "<%= params[:id] %>";
 
+    action = "<%= params[:action] %>";
+    controller = "<%= params[:controller] %>";
     if (page.indexOf(".") > -1)
       page = page.substring(0,page.indexOf("."));
 
 
-    
-    if (page == 'index') {
+    if (controller == "listings" && action == "residential")
+      $("#pu31906 > div").eq(0).find("div").css("background-color","#F6F6F6")
+
+    else if (controller == "listings" && action == "commercial")
+      $("#pu31906 > div").eq(1).find("div").css("background-color","#F6F6F6")
+
+    else if (controller == "listings" && action == "transactions" && (page == "homes" || page == ""))
+      $("#pu31968 > div").eq(0).find("div").css("background-color","#F6F6F6")
+
+    else if (controller == "listings" && action == "transactions" && (page == "condos"))
+      $("#pu31968 > div").eq(1).find("div").css("background-color","#F6F6F6")
+
+    else if (controller == "listings" && action == "transactions" && (page == "commercial"))
+      $("#pu31968 > div").eq(2).find("div").css("background-color","#F6F6F6")
+
+    else if (page == "commercial")
+      $("#pu31906 > div").eq(3).find("div").css("background-color","#F6F6F6")
+
+    else if (page == 'index') {
       $("ul.MenuBar > li").eq(0).find("a").addClass("MuseMenuActive");
       
     }
@@ -272,9 +311,16 @@
       $("ul.MenuBar > li").eq(9).find("a").addClass("MuseMenuActive");
     }
 
-
+    <% flash.each do |key, value| %>
+        <%= add_gritter(value) %>
+    <% end %>
     
 	} catch(e) { Muse.Assert.fail('Error calling selector function:' + e); }});
 	</script>
+
+
+
+
+
    </body>
 </html>
