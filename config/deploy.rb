@@ -18,12 +18,14 @@ set :use_sudo, false
 set :scm, "git"
 set :repository, "git@github.com:slavajacobson/oulahen.git"
 set :branch, "master"
+set :dbname, "oulahen"
  
 default_run_options[:pty] = true
 ssh_options[:forward_agent] = true
  
 after "deploy", "deploy:cleanup" # keep only the last 5 releases
- 
+after "deploy:update_code", "deploy:migrate"
+
 namespace :deploy do
   %w[start stop restart].each do |command|
     desc "#{command} unicorn server"
@@ -68,3 +70,21 @@ namespace :deploy do
   end
 end
 
+
+namespace :db do
+  task :seed do
+    run "cd #{current_path} && bundle exec rake db:seed RAILS_ENV=#{rails_env}"
+  end
+  task :restart do
+    run 'echo "SELECT pg_terminate_backend(procpid) FROM pg_stat_activity WHERE datname=\'#{dbname}\';" | psql -U postgres'
+
+
+
+    run "cd #{current_path} && bundle exec rake db:migrate VERSION=0 RAILS_ENV=#{rails_env}"
+    run "cd #{current_path} && bundle exec rake db:migrate RAILS_ENV=#{rails_env}"
+    run "cd #{current_path} && bundle exec rake db:seed RAILS_ENV=#{rails_env}"
+  end
+
+
+
+end

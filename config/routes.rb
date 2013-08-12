@@ -1,4 +1,6 @@
 Oulahen::Application.routes.draw do
+  resources :slide_show_images
+
   resources :photos do
     collection do
       get 'manipulate', as: 'manipulate'
@@ -8,6 +10,7 @@ Oulahen::Application.routes.draw do
 
   resources :listings do
     collection do
+      get 'disable_feature', as: 'disable_feature'
       get 'residential'
       get 'commercial'
       get 'transactions(/:id)' => 'listings#transactions'
@@ -24,6 +27,7 @@ Oulahen::Application.routes.draw do
   root 'pages#index'
   match "/" => redirect("/pages/index"), via: [:get, :post]
 
+  match "/404", :to => "errors#not_found", via: [:get, :post]
 
   # namespace :admin do
   #   root to: "listings#index"

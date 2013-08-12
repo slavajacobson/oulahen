@@ -133,52 +133,36 @@
       <p><span id="u16042">&nbsp;416&#45;222&#45;1212</span></p>
      </div>
      <a class="nonblock nontext clearfix grpelem" id="u27269-4" href="/pages/contact-us-form.html"><!-- content --><p>team@oulahen.com</p></a>
+
+
+
+
+
+     <% @slide_show_images = SlideShowImage.all %>
+     <% @featured_listings = Listing.where(active: true, featured_listing: true) %>
+
+
      <div class="SlideShowWidget clearfix grpelem" id="slideshowu6475"><!-- group -->
-      <div class="popup_anchor" id="u6493popup">
-       <div class="SlideShowContentPanel clearfix" id="u6493"><!-- stack box -->
-        <div class="SSSlide clearfix grpelem" id="u15534"><!-- image -->
-         <div id="u15534_clip">
-          <img class="ImageInclude position_content" id="u15534_img" data-src="/images/1-team-altogether.jpg" src="/images/blank.gif" alt="" data-width="736" data-height="410"/>
-         </div>
-        </div>
-        <div class="SSSlide invi clearfix grpelem" id="u15562"><!-- image -->
-         <div id="u15562_clip">
-          <img class="ImageInclude position_content" id="u15562_img" data-src="/images/2-office-outside.jpg" src="/images/blank.gif" alt="" data-width="736" data-height="410"/>
-         </div>
-        </div>
-        <a class="nonblock nontext SSSlide invi clearfix grpelem" id="u23894" href="/pages/listings.html"><!-- image --><div id="u23894_clip"><img class="ImageInclude position_content" id="u23894_img" data-src="/images/3_featured-listing.jpg" src="/images/blank.gif" alt="" data-width="736" data-height="410"/></div></a>
-       </div>
+
+    <div id="myCarousel" class="carousel slide" style="width: 730px;height: 410px;">
+      <ol class="carousel-indicators">
+        <%= render @slide_show_images, indicator: true %>
+
+      </ol>
+      <!-- Carousel items -->
+      <div class="carousel-inner">
+        <%= render @slide_show_images %>
+        <%= render partial: 'listings/featured_listing_slide', collection: @featured_listings, as: 'featured_listing' %>
       </div>
-      <div class="popup_anchor" id="u6508popup">
-       <div class="SlideShowCaptionPanel clearfix" id="u6508"><!-- stack box -->
-        <div class="SSSlideCaption gradient clearfix grpelem" id="u15540-7"><!-- content -->
-         <p>&nbsp;</p>
-         <p id="u15540-3">#17&nbsp; Remax team in Canada</p>
-         <p id="u15540-5">#32&nbsp; worldwide with impressive results</p>
-        </div>
-        <div class="SSSlideCaption invi gradient clearfix grpelem" id="u15568-8"><!-- content -->
-         <p id="u15568">&nbsp;</p>
-         <p id="u15568-6"><span id="u15568-5">Come Visit Our Office at <br/>&nbsp; 4685 Yonge Street in the heart of North York!</span></p>
-        </div>
-        <a class="nonblock nontext SSSlideCaption invi gradient clearfix grpelem" id="u23900-7" href="/pages/listings.html"><!-- content --><p>&nbsp;</p><p><span id="u23900-2">FEATURED LISTING</span></p><p id="u23900-5"><span id="u23900-4">18 Franklin Avenue, Toronto</span></p></a>
-       </div>
-      </div>
-      <div class="popup_anchor" id="u6476-4popup">
-       <div class="SlideShowLabel SSSlideCount clearfix" id="u6476-4"><!-- content -->
-        <p>3 &#45; 3</p>
-       </div>
-      </div>
-      <div class="popup_anchor" id="u6489-4popup">
-       <div class="SSPreviousButton clearfix" id="u6489-4"><!-- content -->
-        <p>&lt;</p>
-       </div>
-      </div>
-      <div class="popup_anchor" id="u6492-4popup">
-       <div class="SSNextButton clearfix" id="u6492-4"><!-- content -->
-        <p>&gt;</p>
-       </div>
-      </div>
-     </div>
+      <!-- Carousel nav -->
+      <a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
+      <a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
+    </div>
+
+</div>
+
+
+
      <div class="clearfix grpelem" id="u6524-6"><!-- content -->
       <p id="u6524-2">Welcome to our site!</p>
       <p>&nbsp;</p>

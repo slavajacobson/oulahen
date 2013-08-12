@@ -1,4 +1,8 @@
 class PhotosController < ApplicationController
+  before_filter :authenticate_user!, only: [:new, :index, :edit, :update, :destroy, :manipulate] 
+
+
+
 	def index
 
 	end

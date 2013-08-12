@@ -1,0 +1,86 @@
+<% if defined?(indicator) %>
+
+        <li data-target="#myCarousel" data-slide-to="<%= slide_show_image_counter %>" class="<%= 'active' if slide_show_image_counter == 0 %>"></li>
+
+<% else %>
+
+<div class="<%= 'active' if slide_show_image_counter == 0 %> item">
+
+  <% unless slide_show_image.link_to.blank? %>
+    <a href="<%= slide_show_image.link_to %>">
+  <% end %>
+
+  <% if slide_show_image.is_video %>
+
+    <div id="player_<%= slide_show_image.video %>">
+    </div>
+
+
+
+
+
+
+    <script>
+    // 2. This code loads the IFrame Player API code asynchronously.
+    var tag = document.createElement('script');
+    tag.src = "http://www.youtube.com/player_api";
+    var firstScriptTag = document.getElementsByTagName('script')[0];
+    firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+    // 3. This function creates an <iframe> (and YouTube player)
+    //    after the API code downloads.
+    var ytplayer_<%= slide_show_image.video %>;
+    function onYouTubePlayerAPIReady() {
+        ytplayer_<%= slide_show_image.video %> = new YT.Player('player_<%= slide_show_image.video %>', {
+            width: '730',
+            height: '410',
+            videoId: '<%= slide_show_image.video %>',
+            playerVars: {
+                'rel': 0,
+                'showinfo': 0,
+                'modestbranding': 1,
+                'controls': 0
+
+            }
+            
+        });
+        // document.getElementById('resume').onclick = function() {
+        //     player.playVideo();
+        // };
+        // document.getElementById('pause').onclick = function() {
+        //     player.pauseVideo();
+        // };
+
+        ytplayer_<%= slide_show_image.video %>.addEventListener("onStateChange", "onytplayerStateChange");
+    }
+    function onytplayerStateChange(newState) {
+      console.log(newState['data']);
+      if (newState['data'] == 1) {
+        $("#myCarousel").carousel('pause');
+      }
+      if (newState['data'] == 0) {
+        $("#myCarousel").carousel('next');
+        $("#myCarousel").carousel('cycle');
+        //ytplayer.stopVideo();
+      }
+    }
+    </script>
+
+
+  <% else %>
+    <img src="<%= slide_show_image.image_url %>" alt="img" />
+  <% end %>
+
+  <% unless slide_show_image.link_to.blank? %>
+    </a>
+  <% end %>
+
+<% unless defined?(preview) %>
+  <div class="carousel-caption" id="u34596-7">
+    <p><%= slide_show_image.description_line1 %></p>
+    <p><%= slide_show_image.description_line2 %></p>
+  </div>
+<% end %>
+</div>
+
+<% end %>

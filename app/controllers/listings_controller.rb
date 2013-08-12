@@ -1,21 +1,29 @@
 class ListingsController < ApplicationController
   before_action :set_listing, only: [:show, :edit, :update, :destroy]
   layout 'admin', only: [:new, :index, :edit, :update, :destroy]
-  before_filter :authenticate_user!, only: [:new, :index, :edit, :update, :destroy] 
+  before_filter :authenticate_user!, only: [:new, :index, :edit, :update, :destroy, :disable_feature] 
   
+  def disable_feature
+    @listing = Listing.find(params[:listing_id])
+    @listing.featured_listing = false
+    @success = @listing.save
+
+
+  end
+
 
   def transactions
     if params[:id] == 'homes' || params[:id].blank?
-      @transactions = Listing.where(sold:true, category_id: 1, active: true).page(params[:page]).per(20)
+      @transactions = Listing.where(sold:true, category_id: 1, active: true).order("created_at DESC").page(params[:page]).per(20)
     elsif params[:id] == 'condos'
-      @transactions = Listing.where(sold:true, category_id: 2, active: true).page(params[:page]).per(20)
+      @transactions = Listing.where(sold:true, category_id: 2, active: true).order("created_at DESC").page(params[:page]).per(20)
     elsif params[:id] == 'commercial'
-      @transactions = Listing.where(sold:true, category_id: 3, active: true).page(params[:page]).per(20)
+      @transactions = Listing.where(sold:true, category_id: 3, active: true).order("created_at DESC").page(params[:page]).per(20)
     end
   end
 
   def residential
-    @listings = Listing.where(active:true,category_id:[1,2], sold:false).page(params[:page]).per(6)
+    @listings = Listing.where(active:true,category_id:[1,2], sold:false).order("created_at DESC").page(params[:page]).per(6)
     #debugger
     @header = "Residential Listings"
     
@@ -24,7 +32,7 @@ class ListingsController < ApplicationController
 
   def commercial
     @header = "Commercial Listings"
-    @listings = Listing.where(active:true,category_id:3, sold:false).page(params[:page]).per(6)
+    @listings = Listing.where(active:true,category_id:3, sold:false).order("created_at DESC").page(params[:page]).per(6)
     render 'site_listings'
   end
 

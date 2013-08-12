@@ -1,0 +1,90 @@
+<%= form_for(@slide_show_image) do |f| %>
+  <% if @slide_show_image.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@slide_show_image.errors.count, "error") %> prohibited this slide_show_image from being saved:</h2>
+
+      <ul>
+      <% @slide_show_image.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+
+<div class="well well-large">
+
+
+  <div class="row">
+    <div class="col-lg-6">
+      <div class="form-group">
+        <%= f.label :Enabled %><br>
+
+        <div class="make-switch" data-on-label="Yes" data-off-label="No" data-off="danger" data-on="success" style="margin-right:25px;">
+          <%= f.check_box :active %> 
+        </div> 
+      </div>
+
+      <div class="form-group">
+        <%= f.label :is_video %><br>
+
+        <div class="make-switch" data-on-label="Yes" data-off-label="No" data-off="danger" data-on="success" style="margin-right:25px;">
+          <%= f.check_box :is_video %> 
+        </div> 
+      </div>
+      <div class="form-group" id="video_field" style="<%= 'display:none' unless @slide_show_image.is_video %>">
+        <%= f.label :video %><br>
+        <%= f.text_field :video, style:'width:400px;', class: 'form-control input-small' %>
+      </div>
+
+      <div class="form-group" id="image_field" style="<%= 'display:none' if @slide_show_image.is_video %>">
+        <%= f.label :image %><br>
+        <%= f.file_field :image %>
+      </div>
+
+
+
+      <div class="form-group" id="link_to_field" style="<%= 'display:none' if @slide_show_image.is_video %>">
+        <%= f.label :link_to_address %><br>
+        <%= f.text_field :link_to, style:'width:400px;', class: 'form-control input-small'  %>
+      </div>
+
+      <div class="form-group">
+        <%= f.label :description_line1 %><br>
+        <%= f.text_field :description_line1, style:'width:700px;', class: 'form-control input-small' %>
+      </div>
+      <div class="form-group">
+        <%= f.label :description_line2 %><br>
+        <%= f.text_field :description_line2, style:'width:700px;', class: 'form-control input-small' %>
+      </div>
+      <div class="actions">
+        <%= f.submit @slide_show_image.new_record? ? 'Create' : 'Update' , class:'btn btn-primary' %> <%= link_to 'Back', slide_show_images_path, class:'btn btn-warning'  %>
+      </div>
+
+    </div>
+  </div>
+</div>
+<% end %>
+
+
+<script>
+$(document).ready(function() {
+  $("input[name='slide_show_image[is_video]']").change(function(){
+    if ($("input[name='slide_show_image[is_video]']").is(":checked")) {
+      $("#video_field").show();
+      $("#image_field").hide();
+      $("#link_to_field").hide();
+
+    }
+    else {
+      $("#video_field").hide();
+      $("#image_field").show();
+      $("#link_to_field").show();
+    }
+  });
+
+
+});
+
+
+</script>

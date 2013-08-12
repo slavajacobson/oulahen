@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130808161220) do
+ActiveRecord::Schema.define(version: 20130810192137) do
 
   create_table "categories", force: true do |t|
     t.string   "name"
@@ -80,6 +80,18 @@ ActiveRecord::Schema.define(version: 20130808161220) do
     t.text     "description"
     t.boolean  "main_photo",  default: false
     t.integer  "listing_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "slide_show_images", force: true do |t|
+    t.string   "image"
+    t.string   "video"
+    t.string   "description_line1"
+    t.string   "description_line2"
+    t.string   "link_to"
+    t.boolean  "active",            default: true
+    t.boolean  "is_video",          default: false
     t.datetime "created_at"
     t.datetime "updated_at"
   end

@@ -23,3 +23,4 @@
 //= require mortgage_calculator
 //= require landtransfer_calculator
 //= require gritter
+//= require bootstrap-slideshow.min

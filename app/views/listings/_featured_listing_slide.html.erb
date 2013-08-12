@@ -1,0 +1,12 @@
+<div class="item">
+
+  <a href="<%= listing_path(featured_listing) %>">
+    <img src="<%= featured_listing.photos.where(main_photo:true).first.image_url(:slide) %>" alt="img" />
+  </a>
+
+  <div class="carousel-caption" id="u34596-7">
+    <p>FEATURED LISTING</p>
+    <p><%= featured_listing.street_number %> <%= featured_listing.address %>, <%= "Unit #{featured_listing.unit_number}," unless featured_listing.unit_number.blank? %> <%= featured_listing.city_province %></p>
+  </div>
+
+</div>

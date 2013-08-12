@@ -1,0 +1,43 @@
+
+
+<% if @slide_show_image.is_video %>
+
+	<p>
+	  <strong>Enabled:</strong> <%= @slide_show_image.active ? "YES" : "NO" %>
+	</p>
+	<p>
+	  <strong>Video:</strong>
+	</p>
+
+	<p>
+		<%= render 'slide_show_images/slide_show_image', slide_show_image: @slide_show_image, slide_show_image_counter: 1, preview: true %>
+	</p>
+<% else %>
+	<p>
+		<strong>Image:</strong>
+	</p>
+	<p>
+	  
+	  <%= image_tag @slide_show_image.image_url %>
+	</p>
+
+<% end %>
+
+<p>
+  <strong>Description Line 1:</strong>
+  <%= @slide_show_image.description_line1 %>
+</p>
+
+<p>
+	<strong>Description Line 2:</strong>
+  <%= @slide_show_image.description_line2 %>
+</p>
+
+
+<p>
+  <strong>Link to:</strong>
+  <%= @slide_show_image.link_to %>
+</p>
+
+<%= link_to 'Edit', edit_slide_show_image_path(@slide_show_image), class:'btn btn-primary' %>
+<%= link_to 'Back', slide_show_images_path, class:'btn btn-warning' %>

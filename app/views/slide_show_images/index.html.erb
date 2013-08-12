@@ -1,0 +1,66 @@
+<h1>Manage Slideshow</h1>
+
+
+
+<table class="table table-striped table-hover">
+  <thead>
+    <tr>
+      <th style="min-width:700px">Description</th>
+      <th>Action</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @slide_show_images.each do |slide_show_image| %>
+      <tr>
+        <td><%= link_to "#{slide_show_image.description_line1} #{slide_show_image.description_line2}", slide_show_image %></td>
+        <td>
+          <%= link_to 'Edit', edit_slide_show_image_path(slide_show_image), class: 'btn btn-primary' %>
+          <%= link_to 'Remove', slide_show_image, method: :delete, data: { confirm: 'Are you sure?' }, class:'btn btn-danger' %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+
+<h3>Featured listings:</h3>
+
+
+
+<% if @listings.blank? %>
+
+  <div class="alert alert-info">
+    There are no featured listings.
+
+  </div>
+<% else %>
+
+  <table class="table table-striped table-hover">
+    <thead>
+      <tr>
+        <th>Address</th>
+        <th style="width:220px;">Take Action</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @listings.each do |listing| %>
+        <tr id="listing_<%= listing.id %>">
+          <td>
+            <%= link_to listing do %>
+              <%= listing.street_number %> <%= listing.address %>, <%= "Unit #{listing.unit_number}," unless listing.unit_number.blank? %> <%= listing.city_province %>
+            <% end %>
+          </td>
+          <td>
+            <%= button_to 'Remove from Featured Listings', disable_feature_listings_path(listing_id:listing.id), method: 'get', remote: true, class:'btn btn-primary btn-small' %>
+          </td>
+        </tr>
+      <% end %>
+
+
+
+    </tbody>
+  </table>
+
+<% end %>

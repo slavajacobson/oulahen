@@ -161,7 +161,7 @@
       <% end %>
       <% unless @listing.maintenance_fee.blank? %>
         <div>
-          <label>Maintenance fee:</label> <span><%= "#{@listing.maintenance_fee}" %></span>
+          <label>Maintenance fee:</label> <span>$<%= "#{@listing.maintenance_fee}" %></span>
         </div>
       <% end %>
       <% unless @listing.lot_frontage.blank? || @listing.lot_depth.blank? %>
