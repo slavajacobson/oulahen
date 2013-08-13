@@ -21,7 +21,8 @@ set :branch, "master"
 set :dbname, "oulahen"
  
 default_run_options[:pty] = true
-ssh_options[:forward_agent] = true
+#ssh_options[:keys] = ['C:\Users\Slava\.ssh\id_rsa.pub']
+#ssh_options[:forward_agent] = true
  
 after "deploy", "deploy:cleanup" # keep only the last 5 releases
 after "deploy:update_code", "deploy:migrate"
@@ -62,7 +63,7 @@ namespace :deploy do
       exit
     end
   end
-  before "deploy", "deploy:check_revision"
+  #before "deploy", "deploy:check_revision"
 
 
   after 'deploy:update_code' do
