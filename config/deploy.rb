@@ -21,8 +21,8 @@ set :branch, "master"
 set :dbname, "oulahen"
  
 default_run_options[:pty] = true
-#ssh_options[:keys] = ['C:\Users\Slava\.ssh\id_rsa.pub']
-#ssh_options[:forward_agent] = true
+ssh_options[:keys] = %w('~\.ssh\id_rsa.pub')
+ssh_options[:forward_agent] = true
  
 after "deploy", "deploy:cleanup" # keep only the last 5 releases
 after "deploy:update_code", "deploy:migrate"
@@ -57,13 +57,13 @@ namespace :deploy do
  
   desc "Make sure local git is in sync with remote."
   task :check_revision, roles: :web do
-    unless `git rev-parse HEAD` == `git rev-parse github/master`
-      puts "WARNING: HEAD is not the same as github/master"
+    unless `git rev-parse HEAD` == `git rev-parse master`
+      puts "WARNING: HEAD is not the same as master"
       puts "Run `git push` to sync changes."
       exit
     end
   end
-  #before "deploy", "deploy:check_revision"
+  before "deploy", "deploy:check_revision"
 
 
   after 'deploy:update_code' do
