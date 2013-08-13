@@ -7,7 +7,7 @@ ul.pagination {
 }
 ul.pagination li {
 	display: inline;
-	border: 1px solid #E9E9E9;
+	border: 2px solid #EAF3FA;
 	padding: 7px 2px;
 
 }
@@ -108,14 +108,21 @@ ul.pagination li.active a {
   position: relative;
 }
 
-
+#u31908:hover {
+	border-color: #EAF3FA;
+	background-color: #EAF3FA;
+	width: 98px;
+	min-height: 0px;
+	margin: 0px -10000px 0px 0px;
+}
 #u31908
 {
 	z-index: 586;
 	width: 96px;
-	border-width: 1px;
+	border-width: 2px;
 	border-style: solid;
-	border-color: #E9E9E9;
+	border-color: #EAF3FA;
+	border-radius: 10px 10px 0px 0px;
 	background-color: #FFFFFF;
 	padding-bottom: 2px;
 	position: relative;
@@ -124,8 +131,8 @@ ul.pagination li.active a {
 
 #u31908.MuseLinkActive
 {
-	border-color: #E9E9E9;
-	background-color: #F6F6F6;
+	border-color: #EAF3FA;
+	background-color: #EAF3FA;
 	width: 96px;
 	min-height: 0px;
 	margin: 0px -10000px 0px 0px;
@@ -160,9 +167,10 @@ ul.pagination li.active a {
 {
 	z-index: 592;
 	width: 98px;
-	border-width: 1px;
+	border-width: 2px;
 	border-style: solid;
-	border-color: #E9E9E9;
+	border-radius:10px 10px 0px 0px;
+	border-color: #EAF3FA;
 	background-color: #FFFFFF;
 	padding-bottom: 2px;
 	position: relative;
@@ -171,8 +179,8 @@ ul.pagination li.active a {
 
 #u31916:hover
 {
-	border-color: #E9E9E9;
-	background-color: #F6F6F6;
+	border-color: #EAF3FA;
+	background-color: #EAF3FA;
 	width: 98px;
 	min-height: 0px;
 	margin: 0px -10000px 0px 0px;
@@ -207,9 +215,10 @@ ul.pagination li.active a {
 {
 	z-index: 604;
 	width: 110px;
-	border-width: 1px;
+	border-width: 2px;
 	border-style: solid;
-	border-color: #E9E9E9;
+	border-radius:10px 10px 0px 0px;
+	border-color: #EAF3FA;
 	background-color: #FFFFFF;
 	padding-bottom: 2px;
 	position: relative;
@@ -218,8 +227,8 @@ ul.pagination li.active a {
 
 #u31920:hover
 {
-	border-color: #E9E9E9;
-	background-color: #F6F6F6;
+	border-color: #EAF3FA;
+	background-color: #EAF3FA;
 	width: 110px;
 	min-height: 0px;
 	margin: 0px -10000px 0px 0px;
@@ -254,9 +263,10 @@ ul.pagination li.active a {
 {
 	z-index: 598;
 	width: 184px;
-	border-width: 1px;
+	border-width: 2px;
 	border-style: solid;
-	border-color: #E9E9E9;
+	border-radius:10px 10px 0px 0px;
+	border-color: #EAF3FA;
 	background-color: #FFFFFF;
 	padding-bottom: 2px;
 	position: relative;
@@ -265,8 +275,8 @@ ul.pagination li.active a {
 
 #u31923:hover
 {
-	border-color: #E9E9E9;
-	background-color: #F6F6F6;
+	border-color: #EAF3FA;
+	background-color: #EAF3FA;
 	width: 184px;
 	min-height: 0px;
 	margin: 0px -10000px 0px 0px;

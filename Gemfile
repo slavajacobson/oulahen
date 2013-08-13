@@ -42,10 +42,11 @@ group :doc do
 end
 
 # Use ActiveModel has_secure_password
-# gem 'bcrypt-ruby', '~> 3.0.0'
+#gem 'bcrypt-ruby', '~> 3.0.0'
+gem "bcrypt-ruby", :require => "bcrypt"
 
 # Use unicorn as the app server
-gem 'unicorn'
+gem 'unicorn', group: :production, platform: 'ruby'
 
 # Use Capistrano for deployment
 gem 'capistrano', group: :development
@@ -53,7 +54,7 @@ gem 'capistrano', group: :development
 gem 'high_voltage'
 gem 'devise'
 gem 'carrierwave'
-gem "rmagick"
+gem "rmagick", platform: 'ruby'
 gem "gritter"
 # Use debugger
 gem 'debugger', group: [:development, :test]

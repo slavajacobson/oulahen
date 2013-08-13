@@ -209,6 +209,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  bcrypt-ruby
   capistrano
   carrierwave
   coffee-rails (~> 4.0.0)

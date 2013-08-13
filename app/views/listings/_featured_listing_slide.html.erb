@@ -1,7 +1,15 @@
-<div class="item">
+<div class="item <%= 'active' if (featured_listing_counter == 0 && active_set) %>">
+	<% @image = featured_listing.photos.where(main_photo:true).first %>
+
 
   <a href="<%= listing_path(featured_listing) %>">
-    <img src="<%= featured_listing.photos.where(main_photo:true).first.image_url(:slide) %>" alt="img" />
+  	<% unless @image.blank? %>
+    	<img src="<%= featured_listing.photos.where(main_photo:true).first.image_url(:slide) %>" alt="img" />
+    <% else %>
+    	<div style="width:736; height:410px; text-align: center;line-height: 252px;font-size: 38px;">
+    		No Photo
+    	</div>
+    <% end %>
   </a>
 
   <div class="carousel-caption" id="u34596-7">
