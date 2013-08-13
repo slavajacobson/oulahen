@@ -20,6 +20,8 @@ set :repository, "git@github.com:slavajacobson/oulahen.git"
 set :branch, "master"
 set :dbname, "oulahen"
  
+set :shared_children, shared_children + %w{public/uploads}
+
 default_run_options[:pty] = true
 ssh_options[:keys] = %w('~\.ssh\id_rsa.pub')
 ssh_options[:forward_agent] = true
