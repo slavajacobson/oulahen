@@ -1,6 +1,6 @@
 <% if defined?(indicator) %>
-
-        <li data-target="#myCarousel" data-slide-to="<%= slide_show_image_counter %>" class="<%= 'active' if slide_show_image_counter == 0 %>"></li>
+  <% add_to_counter = counter_add > 0 ? counter_add : 0 %>      
+  <li data-target="#myCarousel" data-slide-to="<%= slide_show_image_counter + add_to_counter %>" class="<%= 'active' if (slide_show_image_counter + add_to_counter) == 0 %>"></li>
 
 <% else %>
 

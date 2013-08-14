@@ -112,13 +112,14 @@
 
     <div id="myCarousel" class="carousel slide" style="width: 730px;height: 410px;">
       <ol class="carousel-indicators">
-        <%= render(@slide_show_images, indicator: true) if @rmagick %>
-
+        <%= render(@slide_show_images, indicator: true, counter_add: 0) if @rmagick %>
+        <%= render(partial: 'slide_show_images/slide_show_image', :locals => { indicator: true, counter_add: @slide_show_images.length }, collection: @featured_listings, as: 'slide_show_image') if @rmagick %>
       </ol>
       <!-- Carousel items -->
       <div class="carousel-inner">
         <% if @rmagick %>
           <%= render @slide_show_images %>
+
           <%= render partial: 'listings/featured_listing_slide', :locals => { active_set: (@slide_show_images.length == 0 ? true : false) }, collection: @featured_listings, as: 'featured_listing' %>
         <% else %>
           <li style="margin-left: 300px; margin-top: 150px; font-size: 25px;">Install RMagick</li>
