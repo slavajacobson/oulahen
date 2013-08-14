@@ -276,7 +276,6 @@ ul.pagination li.active a {
 {
 	border-color: #EAF3FA;
 	background-color: #EAF3FA;
-	width: 184px;
 	min-height: 0px;
 	margin: 0px -10000px 0px 0px;
 }
