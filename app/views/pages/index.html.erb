@@ -4,13 +4,54 @@
    <div class="position_content" id="page_position_content">
     <div class="clearfix colelem" id="ppu6474"><!-- group -->
      <div class="grpelem" id="pu6474"><!-- inclusion -->
+      
+
       <div id="u6474"><!-- simple frame --></div>
+
+
+
+
+
       <div class="clearfix" id="pu26985"><!-- group -->
        <div class="clearfix grpelem" id="u26985"><!-- column -->
         <div class="clearfix colelem" id="u6470-6"><!-- content -->
          <p>HAVE A QUESTION?<br/>WE'RE HERE TO HELP!</p>
         </div>
-        <div class="colelem" id="u6571"><!-- simple frame --></div>
+        <div class="colelem" id="u6571">
+
+    <%= form_tag contact_us_sendmail_path, method: 'post', class:"form-grp clearfix grpelem", id:'widgetu6528' do %><!-- group -->
+
+      <div class="fld-grp clearfix grpelem" id="widgetu6543" data-required="true"><!-- group -->
+       <label class="fld-label actAsDiv clearfix grpelem" id="u6546-4" for="widgetu6543_input"><!-- content -->
+        <span class="actAsPara">Name:</span>
+       </label>
+       <span class="fld-input NoWrap actAsDiv clearfix grpelem" id="u6547-4"><!-- content --><input class="wrapped-input" type="text" spellcheck="false" id="widgetu6543_input" name="Name" tabindex="1"/><label class="wrapped-input fld-prompt" id="widgetu6543_prompt" for="widgetu6543_input"><span class="actAsPara">Your Name</span></label></span>
+      </div>
+      <div class="fld-grp clearfix grpelem" id="widgetu6534" data-required="true" data-type="email"><!-- group -->
+       <label class="fld-label actAsDiv clearfix grpelem" id="u6536-4" for="widgetu6534_input"><!-- content -->
+        <span class="actAsPara">Email:</span>
+       </label>
+       <span class="fld-input NoWrap actAsDiv clearfix grpelem" id="u6538-4"><!-- content --><input class="wrapped-input" type="text" spellcheck="false" id="widgetu6534_input" name="Email" tabindex="2"/><label class="wrapped-input fld-prompt" id="widgetu6534_prompt" for="widgetu6534_input"><span class="actAsPara">name@email.com</span></label></span>
+      </div>
+      <div class="clearfix grpelem" id="u6540-4"><!-- content -->
+       <p>Submitting Form...</p>
+      </div>
+      <div class="clearfix grpelem" id="u6541-4"><!-- content -->
+       <p>The server encountered an error.</p>
+      </div>
+      <div class="clearfix grpelem" id="u6542-4"><!-- content -->
+       <p>Form received.</p>
+      </div>
+      <input class="submit-btn NoWrap grpelem" id="u6539-17" type="submit" value="" tabindex="4"/><!-- state-based BG images -->
+      <div class="fld-grp clearfix grpelem" id="widgetu6529" data-required="false"><!-- group -->
+       <label class="fld-label actAsDiv clearfix grpelem" id="u6533-4" for="widgetu6529_input"><!-- content -->
+        <span class="actAsPara">Message:</span>
+       </label>
+       <span class="fld-textarea actAsDiv clearfix grpelem" id="u6531-4"><!-- content --><textarea class="wrapped-input" rows="9" id="widgetu6529_input" name="Message" tabindex="3"></textarea><label class="wrapped-input fld-prompt" id="widgetu6529_prompt" for="widgetu6529_input"><span class="actAsPara">Add a brief message...</span></label></span>
+      </div>
+     <% end %>
+
+     <!-- simple frame --></div>
        </div>
       </div>
      </div>
@@ -88,7 +129,7 @@
       <a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
     </div>
 
-</div>
+    </div>
 
 
 
@@ -166,39 +207,11 @@
      </div>
     </div>
     <div class="clearfix colelem" id="pwidgetu6528"><!-- group -->
-     <form class="form-grp clearfix grpelem" id="widgetu6528" method="post" enctype="multipart/form-data" action="scripts/form-u6528.php"><!-- group -->
-      <div class="fld-grp clearfix grpelem" id="widgetu6543" data-required="true"><!-- group -->
-       <label class="fld-label actAsDiv clearfix grpelem" id="u6546-4" for="widgetu6543_input"><!-- content -->
-        <span class="actAsPara">Name:</span>
-       </label>
-       <span class="fld-input NoWrap actAsDiv clearfix grpelem" id="u6547-4"><!-- content --><input class="wrapped-input" type="text" spellcheck="false" id="widgetu6543_input" name="custom_U6543" tabindex="1"/><label class="wrapped-input fld-prompt" id="widgetu6543_prompt" for="widgetu6543_input"><span class="actAsPara">Your Name</span></label></span>
-      </div>
-      <div class="fld-grp clearfix grpelem" id="widgetu6534" data-required="true" data-type="email"><!-- group -->
-       <label class="fld-label actAsDiv clearfix grpelem" id="u6536-4" for="widgetu6534_input"><!-- content -->
-        <span class="actAsPara">Email:</span>
-       </label>
-       <span class="fld-input NoWrap actAsDiv clearfix grpelem" id="u6538-4"><!-- content --><input class="wrapped-input" type="text" spellcheck="false" id="widgetu6534_input" name="Email" tabindex="2"/><label class="wrapped-input fld-prompt" id="widgetu6534_prompt" for="widgetu6534_input"><span class="actAsPara">name@email.com</span></label></span>
-      </div>
-      <div class="clearfix grpelem" id="u6540-4"><!-- content -->
-       <p>Submitting Form...</p>
-      </div>
-      <div class="clearfix grpelem" id="u6541-4"><!-- content -->
-       <p>The server encountered an error.</p>
-      </div>
-      <div class="clearfix grpelem" id="u6542-4"><!-- content -->
-       <p>Form received.</p>
-      </div>
-      <input class="submit-btn NoWrap grpelem" id="u6539-17" type="submit" value="" tabindex="4"/><!-- state-based BG images -->
-      <div class="fld-grp clearfix grpelem" id="widgetu6529" data-required="false"><!-- group -->
-       <label class="fld-label actAsDiv clearfix grpelem" id="u6533-4" for="widgetu6529_input"><!-- content -->
-        <span class="actAsPara">Message:</span>
-       </label>
-       <span class="fld-textarea actAsDiv clearfix grpelem" id="u6531-4"><!-- content --><textarea class="wrapped-input" id="widgetu6529_input" name="custom_U6529" tabindex="3"></textarea><label class="wrapped-input fld-prompt" id="widgetu6529_prompt" for="widgetu6529_input"><span class="actAsPara">Add a brief message...</span></label></span>
-      </div>
-     </form>
+     
+  
      <div class="clearfix grpelem" id="u26983"><!-- group -->
       <div class="clearfix grpelem" id="u26984-4"><!-- content -->
-       <p>BLOG FEED GOES HERE</p>
+        <script type="text/javascript" src="http://output92.rssinclude.com/output?type=js&amp;id=675736&amp;hash=42ede2a9acf9c446fe30e5acb5bf2c3d"></script>
       </div>
      </div>
      <div class="grpelem" id="u6522"><!-- custom html -->
@@ -210,10 +223,10 @@
   js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
-<div class="fb-like-box" data-href="https://www.facebook.com/oulahenteam" data-width="212" data-height="345" data-show-faces="true" data-stream="true" data-show-border="true" data-header="true"></div>
+<div class="fb-like-box" data-href="https://www.facebook.com/oulahenteam" data-width="212" data-height="454" data-show-faces="true" data-stream="true" data-show-border="true" data-header="true"></div>
 </div>
      <div class="grpelem" id="u6519"><!-- custom html -->
-      <a class="twitter-timeline"  href="https://twitter.com/Oulahen"  data-widget-id="319566325435473920">Tweets by @Oulahen</a>
+      <a class="twitter-timeline"  width="213" height="454" href="https://twitter.com/Oulahen"  data-widget-id="319566325435473920">Tweets by @Oulahen</a>
 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 
 

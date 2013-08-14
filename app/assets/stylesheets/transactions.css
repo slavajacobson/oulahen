@@ -139,7 +139,6 @@
 	font-family: Geneva, Verdana, Lucida Sans, Lucida Sans Unicode, sans-serif;
 	font-weight: bold;
 	margin-left: 20px;
-	margin-top: 22px;
 	position: relative;
 }
 
@@ -177,19 +176,20 @@
 {
 	z-index: 230;
 	width: 96px;
-	border-width: 1px;
+	border-width: 2px;
 	border-style: solid;
-	border-color: #E9E9E9;
+	border-color: rgb(234, 243, 250);
 	background-color: #FFFFFF;
 	padding-bottom: 2px;
 	position: relative;
 	margin-right: -10000px;
+	border-radius:10px 10px 0px 0px;
 }
 
 #u31969:hover
 {
-	border-color: #E9E9E9;
-	background-color: #F6F6F6;
+	border-color: rgb(234, 243, 250);
+	background-color: rgb(234, 243, 250);
 	width: 96px;
 	min-height: 0px;
 	margin: 0px -10000px 0px 0px;
@@ -224,19 +224,20 @@
 {
 	z-index: 236;
 	width: 98px;
-	border-width: 1px;
+	border-width: 2px;
 	border-style: solid;
-	border-color: #E9E9E9;
+	border-color: rgb(234, 243, 250);
 	background-color: #FFFFFF;
 	padding-bottom: 2px;
 	position: relative;
 	margin-right: -10000px;
+	border-radius:10px 10px 0px 0px;
 }
 
 #u31972:hover
 {
-	border-color: #E9E9E9;
-	background-color: #F6F6F6;
+	border-color: rgb(234, 243, 250);
+	background-color: rgb(234, 243, 250);
 	width: 98px;
 	min-height: 0px;
 	margin: 0px -10000px 0px 0px;
@@ -271,19 +272,20 @@
 {
 	z-index: 242;
 	width: 110px;
-	border-width: 1px;
+	border-width: 2px;
 	border-style: solid;
-	border-color: #E9E9E9;
+	border-color: rgb(234, 243, 250);
 	background-color: #FFFFFF;
+	border-radius:10px 10px 0px 0px;
 	padding-bottom: 2px;
 	position: relative;
 	margin-right: -10000px;
 }
 
-#u31976.MuseLinkActive
+#u31976:hover
 {
-	border-color: #E9E9E9;
-	background-color: #F6F6F6;
+	border-color: rgb(234, 243, 250);
+	background-color: rgb(234, 243, 250);
 	width: 110px;
 	min-height: 0px;
 	margin: 0px -10000px 0px 0px;

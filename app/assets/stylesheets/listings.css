@@ -14,7 +14,7 @@ ul.pagination li {
 .pagination_container {
 	width: 920px;
 	margin: 0 auto;
-	margin-top: 45px;
+	margin-top: 10px;
 	margin-bottom: 15px;
 	float: right;
 	margin-right: 20px;
@@ -83,7 +83,6 @@ ul.pagination li.active a {
   font-family: Geneva, Verdana, Lucida Sans, Lucida Sans Unicode, sans-serif;
   font-weight: bold;
   margin-left: 20px;
-  margin-top: 22px;
   position: relative;
   top:0px;
   margin-bottom: 0px;

@@ -61,6 +61,7 @@ html
 	position: absolute;
 	top: 0px;
 	bottom: 0px;
+	height:454px;
 }
 
 #pu26985
@@ -1773,7 +1774,7 @@ html
 	height: 273px;
 	position: relative;
 	margin-right: -10000px;
-	margin-top: 63px;
+	margin-top: 20px;
 	left: -1px;
 }
 
@@ -1838,9 +1839,7 @@ html
 	z-index: 269;
 	width: 184px;
 	min-height: 14px;
-	border-width: 1px;
-	border-style: solid;
-	border-color: #C4C4C4;
+	border:none;
 	background-color: #F2F2F2;
 	padding: 6px;
 	line-height: 1;
@@ -1872,7 +1871,7 @@ html
 
 #widgetu6543.focus-st #u6547-4
 {
-	border-color: #6B6B6B;
+	border:none;
 	background-color: #FFFFFF;
 	padding-top: 6px;
 	padding-bottom: 6px;
@@ -1960,9 +1959,7 @@ html
 	z-index: 278;
 	width: 184px;
 	min-height: 14px;
-	border-width: 1px;
-	border-style: solid;
-	border-color: #C4C4C4;
+	border:none;
 	background-color: #F2F2F2;
 	padding: 6px;
 	line-height: 1;
@@ -1994,7 +1991,7 @@ html
 
 #widgetu6534.focus-st #u6538-4
 {
-	border-color: #6B6B6B;
+	border:none;
 	background-color: #FFFFFF;
 	padding-top: 6px;
 	padding-bottom: 6px;
@@ -2056,8 +2053,8 @@ html
 	font-family: Geneva, Verdana, Lucida Sans, Lucida Sans Unicode, sans-serif;
 	position: relative;
 	margin-right: -10000px;
-	margin-top: 240px;
-	left: 141px;
+	margin-top: 352px;
+	left: 105px;
 }
 
 #widgetu6528.frm-sub-st #u6540-4 p
@@ -2122,7 +2119,7 @@ html
 	position: relative;
 	margin-right: -10000px;
 	margin-top: 240px;
-	left: 141px;
+	left: 110px;
 }
 
 #widgetu6528.frm-sub-st #u6540-4,#widgetu6528.frm-subm-ok-st #u6542-4
@@ -2146,21 +2143,21 @@ html
 	z-index: 294;
 	min-height: 31px;
 	width: 131px;
-	background: url("/assets/u6539-17.png") no-repeat 0px 0px;
+	background: url("../images/u34669-17.png") no-repeat 0px 0px;
 	position: relative;
 	margin-right: -10000px;
-	margin-top: 234px;
+	margin-top: 350px;
 	left: 1px;
 }
 
 #u6539-17:hover
 {
-	background: url("../images/u6539-17-r.png") no-repeat 0px 0px;
+	background: url("../images/u34669-17-r.png") no-repeat 0px 0px;
 }
 
 #u6539-17:active
 {
-	background: url("../images/u6539-17-m.png") no-repeat 0px 0px;
+	background: url("../images/u34669-17-m.png") no-repeat 0px 0px;
 }
 
 #widgetu6528.frm-sub-st #u6539-17
@@ -2243,7 +2240,7 @@ html
 {
 	z-index: 316;
 	width: 184px;
-	min-height: 68px;
+	min-height: 192px;
 	border-width: 1px;
 	border-style: solid;
 	border-color: #C4C4C4;
@@ -2271,20 +2268,21 @@ html
 	background-color: #FFFFFF;
 	padding-top: 6px;
 	padding-bottom: 6px;
-	min-height: 68px;
+	min-height: 192px;
 	width: 184px;
 	margin: 19px -10000px -1px 0px;
 }
 
 #widgetu6529.focus-st #u6531-4
 {
-	border-color: #6B6B6B;
+	border:none;
 	background-color: #FFFFFF;
 	padding-top: 6px;
 	padding-bottom: 6px;
-	min-height: 68px;
+	min-height: 192px;
 	width: 184px;
 	margin: 19px -10000px -1px 0px;
+
 }
 
 #widgetu6529.fld-err-st #u6531-4
@@ -2293,7 +2291,7 @@ html
 	background-color: #FFFFFF;
 	padding-top: 6px;
 	padding-bottom: 6px;
-	min-height: 68px;
+	min-height: 192px;
 	width: 184px;
 	margin: 19px -10000px -1px 0px;
 }
@@ -2355,17 +2353,19 @@ html
 	z-index: 383;
 	width: 210px;
 	border-width: 1px;
-	border-style: solid;
+	border-style: none;
 	border-color: #000000;
 	background-color: #FFFFFF;
-	padding-bottom: 127px;
+
 	position: relative;
 	margin-right: -10000px;
 	left: 228px;
+		height:454px;
 }
 
 #u26984-4
 {
+	border:none;
 	z-index: 384;
 	width: 167px;
 	min-height: 83px;
@@ -2376,8 +2376,9 @@ html
 	font-weight: bold;
 	position: relative;
 	margin-right: -10000px;
-	margin-top: 134px;
-	left: 22px;
+	margin-top: 1px;
+	left: -2px;
+		height:454px;
 }
 
 #u6522
@@ -2392,13 +2393,14 @@ html
 	position: relative;
 	margin-right: -10000px;
 	left: 464px;
+	height:454px;
 }
 
 #u6519
 {
 	z-index: 329;
 	width: 212px;
-	min-height: 344px;
+	min-height: 454px;
 	border-style: none;
 	border-color: transparent;
 	background-color: transparent;

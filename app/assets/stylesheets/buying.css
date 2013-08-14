@@ -2,7 +2,6 @@
 {
 	width: 0.01px;
 	margin-left: 20px;
-	margin-top: 20px;
 	position: relative;
 }
 
@@ -70,9 +69,10 @@
 {
 	z-index: 409;
 	width: 69px;
-	border-width: 1px;
+	border-width: 2px;
+	border-radius:10px 10px 0px 0px;
 	border-style: solid;
-	border-color: #E9E9E9;
+	border-color: #EAF3FA;
 	background-color: #FFFFFF;
 	padding-bottom: 2px;
 	position: relative;
@@ -108,10 +108,11 @@
 {
 	z-index: 421;
 	width: 145px;
-	border-width: 1px;
+	border-width: 2px;
 	border-style: solid;
-	border-color: #E9E9E9;
+	border-color: #EAF3FA;
 	background-color: #FFFFFF;
+	border-radius:10px 10px 0px 0px;
 	padding-bottom: 4px;
 	position: relative;
 	margin-right: -10000px;
@@ -119,7 +120,7 @@
 
 #u31871:hover
 {
-	background-color: #F6F6F6;
+	background-color: #EAF3FA;
 	width: 145px;
 	min-height: 0px;
 	margin: 0px -10000px 0px 0px;
@@ -154,19 +155,20 @@
 {
 	z-index: 415;
 	width: 69px;
-	border-width: 1px;
+	border-width: 2px;
 	border-style: solid;
 	border-color: #E9E9E9;
 	background-color: #FFFFFF;
 	padding-bottom: 2px;
 	position: relative;
 	margin-right: -10000px;
+	border-radius:10px 10px 0px 0px;
 }
 
 #u31874:hover,#u31870.MuseLinkActive
 {
-	border-color: #E9E9E9;
-	background-color: #F6F6F6;
+	border-color: #EAF3FA;
+	background-color: #EAF3FA;
 	width: 69px;
 	min-height: 0px;
 	margin: 0px -10000px 0px 0px;
