@@ -163,18 +163,17 @@
     var helpful_tools = ['land-transfer-calculator', 'helpful-tools', 'mortgage-calculator'];
         
     var stats = ['stats-condos', 'stats'];
-    alert("3");
-    alert("<%= params[:id] %>");
+
     var page = "<%= params[:id] %>";
-    alert("7");
+  
     var action = "<%= params[:action] %>";
-        alert("8");
+        
     var controller = "<%= params[:controller] %>";
-       alert("9");
+       
     if (page.indexOf(".") > -1)
       page = page.substring(0,page.indexOf("."));
 
-    alert("10");
+   
     if (controller == "listings" && action == "residential")
       $("#pu31906 > div").eq(0).find("div").css("background-color","#EAF3FA")
 
