@@ -153,22 +153,23 @@
 		Muse.Utils.transformMarkupToFixBrowserProblems();/* body */
 
 
-    alert("1");
+   
     var about_us = ['ajay-aheer', 'mark-oulahen', 'andreia','awards', 'norah-oulahen', 'carly', 'charitable-work', 'paul-oulahen', 'claire', 'testimonials', 'thanh-nguyen', 'in-the-news ', 'jeff-oulahen', 'victor', 'vinay-lakhani','about-us'];
-       alert("2");
+  
     var contact_us = ['contact-us-form', 'contact-us'];
-        alert("3");
+
     var condos_profiles = ['meridian', 'monet', 'bravo-boutique', 'chicago', 'marquis', 'pulse-towers', 'dia-condos', 'grand-triomphe', 'c-condos', 'triomphe-grand-triomphe-i', 'condo-profiles', 'park-lane', 'princess-place-tower', 'platinum', 'palm-condos' ];
-        alert("4");
+ 
     var helpful_tools = ['land-transfer-calculator', 'helpful-tools', 'mortgage-calculator'];
-        alert("5");
+        
     var stats = ['stats-condos', 'stats'];
-    alert("6");
-    page = "<%= params[:id] %>";
+    alert("3");
+    alert("<%= params[:id] %>");
+    var page = "<%= params[:id] %>";
     alert("7");
-    action = "<%= params[:action] %>";
+    var action = "<%= params[:action] %>";
         alert("8");
-    controller = "<%= params[:controller] %>";
+    var controller = "<%= params[:controller] %>";
        alert("9");
     if (page.indexOf(".") > -1)
       page = page.substring(0,page.indexOf("."));
