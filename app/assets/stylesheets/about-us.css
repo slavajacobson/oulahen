@@ -31,9 +31,9 @@
 #pu32269
 {
 	width: 0.01px;
-	margin-left: 20px;
 	margin-top: 7px;
 	position: relative;
+	margin-left:20px;
 }
 
 #u32269
@@ -49,19 +49,20 @@
 {
 	z-index: 457;
 	width: 96px;
-	border-width: 1px;
+	border-width: 2px;
 	border-style: solid;
-	border-color: #E9E9E9;
+	border-color: #EAF3FA;
 	background-color: #FFFFFF;
 	padding-bottom: 2px;
 	position: relative;
 	margin-right: -10000px;
+	border-radius:10px 10px 0px 0px;
 }
 
-#u32271.MuseLinkActive
+#u32271:hover
 {
-	border-color: #E9E9E9;
-	background-color: #F6F6F6;
+	border-color: #EAF3FA;
+	background-color: #EAF3FA;
 	width: 96px;
 	min-height: 0px;
 	margin: 0px -10000px 0px 0px;
@@ -96,19 +97,19 @@
 {
 	z-index: 463;
 	width: 98px;
-	border-width: 1px;
+	border-width: 2px;
 	border-style: solid;
-	border-color: #E9E9E9;
+	border-color: #EAF3FA;
 	background-color: #FFFFFF;
 	padding-bottom: 2px;
 	position: relative;
 	margin-right: -10000px;
+	border-radius:10px 10px 0px 0px;
 }
 
 #u32273:hover
 {
-	border-color: #E9E9E9;
-	background-color: #F6F6F6;
+	background-color: #EAF3FA;
 	width: 98px;
 	min-height: 0px;
 	margin: 0px -10000px 0px 0px;
@@ -143,19 +144,20 @@
 {
 	z-index: 481;
 	width: 131px;
-	border-width: 1px;
+	border-width: 2px;
 	border-style: solid;
-	border-color: #E9E9E9;
+	border-color: #EAF3FA;
 	background-color: #FFFFFF;
 	padding-bottom: 2px;
 	position: relative;
 	margin-right: -10000px;
+	border-radius:10px 10px 0px 0px;
 }
 
 #u32277:hover
 {
-	border-color: #E9E9E9;
-	background-color: #F6F6F6;
+	border-color: #EAF3FA;
+	background-color: #EAF3FA;
 	width: 131px;
 	min-height: 0px;
 	margin: 0px -10000px 0px 0px;
@@ -190,13 +192,14 @@
 {
 	z-index: 469;
 	width: 106px;
-	border-width: 1px;
+	border-width: 2px;
 	border-style: solid;
-	border-color: #E9E9E9;
+	border-color: #EAF3FA;
 	background-color: #FFFFFF;
 	padding-bottom: 2px;
 	position: relative;
 	margin-right: -10000px;
+	border-radius:10px 10px 0px 0px;
 }
 
 #u32284-4
@@ -239,8 +242,8 @@
 
 #u32285:hover,#u32287:hover
 {
-	border-color: #E9E9E9;
-	background-color: #F6F6F6;
+	border-color: #EAF3FA;
+	background-color: #EAF3FA;
 	width: 106px;
 	min-height: 0px;
 	margin: 0px -10000px 0px 0px;

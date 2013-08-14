@@ -170,8 +170,11 @@
         
     var controller = "<%= params[:controller] %>";
        
+
+
     if (page.indexOf(".") > -1)
       page = page.substring(0,page.indexOf("."));
+
 
    
     if (controller == "listings" && action == "residential")
@@ -188,6 +191,19 @@
 
     else if (controller == "listings" && action == "transactions" && (page == "commercial"))
       $("#pu31968 > div").eq(2).find("div").css("background-color","#EAF3FA")
+
+
+    else if (controller == "pages" && page == "about-us")
+      $("#u32271").css("background-color","#EAF3FA");
+    else if (controller == "pages" && page == "awards")
+      $("#u32273").css("background-color","#EAF3FA");
+    else if (controller == "pages" && page == "charitable-work")
+      $("#u32277").css("background-color","#EAF3FA");
+    else if (controller == "pages" && page == "testimonials")
+      $("#u32285").css("background-color","#EAF3FA");
+    else if (controller == "pages" && page == "in-the-news")
+      $("#u32287").css("background-color","#EAF3FA");
+
 
     else if (page == "commercial")
       $("#pu31906 > div").eq(3).find("div").css("background-color","#EAF3FA")

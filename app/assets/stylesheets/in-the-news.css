@@ -1,7 +1,7 @@
 #pu11090-4
 {
 	width: 0.01px;
-	margin-left: 20px;
+
 	margin-top: 20px;
 	position: relative;
 }
@@ -18,6 +18,7 @@
 	font-weight: bold;
 	position: relative;
 	margin-right: -10000px;
+	margin-left:20px;
 }
 
 #u12039
@@ -30,6 +31,7 @@
 	position: relative;
 	margin-right: -10000px;
 	margin-top: 26px;
+	margin-left:20px;
 }
 
 #u29512
