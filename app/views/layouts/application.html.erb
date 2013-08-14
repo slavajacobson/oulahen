@@ -142,15 +142,16 @@
 
 
 
-
+    alert("1");
 
 		Muse.Utils.initWidget('#widgetu25844', function(elem) { new WebPro.Widget.Form(elem, {validationEvent:'submit',errorStateSensitivity:'high',fieldWrapperClass:'fld-grp',formSubmittedClass:'frm-sub-st',formErrorClass:'frm-subm-err-st',formDeliveredClass:'frm-subm-ok-st',notEmptyClass:'non-empty-st',focusClass:'focus-st',invalidClass:'fld-err-st',requiredClass:'fld-err-st',ajaxSubmit:true}); });/* #widgetu25844 */
-
+    alert("2");
 		Muse.Utils.initWidget('#accordionu7523', function(elem) { return new WebPro.Widget.Accordion(elem, {canCloseAll:false,defaultIndex:0}); });/* #accordionu7523 */
+    alert("3");
 		Muse.Utils.fullPage('#page');/* 100% height page */
 		Muse.Utils.showWidgetsWhenReady();/* body */
 		Muse.Utils.transformMarkupToFixBrowserProblems();/* body */
-
+    alert("4");
     var about_us = ['ajay-aheer', 'mark-oulahen', 'andreia','awards', 'norah-oulahen', 'carly', 'charitable-work', 'paul-oulahen', 'claire', 'testimonials', 'thanh-nguyen', 'in-the-news ', 'jeff-oulahen', 'victor', 'vinay-lakhani','about-us'];
     var contact_us = ['contact-us-form', 'contact-us'];
     var condos_profiles = ['meridian', 'monet', 'bravo-boutique', 'chicago', 'marquis', 'pulse-towers', 'dia-condos', 'grand-triomphe', 'c-condos', 'triomphe-grand-triomphe-i', 'condo-profiles', 'park-lane', 'princess-place-tower', 'platinum', 'palm-condos' ];
@@ -164,7 +165,7 @@
     if (page.indexOf(".") > -1)
       page = page.substring(0,page.indexOf("."));
 
-
+    alert("5");
     if (controller == "listings" && action == "residential")
       $("#pu31906 > div").eq(0).find("div").css("background-color","#EAF3FA")
 
