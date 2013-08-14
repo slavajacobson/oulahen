@@ -129,7 +129,7 @@
       <p><%= listing.street_number %> <%= listing.address %>, <%= "Unit #{listing.unit_number}," unless listing.unit_number.blank? %> <%= listing.city_province %></p>
        </div>
        <div class="clearfix colelem" id="u31188-4"><!-- content -->
-      <p><%= truncate(listing.description, length: 350, seperator: ' ', omission: ' ...Click to read more!') %></p>
+      <p><%= truncate(listing.description, length: 280, seperator: ' ', omission: ' ...Click to read more!') %></p>
        </div>
       </div>
      </div>
