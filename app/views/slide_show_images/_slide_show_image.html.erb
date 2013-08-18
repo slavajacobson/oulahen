@@ -7,7 +7,7 @@
 <div class="<%= 'active' if slide_show_image_counter == 0 %> item">
 
   <% unless slide_show_image.link_to.blank? %>
-    <a href="<%= slide_show_image.link_to %>">
+    <a href="<%= slide_show_image.link_to %>" target="_blank">
   <% end %>
 
   <% if slide_show_image.is_video %>
@@ -76,10 +76,18 @@
   <% end %>
 
 <% unless defined?(preview) %>
-  <div class="carousel-caption" id="u34596-7">
-    <p><%= slide_show_image.description_line1 %></p>
-    <p><%= slide_show_image.description_line2 %></p>
-  </div>
+  <% unless slide_show_image.link_to.blank? %>
+    <a href="<%= slide_show_image.link_to %>" target="_blank">
+  <% end %>
+
+    <div class="carousel-caption" id="u34596-7">
+      <p><%= slide_show_image.description_line1 %></p>
+      <p><%= slide_show_image.description_line2 %></p>
+    </div>
+
+  <% unless slide_show_image.link_to.blank? %>
+    </a>
+  <% end %>
 <% end %>
 </div>
 

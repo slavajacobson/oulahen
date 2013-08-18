@@ -33,7 +33,7 @@
         </div> 
       </div>
       <div class="form-group" id="video_field" style="<%= 'display:none' unless @slide_show_image.is_video %>">
-        <%= f.label :video %><br>
+        <%= f.label :video, "Youtube URL" %><br>
         <%= f.text_field :video, style:'width:400px;', class: 'form-control input-small' %>
       </div>
 

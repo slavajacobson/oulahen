@@ -4,7 +4,7 @@
 	<% @image = featured_listing.photos.where(main_photo:true).first %>
 
 
-  <a href="<%= listing_path(featured_listing) %>">
+  <a href="<%= listing_path(featured_listing) %>" target="_blank">
   	<% unless @image.blank? %>
     	<img src="<%= featured_listing.photos.where(main_photo:true).first.image_url(:slide) %>" alt="img" />
     <% else %>
@@ -14,9 +14,10 @@
     <% end %>
   </a>
 
-  <div class="carousel-caption" id="u34596-7">
-    <p>FEATURED LISTING</p>
-    <p><%= featured_listing.street_number %> <%= featured_listing.address %>, <%= "Unit #{featured_listing.unit_number}," unless featured_listing.unit_number.blank? %> <%= featured_listing.city_province %></p>
-  </div>
-
+  <a href="<%= listing_path(featured_listing) %>" target="_blank">
+    <div class="carousel-caption" id="u34596-7">
+      <p>FEATURED LISTING</p>
+      <p><%= featured_listing.street_number %> <%= featured_listing.address %>, <%= "Unit #{featured_listing.unit_number}," unless featured_listing.unit_number.blank? %> <%= featured_listing.city_province %></p>
+    </div>
+  </a>
 </div>

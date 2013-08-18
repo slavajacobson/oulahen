@@ -21,7 +21,11 @@ module Oulahen
     # config.i18n.default_locale = :de
     
     config.action_mailer.delivery_method = :mailjet
+
+    #for listing slugs
     config.exceptions_app = self.routes
+
+    
     config.to_prepare do
         Devise::SessionsController.layout "admin"
         Devise::RegistrationsController.layout "admin"

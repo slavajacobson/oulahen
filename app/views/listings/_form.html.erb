@@ -75,22 +75,19 @@
   function admin_home_selected() {
     $("#listing_unit_number").parent().hide();
     $("#listing_hide_unit_number").parent().hide();
-    $("#listing_lot_frontage").parent().show();
-    $("#listing_lot_depth").parent().show();
+    $("#listing_lot").parent().show();
     $("#listing_maintenance_fee").parent().hide();
   }
   function admin_condo_selected() {
     $("#listing_unit_number").parent().show();
     $("#listing_hide_unit_number").parent().show();
-    $("#listing_lot_frontage").parent().hide();
-    $("#listing_lot_depth").parent().hide();
+    $("#listing_lot").parent().hide();
     $("#listing_maintenance_fee").parent().show();
   }
   function admin_commercial_selected() {
     $("#listing_unit_number").parent().show();
     $("#listing_hide_unit_number").parent().show();
-    $("#listing_lot_frontage").parent().show();
-    $("#listing_lot_depth").parent().show();
+    $("#listing_lot").parent().show();
     $("#listing_maintenance_fee").parent().show();
   }
 
@@ -173,6 +170,14 @@
                    <%= f.check_box :active %> 
                 </div> 
               </div>
+
+              <div class="form-group">
+                <%= f.label :priority %>
+
+                <%= f.select :priority, (1..10).collect {|r| [ r, r ] } %>
+           
+              </div>
+
               <div class="form-group">
                 <%= f.label :featured_listing, "Featured listing" %>
 
@@ -193,13 +198,6 @@
                 </div>
                 <div id="sold_properties">
 
-                  <div class="form-group">
-                    <%= f.label :sold_price %>
-                    <%= f.text_field :sold_price, class: 'form-control input-small', style:'display:inline-block' %>
-                    <div class="make-switch" data-on-label="Show" data-off-label="Hide">
-                       <%= f.check_box :show_sold_price %> 
-                    </div>
-                  </div>
 
 
                   <div class="form-group">
@@ -219,6 +217,9 @@
               <div class="form-group">
                 <%= f.label :price %>
                 <%= f.text_field :price, class: 'form-control input-small', style:'display:inline-block' %>
+                <div class="make-switch" data-on-label="Show" data-off-label="Hide">
+                   <%= f.check_box :show_price %> 
+                </div>
               </div>
               <div class="form-group">
                 <%= f.label :street_number %>
@@ -251,14 +252,9 @@
                 <%= f.text_field :neighbourhood, class: 'form-control input-small', style:'display:inline-block' %>
               </div>
               <div class="form-group">
-                <%= f.label :lot_frontage %>
-                <%= f.number_field :lot_frontage, class: 'form-control input-small', style:'display:inline-block' %>
+                <%= f.label :lot, "Lot Size" %>
+                <%= f.text_field :lot, class: 'form-control input-small', style:'display:inline-block' %>
               </div>
-              <div class="form-group">
-                <%= f.label :lot_depth %>
-                <%= f.number_field :lot_depth, class: 'form-control input-small', style:'display:inline-block' %>
-              </div>
-
 
               <%  unless @listing.floor_plan.new_record? %>
                 <div class="form-group">
@@ -299,11 +295,11 @@
             </div>
             <div class="form-group">
               <%= f.label :bedrooms %>
-              <%= f.number_field :bedrooms, class: 'form-control input-small', style:'display:inline-block' %>
+              <%= f.text_field :bedrooms, class: 'form-control input-small', style:'display:inline-block' %>
             </div>
             <div class="form-group">
               <%= f.label :bathrooms %>
-              <%= f.number_field :bathrooms, class: 'form-control input-small', style:'display:inline-block' %>
+              <%= f.text_field :bathrooms, class: 'form-control input-small', style:'display:inline-block' %>
             </div>
             <div class="form-group">
               <%= f.label :maintenance_fee %>
@@ -358,7 +354,7 @@
   <div id="photos_tab" class="clearfix" style="position:relative;">
     <% unless @listing.draft? %>
       <div class="alert alert-warning clearfix" style="display: table; margin: 0 auto; margin-bottom: 15px;">
-        <span>Changes done to the photos are permanent <strong>BEFORE</strong> the "Update" button is clicked!</span>
+        <span>Changes made to the photos are permanent <strong>BEFORE</strong> the "Update" button is clicked!</span>
       </div>
     <% end %>
 

@@ -10,14 +10,12 @@ class CreateListings < ActiveRecord::Migration
       t.boolean :show_unit_number, default: true
       t.string :postal_code
       t.string :neighbourhood
-      t.integer :lot_frontage
-      t.integer :lot_depth
+      t.string :lot
       t.integer :sqft
-      t.integer :bedrooms
-      t.integer :bathrooms
+      t.string :bedrooms
+      t.string :bathrooms
       t.float :price
-      t.float :sold_price
-      t.boolean :show_sold_price, default: false
+      t.boolean :show_price, default: true
       t.boolean :sold
       t.string :transaction_label, default: ''
       t.string :sold_status
@@ -32,8 +30,8 @@ class CreateListings < ActiveRecord::Migration
       t.boolean :active, default: true
       t.boolean :draft, default: true
       t.integer :draft_by
+      t.integer :priority, default: 1
       t.references :category
-
       t.timestamps
     end
   end

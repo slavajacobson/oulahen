@@ -1,16 +1,37 @@
 
+<style>
+	.obutton {
+		float: left;
+		border: 2px solid #EAF3FA;
+		padding: 7px 10px;
+		margin-top: 10px;
+		background-color: #76080D;
+	}
+	.obutton a {
+		color: white;
+		text-decoration: none;
+	}
+</style>
 
 <div class="gradient colelem" id="u16510"><!-- simple frame --></div>
 
 <%= render 'site_listings_nav', header: @header %>
 
 <div class="pagination_container">
-  <%= paginate @listings %>
+  
+  <% unless params[:show_all] %>
+		<div class="obutton">
+			<%= link_to "Show All", "#{params[:action]}?show_all=true" %>
+		</div>
+		
+		<%= paginate @listings %>
+	<% end %>
+
 </div>
 
 <%= render @listings %>
 
 
 <div class="pagination_container" style="margin-top:0px;">
-  <%= paginate @listings %>
+  <%= paginate @listings unless params[:show_all] %>
 </div>

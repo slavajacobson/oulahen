@@ -7,7 +7,7 @@
   <% unless @photos.blank? %>
 
 
-    <div class="SlideShowWidget clearfix widget_invisible grpelem" id="slideshowu38145"><!-- group -->
+    <div class="SlideShowWidget clearfix widget_invisible grpelem" id="slideshowu38145" ><!-- group -->
 
 
 
@@ -15,7 +15,7 @@
 
 
     <div class="popup_anchor" id="u38203popup">
-     <div class="SlideShowContentPanel rgba-background clearfix" id="u38203"><!-- stack box -->
+     <div class="SlideShowContentPanel rgba-background clearfix" id="u38203" style="top: -20px;"><!-- stack box -->
 
 
 
@@ -29,7 +29,7 @@
 
 
     <div class="popup_anchor" id="u38146popup">
-     <div class="SSSlideLinks clearfix" id="u38146"><!-- horizontal-rows box -->
+     <div class="SSSlideLinks clearfix" id="u38146" ><!-- horizontal-rows box -->
 
 
         <%= render partial: 'photos/photo_listing_thumb', collection: @photos, as: 'photo' %>
@@ -42,17 +42,17 @@
 
 
     <div class="popup_anchor" id="u38241-4popup">
-     <div class="SSPreviousButton clearfix" id="u38241-4"><!-- content -->
+     <div class="SSPreviousButton clearfix" id="u38241-4" style="left: 470px; top: 410px;"><!-- content -->
       <p>&lt;</p>
      </div>
     </div>
     <div class="popup_anchor" id="u38240-4popup">
-     <div class="SSNextButton clearfix" id="u38240-4"><!-- content -->
+     <div class="SSNextButton clearfix" id="u38240-4" style="left: 570px; top: 410px;"><!-- content -->
       <p>&gt;</p>
      </div>
     </div>
     <div class="popup_anchor" id="u38261-4popup">
-     <div class="SlideShowLabel SSSlideCount clearfix" id="u38261-4"><!-- content -->
+     <div class="SlideShowLabel SSSlideCount clearfix" id="u38261-4" style="left: 500px; top: 410px;"><!-- content -->
       <p>1 &#45; 18</p>
      </div>
     </div>
@@ -124,9 +124,13 @@
 
 
   </div>
-  <div class="Headings-Submenus clearfix colelem" id="u38264-4"><!-- content -->
-   <h1 style="font-size:110%;">List Price: <%= number_to_currency(@listing.price, :unit => "$", precision: 0) %></h1>
-  </div>
+
+  <% unless @listing.show_price.blank? %>
+    <div class="Headings-Submenus clearfix colelem" id="u38264-4"><!-- content -->
+     <h1 style="font-size:110%;">List Price: <%= number_to_currency(@listing.price, :unit => "$", precision: 0) %></h1>
+    </div>
+  <% end %>
+
   <div class="clearfix colelem" id="pu38133-14"><!-- group -->
    <div class="clearfix grpelem" id="u38133-14"><!-- content -->
       <% unless @listing.address.blank? %>
@@ -164,9 +168,9 @@
           <label>Maintenance fee:</label> <span>$<%= "#{@listing.maintenance_fee}" %></span>
         </div>
       <% end %>
-      <% unless @listing.lot_frontage.blank? || @listing.lot_depth.blank? %>
+      <% unless @listing.lot.blank? %>
         <div>
-          <label>Lot:</label> <span><%= "#{@listing.lot_frontage*@listing.lot_depth}" %></span>
+          <label>Lot:</label> <span><%= "#{@listing.lot}" %></span>
         </div>
       <% end %>
    </div>
