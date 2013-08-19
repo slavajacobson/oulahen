@@ -94,7 +94,7 @@ namespace :db do
   task :seed do
     run "cd #{current_path} && bundle exec rake db:seed RAILS_ENV=#{rails_env}"
   end
-  task :restart do
+  task :reset do
     run 'echo "SELECT pg_terminate_backend(procpid) FROM pg_stat_activity WHERE datname=\'#{dbname}\';" | psql -U postgres'
 
 

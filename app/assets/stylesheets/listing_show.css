@@ -126,8 +126,8 @@
 #u38204
 {
 	z-index: 291;
-	width: 480px;
-	height: 360px;
+	width: 900px;
+	height: 614px;
 	background-color: transparent;
 	margin-right: -10000px;
 	position: relative;
@@ -200,8 +200,8 @@ box-shadow: 0px 5px 10px black;
 	text-align: center;
 	line-height: 1.4;
 	font-family: Georgia, Palatino, Palatino Linotype, Times, Times New Roman, serif;
-	top: 420px;
-	left: 348px;
+	left: 785px;
+	top: 625px;
 }
 
 #u38241-4popup
@@ -218,8 +218,8 @@ box-shadow: 0px 5px 10px black;
 	text-align: center;
 	line-height: 1.4;
 	font-family: Georgia, Palatino, Palatino Linotype, Times, Times New Roman, serif;
-	top: 420px;
-	left: 448px;
+	left: 880px;
+	top: 625px;
 }
 
 #u38240-4popup
@@ -236,8 +236,8 @@ box-shadow: 0px 5px 10px black;
 	text-align: center;
 	line-height: 1.4;
 	font-family: Georgia, Palatino, Palatino Linotype, Times, Times New Roman, serif;
-	top: 420px;
-	left: 378px;
+	left: 815px;
+	top: 625px;
 }
 
 #u38261-4popup
@@ -250,7 +250,7 @@ box-shadow: 0px 5px 10px black;
 	position: absolute;
 	width: 30px;
 	padding-bottom: 5px;
-	left: 580px;
+	left: 880px;
 	top: -15px;
 	border-radius: 20px;
 	border: 3px solid white; 
