@@ -183,7 +183,8 @@
     else if (controller == "listings" && action == "commercial")
       $("#pu31906 > div").eq(1).find("div").css("background-color","#EAF3FA")
 
-    else if (controller == "listings" && action == "transactions" && (page == "homes" || page == ""))
+    
+    if (controller == "listings" && action == "transactions" && (page == "homes" || page == ""))
       $("#pu31968 > div").eq(0).find("div").css("background-color","#EAF3FA")
 
     else if (controller == "listings" && action == "transactions" && (page == "condos"))
@@ -193,6 +194,8 @@
       $("#pu31968 > div").eq(2).find("div").css("background-color","#EAF3FA")
 
 
+    if (controller == "listings")
+      $("ul.MenuBar > li").eq(1).find("a").first().addClass("MuseMenuActive");
     else if (controller == "pages" && page == "about-us")
       $("#u32271").css("background-color","#EAF3FA");
     else if (controller == "pages" && page == "awards")

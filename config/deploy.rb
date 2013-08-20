@@ -104,6 +104,15 @@ namespace :db do
     run "cd #{current_path} && bundle exec rake db:seed RAILS_ENV=#{rails_env}"
   end
 
+  task :clear do
+    run 'echo "SELECT pg_terminate_backend(procpid) FROM pg_stat_activity WHERE datname=\'#{dbname}\';" | psql -U postgres'
+
+
+
+    run "cd #{current_path} && bundle exec rake db:migrate VERSION=0 RAILS_ENV=#{rails_env}"
+    run "cd #{current_path} && bundle exec rake db:migrate RAILS_ENV=#{rails_env}"
+  end
+
 
 
 end
