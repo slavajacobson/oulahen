@@ -5,8 +5,7 @@ class PagesController < HighVoltage::PagesController
 
   end
   def contact_us_form
-    c = 12
-    debugger
+
   end
 
   protected

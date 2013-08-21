@@ -12,6 +12,6 @@ class UserMailer < ActionMailer::Base
     @email = email
     @name = name
 
-    mail to: "slava.jacobson@gmail.com", from: "vs.jacobson@gmail.com", subject: "Website Contact Form"
+    mail to: "team@oulahen.com", from: email.blank? ? "vs.jacobson@gmail.com" : email, subject: "Website Contact Form"
   end
 end
