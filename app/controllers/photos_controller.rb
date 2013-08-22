@@ -69,10 +69,19 @@ class PhotosController < ApplicationController
       @photo.main_photo = true
       @photo.save
 
+    elsif params[:save_photo_order]
+      params[:order].each do |photo|
+        photo = JSON.parse photo
+
+        Photo.find(photo['photo_id']).update_attributes(order_priority: photo['order'])
+        #debugger
+
+      end
+
     end
 
 
-    @photos = Photo.find_all_by_listing_id(photo_params[:listing_id])
+    @photos = Photo.where(listing_id: photo_params[:listing_id]).order("order_priority ASC")
 
   end
 

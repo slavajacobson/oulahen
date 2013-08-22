@@ -45,7 +45,7 @@ ActiveRecord::Schema.define(version: 20130810192137) do
     t.boolean  "show_unit_number",   default: true
     t.string   "postal_code"
     t.string   "neighbourhood"
-    t.integer  "lot"
+    t.string   "lot"
     t.integer  "sqft"
     t.string   "bedrooms"
     t.string   "bathrooms"
@@ -65,7 +65,7 @@ ActiveRecord::Schema.define(version: 20130810192137) do
     t.boolean  "active",             default: true
     t.boolean  "draft",              default: true
     t.integer  "draft_by"
-    t.integer  "priority"
+    t.integer  "priority",           default: 1
     t.integer  "category_id"
     t.datetime "created_at"
     t.datetime "updated_at"
@@ -77,8 +77,9 @@ ActiveRecord::Schema.define(version: 20130810192137) do
   create_table "photos", force: true do |t|
     t.string   "image"
     t.text     "description"
-    t.boolean  "main_photo",  default: false
+    t.boolean  "main_photo",     default: false
     t.integer  "listing_id"
+    t.integer  "order_priority", default: 0
     t.datetime "created_at"
     t.datetime "updated_at"
   end

@@ -7,4 +7,12 @@ $("#photos").html("<div class='row'><%= j render @photos, as: 'photo' %> </div>"
 <% elsif params[:set_main_photo] %>
 
 	<%= add_gritter("New main photo was selected.", :title => "Photos", image: :success) %>
+
+<% elsif params[:save_photo_order] %>
+
+	<%= add_gritter("New order was saved.", :title => "Photos", image: :success) %>
+
 <% end %>
+
+
+make_images_sortable();

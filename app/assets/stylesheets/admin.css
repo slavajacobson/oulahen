@@ -25,3 +25,45 @@
 .button_bar {
 	margin-top:10px;
 }
+
+#main_photo {
+  border:1px solid black;
+  width:235px;
+  height:170px;
+}
+#form_fields {
+  display:block;
+}
+
+.edit_listing input[type="password"], .edit_listing input[type="text"], .edit_listing input[type="number"] {
+  width: 250px;
+}
+.form-group > label {
+  width:120px;
+}
+#photos_tab {
+  display:none;
+}
+.gritter-with-image {
+  font-size:14px;
+}
+.main_photo_label {
+  position: absolute;
+	bottom: 70px;
+	left: 5px;
+  width: 235px;
+  height: 26px;
+  background: rgba(53, 126, 189, 0.7);
+  text-align: center;
+  line-height: 25px;
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+}
+
+.image_frame {
+	position:relative;
+	width:245px; 
+	height:245px; 
+	float:left;
+	margin-right: 35px;
+}

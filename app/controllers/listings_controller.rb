@@ -59,7 +59,7 @@ class ListingsController < ApplicationController
   # GET /listings/1.json
   def show
     #debugger
-    @photos = @listing.photos
+    @photos = @listing.photos.order("order_priority ASC")
     @main_photo = Photo.where(listing_id: @listing.id, main_photo: true).first
     if @main_photo 
       @main_photo = @main_photo.image_url
@@ -84,7 +84,7 @@ class ListingsController < ApplicationController
   # GET /listings/1/edit
   def edit
     #debugger
-    @photos = @listing.photos
+    @photos = @listing.photos.order("order_priority ASC")
     @listing.build_floor_plan unless @listing.floor_plan.present?
     @listing.build_feature_sheet unless @listing.feature_sheet.present?
   end

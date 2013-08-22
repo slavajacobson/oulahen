@@ -5,6 +5,7 @@ class CreatePhotos < ActiveRecord::Migration
       t.text :description
       t.boolean :main_photo, default: false
       t.belongs_to :listing
+      t.integer :order_priority, default: 0
       t.timestamps
     end
   end

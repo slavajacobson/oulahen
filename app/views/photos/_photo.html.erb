@@ -1,5 +1,7 @@
+
+
 <% unless photo.image_url.nil? %>
-	<div class="col-lg-3">
+	<div class="image_frame" id="<%= photo.id %>">
 		<%= link_to photo.image_url, :'data-lightbox' => 'photos' do %>
 			<%= image_tag photo.image_url(:thumb), class:'img-thumbnail' %>
 		<% end %>
@@ -11,16 +13,12 @@
 		<% unless defined?(hide_check_box) %>
 			<div>
 				<%= check_box_tag "photo_ids[]", photo.id %> Select Photo
+				<%= hidden_field_tag "order[]", "{\"photo_id\": \"#{photo.id}\", \"order\": \"#{photo.order_priority}\"}" %>
 			</div>
 		<% end %>
 	</div>
 <% end %>
 
-
-<% if defined?(photo_counter) && (photo_counter+1)%4 == 0 %>
-  </div>
-  <div class="row">
-<% end %>
 
 
 
