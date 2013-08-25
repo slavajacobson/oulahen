@@ -249,7 +249,7 @@
     <div id="progress_bars"></div>
 
 
-    <%= form_for :photo, url: manipulate_photos_path, :html => {method: 'get'}, remote: true do |f| %>
+    <%= form_for :photo, url: manipulate_photos_path, :html => {method: 'post'}, remote: true do |f| %>
       <%= f.hidden_field :listing_id, value: @listing.id %>
       <div id="toggle_all_photos" class="btn btn-small btn-primary" style="margin-bottom:20px;">Toggle All</div>
       <%= f.submit "Delete selected photos", name:'delete_photos', data: { disable_with: "Please wait..." }, class: 'btn btn-small btn-primary', style:'margin-bottom:20px;' %>

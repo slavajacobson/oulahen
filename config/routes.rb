@@ -3,7 +3,7 @@ Oulahen::Application.routes.draw do
 
   resources :photos do
     collection do
-      get 'manipulate', as: 'manipulate'
+      post 'manipulate', as: 'manipulate'
     end
   end
   

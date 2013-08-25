@@ -42,8 +42,13 @@ class PhotosController < ApplicationController
    
 
     if params[:delete_photos]
+      
+      @photos_to_delete = params.require(:photo_ids)
 
-      Photo.destroy_all(id: params.require(:photo_ids))
+      Photo.destroy_all(id: @photos_to_delete)
+
+      
+
 
       #if the deleted photo was the main photo, pick a new main photo
       unless Photo.where(listing_id: photo_params[:listing_id], main_photo: true).first
