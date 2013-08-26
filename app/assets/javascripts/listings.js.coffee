@@ -5,6 +5,7 @@
 
 jQuery ->
 	$('#new_photo').fileupload
+		limitConcurrentUploads: 2
 		dataType: "script"
 		add: (e, data) ->
 			data.context = $(tmpl("template-upload", data.files[0]))
