@@ -62,9 +62,10 @@ class PhotosController < ApplicationController
       
     elsif params[:set_main_photo]
       #debugger
-      @current_main_photo = Photo.where(main_photo: true, listing_id: photo_params[:listing_id])
+      @current_main_photo = Photo.where(main_photo: true, listing_id: photo_params[:listing_id]).first
 
       unless @current_main_photo.blank?
+        #debugger
         @current_main_photo.main_photo = false
         @current_main_photo.save
       end
