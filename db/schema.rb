@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130810192137) do
+ActiveRecord::Schema.define(version: 20130827192108) do
 
   create_table "categories", force: true do |t|
     t.string   "name"
@@ -65,7 +65,7 @@ ActiveRecord::Schema.define(version: 20130810192137) do
     t.boolean  "active",             default: true
     t.boolean  "draft",              default: true
     t.integer  "draft_by"
-    t.integer  "priority",           default: 1
+    t.integer  "priority",           default: 5
     t.integer  "category_id"
     t.datetime "created_at"
     t.datetime "updated_at"

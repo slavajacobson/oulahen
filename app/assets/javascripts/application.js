@@ -19,9 +19,9 @@
 //= require jquery.museoverlay
 //= require touchswipe
 //= require musewpdisclosure
+//= require jquery.musepolyfill.bgsize
 //= require jquery.watch
 //= require mortgage_calculator
 //= require landtransfer_calculator
 //= require gritter
 //= require bootstrap-slideshow.min
-//= require jquery.musepolyfill.bgsize

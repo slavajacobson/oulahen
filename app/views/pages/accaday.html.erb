@@ -273,11 +273,17 @@
   <!-- Other scripts -->
   <script type="text/javascript">
    $(document).ready(function() { 
+    alert("1");
       Muse.Utils.transformMarkupToFixBrowserProblemsPreInit();/* body */
+      alert("2");
       Muse.Utils.prepHyperlinks(true);/* body */
+            alert("3");
       Muse.Utils.fullPage('#page');/* 100% height page */
+            alert("4");
       Muse.Utils.showWidgetsWhenReady();/* body */
+            alert("5");
       Muse.Utils.transformMarkupToFixBrowserProblems();/* body */
+            alert("6");
     });
 </script>
    </body>
