@@ -24,3 +24,4 @@
 //= require landtransfer_calculator
 //= require gritter
 //= require bootstrap-slideshow.min
+//= require jquery.musepolyfill.bgsize
