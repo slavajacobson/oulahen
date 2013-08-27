@@ -8,7 +8,7 @@
   <!-- CSS -->
   <%= stylesheet_link_tag    "acca", media: "all", "data-turbolinks-track" => true %>
   <!-- Other scripts -->
-  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+
   <script type="text/javascript">
    document.documentElement.className += ' js';
 </script>
@@ -270,20 +270,19 @@
    </div>
   </div>
 
+  <script src="/acca/jquery-1.8.3.min.js?4068933136" type="text/javascript"></script>
+  <script src="/acca/museutils.js?441941709" type="text/javascript"></script>
+  <script src="/acca/jquery.musepolyfill.bgsize.js?3956991090" type="text/javascript"></script>
+  <script src="/acca/jquery.watch.js?4068933136" type="text/javascript"></script>
+
   <!-- Other scripts -->
   <script type="text/javascript">
    $(document).ready(function() { 
-    alert("1");
       Muse.Utils.transformMarkupToFixBrowserProblemsPreInit();/* body */
-      alert("2");
       Muse.Utils.prepHyperlinks(true);/* body */
-            alert("3");
       Muse.Utils.fullPage('#page');/* 100% height page */
-            alert("4");
       Muse.Utils.showWidgetsWhenReady();/* body */
-            alert("5");
       Muse.Utils.transformMarkupToFixBrowserProblems();/* body */
-            alert("6");
     });
 </script>
    </body>
