@@ -25,6 +25,8 @@ class PagesController < HighVoltage::PagesController
       	'home_layout'
       when 'accaday'
         false
+      when 'accaday.html'
+        false
       else
         'application'
       end
