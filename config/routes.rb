@@ -25,7 +25,9 @@ Oulahen::Application.routes.draw do
   #root 'pages#index'
 
   root 'pages#index'
-  match "/" => redirect("/pages/index"), via: [:get, :post]
+
+  get "/accaday" => "pages#accaday"
+  #match "/" => redirect("/pages/index"), via: [:get, :post]
 
   match "/404", :to => "errors#not_found", via: [:get, :post]
 

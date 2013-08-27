@@ -1,3 +1,5 @@
+<%= content_for :page_title, @title %>
+
 <% if current_user %>
   <div id="admin_nav"><span style="font-weight:bold;">Admin:</span> <%= link_to "Edit Listing", edit_listing_path(@listing) %> | <%= link_to "Manage Listings", listings_path %> </div>
 <% end %>

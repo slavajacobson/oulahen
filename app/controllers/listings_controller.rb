@@ -64,6 +64,13 @@ class ListingsController < ApplicationController
     if @main_photo 
       @main_photo = @main_photo.image_url
     end
+
+    @title = ""
+    @title = "#{@listing.street_number} " if @listing.show_street_number
+    @title = @title + "#{@listing.address}, "
+    @title = @title + "Unit #{@listing.unit_number}, " unless @listing.unit_number.blank? || !@listing.show_unit_number
+    @title = @title + "#{@listing.city_province}"
+
   end
 
   # GET /listings/new

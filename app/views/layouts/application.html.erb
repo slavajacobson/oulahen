@@ -127,18 +127,27 @@
   	<%= javascript_include_tag "application", "data-turbolinks-track" => true %>
 	<script type="text/javascript">
 	$(document).ready(function() { try {
+
+
+    
+
+
+
 		Muse.Utils.transformMarkupToFixBrowserProblemsPreInit();/* body */
 		Muse.Utils.prepHyperlinks();/* body */
 		Muse.Utils.initWidget('.MenuBar', function(elem) { return $(elem).museMenu(); });/* unifiedNavBar */
-		
+
 
     if ($("#pslideshowu38145").length == 1) {
+
       Muse.Utils.initWidget('#slideshowu38145', function(elem) { new WebPro.Widget.ContentSlideShow(elem, {autoPlay:false,displayInterval:3000,slideLinkStopsSlideShow:false,transitionStyle:'fading',lightboxEnabled_runtime:true,shuffle:false,transitionDuration:500,enableSwipe:true}); });/* #slideshowu38145 */
+
     }
     else {
+      if ($("[id^=slideshowu]").attr("id") != "slideshowu6475")
       Muse.Utils.initWidget('#' + $("[id^=slideshowu]").attr("id"), function(elem) { new WebPro.Widget.ContentSlideShow(elem, {autoPlay:true,displayInterval:7000,slideLinkStopsSlideShow:false,transitionStyle:'horizontal',lightboxEnabled_runtime:false,shuffle:false,transitionDuration:500,enableSwipe:true}); });/* #slideshowu8187 */
-    }
 
+    }
 
 
 
@@ -163,6 +172,7 @@
     var helpful_tools = ['land-transfer-calculator', 'helpful-tools', 'mortgage-calculator'];
         
     var stats = ['stats-condos', 'stats'];
+
 
     var page = "<%= params[:id] %>";
   

@@ -9,9 +9,13 @@ class PagesController < HighVoltage::PagesController
   end
 
   protected
-    def layout_for_page
-
-      case params[:id]
+  def layout_for_page
+    
+    if params[:id].nil?
+      params[:id] = params[:action]
+    end
+    #debugger
+    case params[:id]
 
       when 'index'
         'home_layout'
@@ -19,6 +23,8 @@ class PagesController < HighVoltage::PagesController
     	  'home_layout'
       when nil
       	'home_layout'
+      when 'accaday'
+        false
       else
         'application'
       end
