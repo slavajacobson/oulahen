@@ -1600,6 +1600,8 @@ html
 	font-weight: bold;
 	position: relative;
 	margin-right: -10000px;
+	margin-left: 32px;
+	top: 10px;
 }
 
 #u6575

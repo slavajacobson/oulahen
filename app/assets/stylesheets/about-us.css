@@ -33,7 +33,7 @@
 	width: 0.01px;
 	margin-top: 7px;
 	position: relative;
-	margin-left:20px;
+	
 }
 
 #u32269
@@ -231,13 +231,14 @@
 {
 	z-index: 475;
 	width: 106px;
-	border-width: 1px;
+	border-width: 2px;
 	border-style: solid;
-	border-color: #E9E9E9;
+	border-color: #EAF3FA;
 	background-color: #FFFFFF;
 	padding-bottom: 2px;
 	position: relative;
 	margin-right: -10000px;
+	border-radius: 10px 10px 0px 0px;
 }
 
 #u32285:hover,#u32287:hover
