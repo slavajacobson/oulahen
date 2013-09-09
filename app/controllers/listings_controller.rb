@@ -14,11 +14,16 @@ class ListingsController < ApplicationController
 
   def transactions
     if params[:id] == 'homes' || params[:id].blank?
-      @transactions = Listing.where(sold:true, category_id: 1, active: true).order("updated_at DESC").page(params[:page]).per(20)
+      @transactions = Listing.where(sold:true, category_id: 1, active: true).order("updated_at DESC")
     elsif params[:id] == 'condos'
-      @transactions = Listing.where(sold:true, category_id: 2, active: true).order("updated_at DESC").page(params[:page]).per(20)
+      @transactions = Listing.where(sold:true, category_id: 2, active: true).order("updated_at DESC")
     elsif params[:id] == 'commercial'
-      @transactions = Listing.where(sold:true, category_id: 3, active: true).order("updated_at DESC").page(params[:page]).per(20)
+      @transactions = Listing.where(sold:true, category_id: 3, active: true).order("updated_at DESC")
+    end
+
+
+    unless params[:show_all]
+      @transactions = @transactions.page(params[:page]).per(50)
     end
   end
 

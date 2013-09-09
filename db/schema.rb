@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130827192108) do
+ActiveRecord::Schema.define(version: 20130903204712) do
 
   create_table "categories", force: true do |t|
     t.string   "name"
@@ -38,11 +38,11 @@ ActiveRecord::Schema.define(version: 20130827192108) do
   create_table "listings", force: true do |t|
     t.string   "address"
     t.string   "street_number"
-    t.boolean  "featured_listing",   default: false
-    t.boolean  "show_street_number", default: true
+    t.boolean  "featured_listing",               default: false
+    t.boolean  "show_street_number",             default: true
     t.string   "unit_number"
     t.string   "city_province"
-    t.boolean  "show_unit_number",   default: true
+    t.boolean  "show_unit_number",               default: true
     t.string   "postal_code"
     t.string   "neighbourhood"
     t.string   "lot"
@@ -50,22 +50,22 @@ ActiveRecord::Schema.define(version: 20130827192108) do
     t.string   "bedrooms"
     t.string   "bathrooms"
     t.float    "price"
-    t.boolean  "show_price",         default: true
+    t.boolean  "show_price",                     default: true
     t.boolean  "sold"
-    t.string   "transaction_label",  default: ""
+    t.string   "transaction_label",              default: ""
     t.string   "sold_status"
     t.float    "maintenance_fee"
     t.string   "virtual_tour_url"
-    t.string   "map_url"
+    t.text     "map_url",            limit: 255
     t.string   "realtor_url"
     t.string   "facebook_url"
     t.text     "description"
     t.text     "inclusions"
     t.text     "exclusions"
-    t.boolean  "active",             default: true
-    t.boolean  "draft",              default: true
+    t.boolean  "active",                         default: true
+    t.boolean  "draft",                          default: true
     t.integer  "draft_by"
-    t.integer  "priority",           default: 5
+    t.integer  "priority",                       default: 5
     t.integer  "category_id"
     t.datetime "created_at"
     t.datetime "updated_at"

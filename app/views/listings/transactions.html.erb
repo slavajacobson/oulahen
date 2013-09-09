@@ -32,21 +32,49 @@
 </div>
 
 <style>
-.pagination_container {
-  margin-top: 30px;
-  margin-bottom: 15px;
-}
-ul.pagination {
-  float: none;
-  margin-top: 0px;
-  margin-bottom: 0px;
-}
+  .pagination_container {
+    margin-top: 30px;
+    margin-bottom: 15px;
+  }
+  ul.pagination {
+    float: none;
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
+
+  .obutton {
+    float: right;
+    border: 2px solid #EAF3FA;
+    padding: 7px 10px;
+    margin-top: -25px;
+    color:black;
+  }
+  .obutton a {
+    color:black;
+    text-decoration: none;
+  }
+  .obutton:hover {
+    background-color: rgb(246, 246, 246);
+  }
 </style>
+
 
 <div class="transactions_container">
   <%= render partial: 'transaction', collection: @transactions, as: 'transaction' %>
 </div>
 
+
 <div class="pagination_container">
-  <%= paginate @transactions %>
+
+  <% unless params[:show_all] %>
+
+    
+    
+    <%= paginate @transactions %>
+
+    <div class="obutton">
+      <%= link_to "Show All", "#{params[:action]}?show_all=true" %>
+    </div>
+  <% end %>
+
 </div>

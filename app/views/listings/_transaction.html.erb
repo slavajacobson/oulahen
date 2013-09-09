@@ -28,6 +28,9 @@
       </div>
     <% end %>
     <div class="listing_address">
+      <% if transaction.show_street_number %>
+        <%= transaction.street_number %>
+      <% end %>
       <%= transaction.address.upcase %>, <%= transaction.city_province.upcase %>
     </div>
   </div>
