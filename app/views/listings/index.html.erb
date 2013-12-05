@@ -19,7 +19,7 @@
               </div>
               <div class="col-lg-2">
 
-                <%= f.select :sold_eq, options_for_select([["Listed", "false"], ["Sold", "true"]], params[:q][:sold_eq]), include_blank: true %>
+                <%= f.select :sold_eq, options_for_select([["Listed", "false"], ["Sold", "true"]], (params[:q].nil? ? "" : params[:q][:sold_eq])), include_blank: true %>
              
               </div>
               <div class="col-lg-2">
