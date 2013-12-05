@@ -57,7 +57,10 @@ class ListingsController < ApplicationController
   # GET /listings.json
   def index
     Listing.destroy_all(draft:true, draft_by:current_user.id)
-    @listings = Listing.all.order("created_at DESC").page(params[:page]).per(15)
+
+    @search = Listing.search(params[:q])
+
+    @listings = @search.result.where(draft:false).order("created_at DESC").page(params[:page]).per(15)
   end
 
   # GET /listings/1

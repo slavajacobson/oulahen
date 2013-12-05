@@ -65,3 +65,5 @@ gem 'rvm-capistrano'
 gem 'mailjet'
 
 gem 'kaminari'
+
+gem 'ransack'
