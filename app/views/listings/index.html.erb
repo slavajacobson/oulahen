@@ -1,48 +1,42 @@
 <h1>Listings</h1>
 
-<div class="well well-large">
-  
-
-
       <%= search_form_for @search do |f| %>
-        <div class="row">
-          <div class="form-group">
-              <div class="col-lg-2">
-                <%= f.label :address_cont, "Street name contains" %>
-              </div>
-              <div class="col-lg-2">
-                <%= f.text_field :address_cont, class: 'form-control input-small' %>
-              </div>
+        <div class="well well-large">
+          
+<div class="row">
+     
+                  <div class="form-group">
 
-              <div class="col-lg-2">
-                <%= f.label :sold_eq, "Listing status" %>
-              </div>
-              <div class="col-lg-2">
+                      <%= f.label :address_cont, "Street name contains", class:'control-label col-lg-3' %>
+                      
+                      <div class="col-lg-3">
+                        <%= f.text_field :address_cont, class: 'form-control' %>
+                      </div>
+                      
+                      
+       
+                      <%= f.label :sold_eq, "Listing status", class:'control-label col-lg-3' %>
 
-                <%= f.select :sold_eq, options_for_select([["Listed", "false"], ["Sold", "true"]], (params[:q].nil? ? "" : params[:q][:sold_eq])), include_blank: true %>
-             
+                      <div class="col-lg-3">
+                        <%= f.select :sold_eq, options_for_select([["Listed", "false"], ["Sold", "true"]], (params[:q].nil? ? "" : params[:q][:sold_eq])), { include_blank: true }, { class: 'form-control' } %>
+                        </div>
+                
+
+   
+              
+                  <div class="col-lg-3">
+                        <%= f.submit "Search", class: 'btn btn-default' %>
+                  </div>
+                
               </div>
-              <div class="col-lg-2">
-                <div class="form-group">
-                  <%= f.submit "Search", class: 'btn btn-success' %>
-                </div>
-              </div>
-          </div>
+       
         </div>
 
+      </div>
 
 
 
-           
-
-
-      <% end %>
-
-
-
-
-</div>
-
+<% end %>
 
 <% if @listings.blank? %>
 
