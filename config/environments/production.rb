@@ -81,4 +81,7 @@ Oulahen::Application.configure do
 
   config.action_mailer.default_url_options = { :host => 'oulahen.com' }
   config.assets.initialize_on_precompile = false
+
+
+  GA.tracker = "UA-46244834-1"
 end

@@ -67,3 +67,4 @@ gem 'mailjet'
 gem 'kaminari'
 
 gem 'ransack'
+gem 'google-analytics-rails'

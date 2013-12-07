@@ -30,4 +30,6 @@ Oulahen::Application.configure do
   config.assets.precompile += %w( application_split2.css admin.css admin.js )
 
   #config.action_mailer.default_url_options = { :host => 'localhost:3000' }
+
+  GA.tracker = "UA-46244834-1"
 end
