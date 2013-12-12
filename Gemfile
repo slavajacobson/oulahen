@@ -5,7 +5,7 @@ ruby '2.0.0'
 gem 'rails', '4.0.0'
 
 # Use sqlite3 as the database for Active Record
-gem 'sqlite3', group: [:development, :test]
+gem "sqlite3", "~> 1.3.8", group: [:development, :test]
 group :development do
   gem 'guard-livereload'
   gem "rails-erd"
@@ -44,8 +44,8 @@ end
 
 # Use ActiveModel has_secure_password
 #gem 'bcrypt-ruby', '~> 3.0.0'
-gem "bcrypt-ruby", :require => "bcrypt"
-
+#gem "bcrypt-ruby", :require => "bcrypt"
+gem "bcrypt-ruby", "~> 3.1.2"
 # Use unicorn as the app server
 gem 'unicorn', group: :production, platform: 'ruby'
 
