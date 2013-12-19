@@ -12,7 +12,7 @@ group :development do
 end
 
 group :production do
-	gem 'pg'
+	gem "pg", "~> 0.17.0"
 end
 
 # Use SCSS for stylesheets
@@ -28,7 +28,7 @@ gem 'coffee-rails', '~> 4.0.0'
 # gem 'therubyracer', platforms: :ruby
 
 # Use jquery as the JavaScript library
-gem 'jquery-rails', '2.1.4'
+gem "jquery-rails"
 gem 'jquery-ui-rails'
 gem 'jquery-fileupload-rails'
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
@@ -58,13 +58,18 @@ gem 'carrierwave'
 gem "rmagick", platform: 'ruby'
 gem "gritter"
 # Use debugger
-gem 'debugger', group: [:development, :test]
+gem "debugger", "~> 1.6.3", group: [:development, :test]
 gem 'rails_12factor'
 
-gem 'rvm-capistrano'
+gem "rvm-capistrano", "~> 1.5.1"
+
+gem "comfortable_mexican_sofa", "~> 1.11.0"
+
+
 gem 'mailjet'
 
 gem 'kaminari'
 
 gem 'ransack'
 gem 'google-analytics-rails'
+gem 'jquery-migrate-rails'
