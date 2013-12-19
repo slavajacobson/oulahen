@@ -2386,8 +2386,8 @@ html
 #u6522
 {
 	z-index: 330;
-	width: 212px;
-	min-height: 345px;
+	width: 447px;
+	min-height: 212px;
 	border-style: none;
 	border-color: transparent;
 	background-color: #FFFFFF;
@@ -2395,14 +2395,14 @@ html
 	position: relative;
 	margin-right: -10000px;
 	left: 464px;
-	height:454px;
+	height:212px;
 }
 
 #u6519
 {
 	z-index: 329;
-	width: 212px;
-	min-height: 454px;
+	width: 447px;
+	height: 212px;
 	border-style: none;
 	border-color: transparent;
 	background-color: transparent;
@@ -2410,7 +2410,8 @@ html
 	position: relative;
 	margin-right: -10000px;
 	margin-top: 1px;
-	left: 701px;
+    left: 464px;
+    top: 240px;
 }
 
 #u16202
