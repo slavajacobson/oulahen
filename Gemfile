@@ -55,7 +55,7 @@ gem 'capistrano', group: :development
 gem 'high_voltage'
 gem 'devise'
 gem 'carrierwave'
-#gem "rmagick", platform: 'ruby'
+gem "rmagick", platform: 'ruby'
 gem "gritter"
 # Use debugger
 gem "debugger", "~> 1.6.3", group: [:development, :test]
