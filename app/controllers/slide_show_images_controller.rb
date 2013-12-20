@@ -6,8 +6,8 @@ class SlideShowImagesController < ApplicationController
   # GET /slide_show_images
   # GET /slide_show_images.json
   def index
-    @slide_show_images = SlideShowImage.all
-    @listings = Listing.where(featured_listing: true, active: true)
+    @slide_show_images = SlideShowImage.all.order(order: :asc)
+    @listings = Listing.where(featured_listing: true, active: true).order(priority: :desc)
   end
 
   # GET /slide_show_images/1
@@ -47,6 +47,28 @@ class SlideShowImagesController < ApplicationController
     end
   end
 
+  def update_order
+      
+      
+      
+      respond_to do |format|
+         format.js {
+          
+            new_order = params[:slideshow]
+            
+            new_order.each_with_index do |order, i|
+                #debugger
+                slideshow = SlideShowImage.find(order)
+                slideshow.order = i
+                slideshow.save
+            end
+             
+         }
+
+      end
+      
+      
+  end
   # PATCH/PUT /slide_show_images/1
   # PATCH/PUT /slide_show_images/1.json
   def update
@@ -55,13 +77,12 @@ class SlideShowImagesController < ApplicationController
       video_param = CGI.parse(URI.parse(params[:slide_show_image][:video]).query)
                   
       params[:slide_show_image][:video] = video_param['v'][0]
-      #debugger
-      #puts "ok"
+
     end
 
 
     respond_to do |format|
-      #debugger
+
       if @slide_show_image.update(slide_show_image_params)
         format.html { redirect_to @slide_show_image, notice: 'Slide show image was successfully updated.' }
         format.json { head :no_content }
@@ -90,6 +111,6 @@ class SlideShowImagesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def slide_show_image_params
-      params.require(:slide_show_image).permit(:image, :description_line1, :description_line2, :is_video, :video, :link_to)
+      params.require(:slide_show_image).permit(:image, :description_line1, :description_line2, :is_video, :video, :link_to, :active)
     end
 end

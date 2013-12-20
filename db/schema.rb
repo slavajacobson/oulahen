@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130903204712) do
+ActiveRecord::Schema.define(version: 20131220210352) do
 
   create_table "categories", force: true do |t|
     t.string   "name"
@@ -70,6 +70,7 @@ ActiveRecord::Schema.define(version: 20130903204712) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "slug"
+    t.date     "posted_on",                      default: '2013-12-20'
   end
 
   add_index "listings", ["slug"], name: "index_listings_on_slug"
@@ -94,6 +95,7 @@ ActiveRecord::Schema.define(version: 20130903204712) do
     t.boolean  "is_video",          default: false
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "order",             default: 0
   end
 
   create_table "users", force: true do |t|

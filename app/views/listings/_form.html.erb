@@ -44,7 +44,13 @@
               <div class="form-group">
                 <%= f.label :priority %>
 
-                <%= f.select :priority, (1..10).collect {|r| [ r, r ] } %>
+                <%= f.select :priority, (1..10).collect {|r| [ r, r ] } %> (Listings and slideshow sorted by this field)
+           
+              </div>
+              <div class="form-group">
+                <%= f.label :posted_on %>
+
+                <%= f.date_field :posted_on %> (Transactions sorted by this field)
            
               </div>
 

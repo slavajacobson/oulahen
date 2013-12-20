@@ -14,11 +14,11 @@ class ListingsController < ApplicationController
 
   def transactions
     if params[:id] == 'homes' || params[:id].blank?
-      @transactions = Listing.where(sold:true, category_id: 1, active: true).order("updated_at DESC")
+      @transactions = Listing.where(sold:true, category_id: 1, active: true).order(posted_on: :desc)
     elsif params[:id] == 'condos'
-      @transactions = Listing.where(sold:true, category_id: 2, active: true).order("updated_at DESC")
+      @transactions = Listing.where(sold:true, category_id: 2, active: true).order(posted_on: :desc)
     elsif params[:id] == 'commercial'
-      @transactions = Listing.where(sold:true, category_id: 3, active: true).order("updated_at DESC")
+      @transactions = Listing.where(sold:true, category_id: 3, active: true).order(posted_on: :desc)
     end
 
 
@@ -53,6 +53,8 @@ class ListingsController < ApplicationController
     render 'site_listings'
   end
 
+    #ADMIN SECTION ---------------------
+    
   # GET /listings
   # GET /listings.json
   def index
@@ -195,6 +197,6 @@ class ListingsController < ApplicationController
                                       :active, :address, :street_number, :show_street_number, :unit_number, :show_unit_number, 
                                       :postal_code, :neighbourhood, :lot, :sqft, :bedrooms, :bathrooms, :price, :sold_price, :priority,
                                       :show_price, :sold, :sold_status, :maintenance_fee, :virtual_tour_url, :map_url, :realtor_url, :facebook_url, 
-                                      :description, :inclusions, :exclusions, :category_id, :featured_listing, :city_province, :transaction_label)
+                                      :description, :inclusions, :exclusions, :posted_on, :category_id, :featured_listing, :city_province, :transaction_label)
     end
 end

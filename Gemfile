@@ -62,10 +62,6 @@ gem "debugger", "~> 1.6.3", group: [:development, :test]
 gem 'rails_12factor'
 
 gem "rvm-capistrano", "~> 1.5.1"
-
-gem "comfortable_mexican_sofa", "~> 1.11.0"
-
-
 gem 'mailjet'
 
 gem 'kaminari'

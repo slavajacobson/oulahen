@@ -9,7 +9,7 @@
       <div id="u6474"><!-- simple frame --></div>
 
 
-
+s
 
 
       <div class="clearfix" id="pu26985"><!-- group -->
@@ -104,8 +104,8 @@
      <% @rmagick = gem_exists?('RMagick') %>
 
 
-     <% @slide_show_images = SlideShowImage.all if @rmagick %>
-     <% @featured_listings = Listing.where(active: true, featured_listing: true) if @rmagick %>
+     <% @slide_show_images = SlideShowImage.where(active: true).order(order: :asc) if @rmagick %>
+     <% @featured_listings = Listing.where(active: true, featured_listing: true).order(priority: :desc) if @rmagick %>
 
 
      <div class="SlideShowWidget clearfix grpelem" id="slideshowu6475"><!-- group -->

@@ -1,5 +1,10 @@
 Oulahen::Application.routes.draw do
-  resources :slide_show_images
+  resources :slide_show_images do
+     collection do
+        post 'update_order', as: 'update_order' 
+     end
+      
+  end
 
   resources :photos do
     collection do
