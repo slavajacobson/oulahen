@@ -39,6 +39,11 @@
 .edit_listing input[type="password"], .edit_listing input[type="text"], .edit_listing input[type="number"] {
   width: 250px;
 }
+
+.edit_listing input[type="date"] {
+  width: 150px;
+}
+
 .form-group > label {
   width:120px;
 }
@@ -68,3 +73,4 @@
 	float:left;
 	margin-right: 35px;
 }
+
