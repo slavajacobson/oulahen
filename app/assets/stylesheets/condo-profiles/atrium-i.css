@@ -1,0 +1,267 @@
+#pslideshowu41616
+{
+	width: 0.01px;
+	padding-bottom: 4px;
+	margin-left: 20px;
+	margin-top: 36px;
+	position: relative;
+}
+
+#slideshowu41616
+{
+	z-index: 251;
+	width: 0.01px;
+	height: 345px;
+	position: relative;
+	margin-right: -10000px;
+	margin-top: 2px;
+}
+
+#u41631
+{
+	position: absolute;
+	width: 520px;
+	height: 293px;
+	background-color: transparent;
+}
+
+#u41631popup
+{
+	z-index: 252;
+}
+
+#u41690
+{
+	z-index: 253;
+	width: 520px;
+	height: 293px;
+	border-style: none;
+	border-color: transparent;
+	background-color: transparent;
+	margin-right: -10000px;
+	position: relative;
+}
+
+#u41699
+{
+	z-index: 255;
+	width: 520px;
+	height: 293px;
+	border-style: none;
+	border-color: transparent;
+	background-color: transparent;
+	margin-right: -10000px;
+	position: relative;
+}
+
+#u41620
+{
+	position: absolute;
+	width: 130px;
+	top: 300px;
+	left: 196px;
+}
+
+#u41620popup
+{
+	z-index: 257;
+}
+
+#u41693
+{
+	z-index: 258;
+	width: 60px;
+	height: 45px;
+	border-color: #6B6B6B;
+	background-color: transparent;
+	position: relative;
+	margin-right: -10000px;
+}
+
+#u41702
+{
+	z-index: 260;
+	width: 60px;
+	height: 45px;
+	border-color: #6B6B6B;
+	background-color: transparent;
+	position: relative;
+	margin-right: -10000px;
+	left: 70px;
+}
+
+#u41693.SSSlideLinkSelected,#u41702.SSSlideLinkSelected
+{
+	border-style: none;
+	border-color: transparent;
+	margin: 0px -10000px 0px 0px;
+}
+
+#u41693_clip,#u41702_clip
+{
+	overflow: hidden;
+	width: 60px;
+	height: 45px;
+}
+
+#u41693_img,#u41702_img
+{
+	margin-left: -10px;
+	margin-right: -10px;
+}
+
+#u41628-4
+{
+	position: absolute;
+	width: 33px;
+	min-height: 41px;
+	border-style: none;
+	border-color: transparent;
+	background-color: #FFFFFF;
+	background-color: rgba(255, 255, 255, 0.5);
+	font-size: 41px;
+	text-align: center;
+	color: #4D4B4B;
+	line-height: 1;
+	font-family: ubuntu-condensed, sans-serif;
+	font-weight: 400;
+	top: 252px;
+	left: 454px;
+	-pie-background: rgba(255, 255, 255, 0.5);
+}
+
+#u41628-4popup
+{
+	z-index: 262;
+}
+
+#u41654-4
+{
+	position: absolute;
+	width: 33px;
+	min-height: 41px;
+	border-style: none;
+	border-color: transparent;
+	background-color: #FFFFFF;
+	background-color: rgba(255, 255, 255, 0.5);
+	font-size: 41px;
+	text-align: center;
+	color: #4D4B4B;
+	line-height: 1;
+	font-family: ubuntu-condensed, sans-serif;
+	font-weight: 400;
+	top: 252px;
+	left: 487px;
+	-pie-background: rgba(255, 255, 255, 0.5);
+}
+
+#u41654-4popup
+{
+	z-index: 266;
+}
+
+.SSFirstButton,.SSPreviousButton,.SSNextButton,.SSLastButton,.SSSlideLink,.SSCloseButton /* slideshowFreeStyle */
+{
+	cursor: pointer;
+}
+
+.SSSlideLoading /* slideshowFreeStyle */
+{
+	background: url("../images/loading.gif") no-repeat center center;
+}
+
+#u41657-4
+{
+	z-index: 270;
+	width: 315px;
+	min-height: 25px;
+	font-size: 18px;
+	position: relative;
+	margin-right: -10000px;
+	left: 540px;
+}
+
+#u41612-4
+{
+	z-index: 274;
+	width: 221px;
+	min-height: 27px;
+	font-size: 16px;
+	text-align: left;
+	margin-left: 560px;
+	top: -316px;
+	margin-bottom: -27px;
+	position: relative;
+}
+
+#u41656-5
+{
+	z-index: 278;
+	width: 302px;
+	min-height: 17px;
+	font-weight: bold;
+	margin-left: 560px;
+	top: -277px;
+	margin-bottom: -17px;
+	position: relative;
+}
+
+#u41656-2
+{
+	color: #76080D;
+}
+
+#u41613-28
+{
+	z-index: 222;
+	width: 381px;
+	margin-left: 560px;
+	top: -244px;
+	margin-bottom: -168px;
+	position: relative;
+}
+
+#u41613-19
+{
+	letter-spacing: 1px;
+}
+
+#u41613-7,#u41613-10,#u41613-16,#u41613-21
+{
+	font-weight: normal;
+}
+
+#u41613-3,#u41613-6,#u41613-9,#u41613-12,#u41613-17,#u41613-22,#u41613-23
+{
+	font-weight: bold;
+}
+
+#u41613-2,#u41613-24
+{
+	color: #76080D;
+	font-weight: bold;
+}
+
+#u41655-4
+{
+	z-index: 283;
+	width: 200px;
+	min-height: 14px;
+	font-size: 11px;
+	margin-left: 560px;
+	top: -37px;
+	margin-bottom: -14px;
+	position: relative;
+}
+
+#u41614
+{
+	z-index: 250;
+	width: 200px;
+	border-style: none;
+	border-color: transparent;
+	background-color: transparent;
+	margin-left: 20px;
+	margin-top: 14px;
+	position: relative;
+}

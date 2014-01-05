@@ -1,0 +1,392 @@
+#pslideshowu40879
+{
+	width: 0.01px;
+	padding-bottom: 55px;
+	margin-left: 20px;
+	margin-top: 36px;
+	position: relative;
+}
+
+#slideshowu40879
+{
+	z-index: 223;
+	width: 0.01px;
+	height: 345px;
+	position: relative;
+	margin-right: -10000px;
+	margin-top: 2px;
+}
+
+#u40900
+{
+	position: absolute;
+	width: 520px;
+	height: 293px;
+	background-color: transparent;
+}
+
+#u40900popup
+{
+	z-index: 224;
+}
+
+#u41000
+{
+	z-index: 225;
+	width: 520px;
+	height: 293px;
+	border-style: none;
+	border-color: transparent;
+	background-color: transparent;
+	margin-right: -10000px;
+	position: relative;
+}
+
+#u41009
+{
+	z-index: 227;
+	width: 520px;
+	height: 293px;
+	border-style: none;
+	border-color: transparent;
+	background-color: transparent;
+	margin-right: -10000px;
+	position: relative;
+}
+
+#u41018
+{
+	z-index: 229;
+	width: 520px;
+	height: 293px;
+	border-style: none;
+	border-color: transparent;
+	background-color: transparent;
+	margin-right: -10000px;
+	position: relative;
+}
+
+#u41027
+{
+	z-index: 231;
+	width: 520px;
+	height: 293px;
+	border-style: none;
+	border-color: transparent;
+	background-color: transparent;
+	margin-right: -10000px;
+	position: relative;
+}
+
+#u41094
+{
+	z-index: 233;
+	width: 520px;
+	height: 293px;
+	border-style: none;
+	border-color: transparent;
+	background-color: transparent;
+	margin-right: -10000px;
+	position: relative;
+}
+
+#u41094_img
+{
+	margin-left: 162px;
+	margin-top: -2px;
+	margin-right: 162px;
+}
+
+#u41103
+{
+	z-index: 235;
+	width: 520px;
+	height: 293px;
+	border-style: none;
+	border-color: transparent;
+	background-color: transparent;
+	margin-right: -10000px;
+	position: relative;
+}
+
+#u41094_clip,#u41103_clip
+{
+	overflow: hidden;
+	width: 520px;
+	height: 293px;
+}
+
+#u41103_img
+{
+	margin-top: -20px;
+	margin-bottom: -32px;
+}
+
+#u40928
+{
+	position: absolute;
+	width: 410px;
+	top: 300px;
+	left: 56px;
+}
+
+#u40928popup
+{
+	z-index: 237;
+}
+
+#u41003
+{
+	z-index: 238;
+	width: 60px;
+	height: 45px;
+	border-color: #6B6B6B;
+	background-color: transparent;
+	position: relative;
+	margin-right: -10000px;
+}
+
+#u41012
+{
+	z-index: 240;
+	width: 60px;
+	height: 45px;
+	border-color: #6B6B6B;
+	background-color: transparent;
+	position: relative;
+	margin-right: -10000px;
+	left: 70px;
+}
+
+#u41021
+{
+	z-index: 242;
+	width: 60px;
+	height: 45px;
+	border-color: #6B6B6B;
+	background-color: transparent;
+	position: relative;
+	margin-right: -10000px;
+	left: 140px;
+}
+
+#u41030
+{
+	z-index: 244;
+	width: 60px;
+	height: 45px;
+	border-color: #6B6B6B;
+	background-color: transparent;
+	position: relative;
+	margin-right: -10000px;
+	left: 210px;
+}
+
+#u41003_img,#u41012_img,#u41021_img,#u41030_img
+{
+	margin-left: -10px;
+	margin-right: -10px;
+}
+
+#u41097
+{
+	z-index: 246;
+	width: 60px;
+	height: 45px;
+	border-color: #6B6B6B;
+	background-color: transparent;
+	position: relative;
+	margin-right: -10000px;
+	left: 280px;
+}
+
+#u41097_img
+{
+	margin-top: -23px;
+	margin-bottom: -23px;
+}
+
+#u41106
+{
+	z-index: 248;
+	width: 60px;
+	height: 45px;
+	border-color: #6B6B6B;
+	background-color: transparent;
+	position: relative;
+	margin-right: -10000px;
+	left: 350px;
+}
+
+#u41003.SSSlideLinkSelected,#u41012.SSSlideLinkSelected,#u41021.SSSlideLinkSelected,#u41030.SSSlideLinkSelected,#u41097.SSSlideLinkSelected,#u41106.SSSlideLinkSelected
+{
+	border-style: none;
+	border-color: transparent;
+	margin: 0px -10000px 0px 0px;
+}
+
+#u41003_clip,#u41012_clip,#u41021_clip,#u41030_clip,#u41097_clip,#u41106_clip
+{
+	overflow: hidden;
+	width: 60px;
+	height: 45px;
+}
+
+#u41106_img
+{
+	margin-left: -4px;
+	margin-right: -4px;
+}
+
+#u40924-4
+{
+	position: absolute;
+	width: 33px;
+	min-height: 41px;
+	border-style: none;
+	border-color: transparent;
+	background-color: #FFFFFF;
+	background-color: rgba(255, 255, 255, 0.5);
+	font-size: 41px;
+	text-align: center;
+	color: #4D4B4B;
+	line-height: 1;
+	font-family: ubuntu-condensed, sans-serif;
+	font-weight: 400;
+	top: 252px;
+	left: 454px;
+	-pie-background: rgba(255, 255, 255, 0.5);
+}
+
+#u40924-4popup
+{
+	z-index: 250;
+}
+
+#u40925-4
+{
+	position: absolute;
+	width: 33px;
+	min-height: 41px;
+	border-style: none;
+	border-color: transparent;
+	background-color: #FFFFFF;
+	background-color: rgba(255, 255, 255, 0.5);
+	font-size: 41px;
+	text-align: center;
+	color: #4D4B4B;
+	line-height: 1;
+	font-family: ubuntu-condensed, sans-serif;
+	font-weight: 400;
+	top: 252px;
+	left: 487px;
+	-pie-background: rgba(255, 255, 255, 0.5);
+}
+
+#u40925-4popup
+{
+	z-index: 254;
+}
+
+.SSFirstButton,.SSPreviousButton,.SSNextButton,.SSLastButton,.SSSlideLink,.SSCloseButton /* slideshowFreeStyle */
+{
+	cursor: pointer;
+}
+
+.SSSlideLoading /* slideshowFreeStyle */
+{
+	background: url("../images/loading.gif") no-repeat center center;
+}
+
+#u40943-4
+{
+	z-index: 258;
+	width: 400px;
+	min-height: 30px;
+	font-size: 18px;
+	position: relative;
+	margin-right: -10000px;
+	left: 540px;
+}
+
+#u40877-4
+{
+	z-index: 262;
+	width: 291px;
+	min-height: 28px;
+	font-size: 16px;
+	text-align: left;
+	margin-left: 560px;
+	top: -367px;
+	margin-bottom: -28px;
+	position: relative;
+}
+
+#u40873-5
+{
+	z-index: 305;
+	width: 302px;
+	min-height: 17px;
+	font-weight: bold;
+	margin-left: 560px;
+	top: -325px;
+	margin-bottom: -17px;
+	position: relative;
+}
+
+#u40873-2
+{
+	color: #76080D;
+}
+
+#pu40875
+{
+	width: 0.01px;
+	margin-left: 20px;
+	top: -293px;
+	margin-bottom: -293px;
+	position: relative;
+}
+
+#u40875
+{
+	z-index: 222;
+	width: 520px;
+	min-height: 378px;
+	border-style: none;
+	border-color: transparent;
+	background-color: transparent;
+	position: relative;
+	margin-right: -10000px;
+	margin-top: 263px;
+}
+
+#u40878-39
+{
+	z-index: 266;
+	width: 381px;
+	position: relative;
+	margin-right: -10000px;
+	left: 540px;
+}
+
+#u40878-10,#u40878-28
+{
+	font-weight: normal;
+}
+
+#u40878-3,#u40878-6,#u40878-9,#u40878-12,#u40878-15,#u40878-18,#u40878-21,#u40878-24,#u40878-29,#u40878-30
+{
+	font-weight: bold;
+}
+
+#u40878-2,#u40878-17,#u40878-31,#u40878-35
+{
+	color: #76080D;
+	font-weight: bold;
+}
+
+#u40878-36
+{
+	color: #000000;
+}

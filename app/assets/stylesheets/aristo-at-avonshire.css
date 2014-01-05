@@ -1,0 +1,252 @@
+#pslideshowu42222
+{
+	width: 0.01px;
+	padding-bottom: 13px;
+	margin-left: 20px;
+	margin-top: 36px;
+	position: relative;
+}
+
+#slideshowu42222
+{
+	z-index: 249;
+	width: 0.01px;
+	height: 345px;
+	position: relative;
+	margin-right: -10000px;
+	margin-top: 2px;
+}
+
+#u42273
+{
+	position: absolute;
+	width: 520px;
+	height: 293px;
+	background-color: transparent;
+}
+
+#u42273popup
+{
+	z-index: 250;
+}
+
+#u42321
+{
+	z-index: 251;
+	width: 520px;
+	height: 293px;
+	border-style: none;
+	border-color: transparent;
+	background-color: transparent;
+	margin-right: -10000px;
+	position: relative;
+}
+
+#u42330
+{
+	z-index: 253;
+	width: 520px;
+	height: 293px;
+	border-style: none;
+	border-color: transparent;
+	background-color: transparent;
+	margin-right: -10000px;
+	position: relative;
+}
+
+#u42234
+{
+	position: absolute;
+	width: 130px;
+	top: 300px;
+	left: 196px;
+}
+
+#u42234popup
+{
+	z-index: 255;
+}
+
+#u42324
+{
+	z-index: 256;
+	width: 60px;
+	height: 45px;
+	border-color: #6B6B6B;
+	background-color: transparent;
+	position: relative;
+	margin-right: -10000px;
+}
+
+#u42333
+{
+	z-index: 258;
+	width: 60px;
+	height: 45px;
+	border-color: #6B6B6B;
+	background-color: transparent;
+	position: relative;
+	margin-right: -10000px;
+	left: 70px;
+}
+
+#u42324.SSSlideLinkSelected,#u42333.SSSlideLinkSelected
+{
+	border-style: none;
+	border-color: transparent;
+	margin: 0px -10000px 0px 0px;
+}
+
+#u42324_img,#u42333_img
+{
+	padding-top: 6px;
+	padding-bottom: 6px;
+}
+
+#u42233-4
+{
+	position: absolute;
+	width: 33px;
+	min-height: 41px;
+	border-style: none;
+	border-color: transparent;
+	background-color: #FFFFFF;
+	background-color: rgba(255, 255, 255, 0.5);
+	font-size: 41px;
+	text-align: center;
+	color: #4D4B4B;
+	line-height: 1;
+	font-family: ubuntu-condensed, sans-serif;
+	font-weight: 400;
+	top: 252px;
+	left: 454px;
+	-pie-background: rgba(255, 255, 255, 0.5);
+}
+
+#u42233-4popup
+{
+	z-index: 260;
+}
+
+#u42252-4
+{
+	position: absolute;
+	width: 33px;
+	min-height: 41px;
+	border-style: none;
+	border-color: transparent;
+	background-color: #FFFFFF;
+	background-color: rgba(255, 255, 255, 0.5);
+	font-size: 41px;
+	text-align: center;
+	color: #4D4B4B;
+	line-height: 1;
+	font-family: ubuntu-condensed, sans-serif;
+	font-weight: 400;
+	top: 252px;
+	left: 487px;
+	-pie-background: rgba(255, 255, 255, 0.5);
+}
+
+#u42252-4popup
+{
+	z-index: 264;
+}
+
+.SSFirstButton,.SSPreviousButton,.SSNextButton,.SSLastButton,.SSSlideLink,.SSCloseButton /* slideshowFreeStyle */
+{
+	cursor: pointer;
+}
+
+.SSSlideLoading /* slideshowFreeStyle */
+{
+	background: url("../images/loading.gif") no-repeat center center;
+}
+
+#u42216-4
+{
+	z-index: 268;
+	width: 393px;
+	min-height: 25px;
+	font-size: 18px;
+	position: relative;
+	margin-right: -10000px;
+	left: 540px;
+}
+
+#u42217-4
+{
+	z-index: 281;
+	width: 381px;
+	min-height: 25px;
+	font-size: 16px;
+	text-align: left;
+	margin-left: 560px;
+	top: -325px;
+	margin-bottom: -25px;
+	position: relative;
+}
+
+#u42291-5
+{
+	z-index: 272;
+	width: 302px;
+	min-height: 17px;
+	font-weight: bold;
+	margin-left: 560px;
+	top: -283px;
+	margin-bottom: -17px;
+	position: relative;
+}
+
+#u42291-2
+{
+	color: #76080D;
+}
+
+#u42221-26
+{
+	z-index: 222;
+	width: 381px;
+	margin-left: 560px;
+	top: -250px;
+	margin-bottom: -202px;
+	position: relative;
+}
+
+#u42221-10,#u42221-16
+{
+	font-weight: normal;
+}
+
+#u42221-3,#u42221-6,#u42221-9,#u42221-12,#u42221-17,#u42221-18,#u42221-21
+{
+	font-weight: bold;
+}
+
+#u42221-2,#u42221-22
+{
+	color: #76080D;
+	font-weight: bold;
+}
+
+#u42218-4
+{
+	z-index: 277;
+	width: 216px;
+	min-height: 14px;
+	font-size: 11px;
+	margin-left: 560px;
+	position: relative;
+}
+
+#u42219
+{
+	z-index: 248;
+	width: 200px;
+	border-style: none;
+	border-color: transparent;
+	background-color: transparent;
+	margin-left: 20px;
+	position: relative;
+}

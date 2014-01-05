@@ -59,9 +59,9 @@ html
 	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
 	filter: alpha(opacity=50);
 	position: absolute;
-	top: 0px;
+	top: 12px;
 	bottom: 0px;
-	height:454px;
+	height: 451px;
 }
 
 #pu26985
