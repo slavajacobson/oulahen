@@ -17,8 +17,6 @@ class ListingsController < ApplicationController
       @transactions = Listing.where(sold:true, category_id: 1, active: true).order(posted_on: :desc)
     elsif params[:id] == 'condos'
       @transactions = Listing.where(sold:true, category_id: 2, active: true).order(posted_on: :desc)
-    elsif params[:id] == 'commercial'
-      @transactions = Listing.where(sold:true, category_id: 3, active: true).order(posted_on: :desc)
     end
 
 
