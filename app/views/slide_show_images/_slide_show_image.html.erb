@@ -80,10 +80,12 @@
     <a href="<%= slide_show_image.link_to %>" target="_blank">
   <% end %>
 
-    <div class="carousel-caption" id="u34596-7">
-      <p><%= slide_show_image.description_line1 %></p>
-      <p><%= slide_show_image.description_line2 %></p>
-    </div>
+  <% unless slide_show_image.description_line1.blank? && slide_show_image.description_line1.blank? %>
+      <div class="carousel-caption" id="u34596-7">
+        <p><%= slide_show_image.description_line1 %></p>
+        <p><%= slide_show_image.description_line2 %></p>
+      </div>
+  <% end %>
 
   <% unless slide_show_image.link_to.blank? %>
     </a>
