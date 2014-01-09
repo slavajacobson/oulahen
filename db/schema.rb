@@ -70,7 +70,7 @@ ActiveRecord::Schema.define(version: 20131220210352) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "slug"
-    t.date     "posted_on",                      default: '2013-12-21'
+    t.date     "posted_on",                      default: '2014-01-09'
   end
 
   add_index "listings", ["slug"], name: "index_listings_on_slug"
