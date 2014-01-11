@@ -1493,9 +1493,10 @@ html
 #u6559-6
 {
 	z-index: 230;
-	width: 143px;
+	width: 147px;
 	min-height: 22px;
 	text-align: left;
+	left:-5px;
 	font-size: 13px;
 	line-height: 0.97;
 	font-weight: bold;
