@@ -271,7 +271,7 @@
 #u31976
 {
 	z-index: 242;
-	width: 110px;
+	width: 134px;
 	border-width: 2px;
 	border-style: solid;
 	border-color: rgb(234, 243, 250);
@@ -286,7 +286,6 @@
 {
 	border-color: rgb(234, 243, 250);
 	background-color: rgb(234, 243, 250);
-	width: 110px;
 	min-height: 0px;
 	margin: 0px -10000px 0px 0px;
 }
@@ -294,7 +293,7 @@
 #u31975-4
 {
 	z-index: 243;
-	width: 95px;
+	width: 120px;
 	min-height: 22px;
 	text-align: center;
 	color: #0D0A31;
