@@ -1,10 +1,18 @@
 <div class="gradient colelem" id="u16510"><!-- simple frame --></div>
 
   <%= render 'listings/site_listings_nav', header: "Commercial Real Estate" %>
-
+ <% @listings = Listing.where(active:true,category_id:3, sold:false).order("priority DESC, price DESC") %>
+    <%= render @listings %>
   <div class="clearfix colelem" id="ppu23347"><!-- group -->
+  
    <div class="clearfix grpelem" id="pu23347"><!-- column -->
+
     <div class="colelem" id="u23347"><!-- image -->
+
+
+
+
+
      <img class="block" id="u23347_img" src="/images/commercial_main.jpg" alt="" width="330" height="240"/>
     </div>
 <!--     <a class="nonblock nontext clearfix colelem" id="u13566-4" href="commercial-listings.html"><p class="Charitable-work-subtitles">Commercial Listings</p></a>
