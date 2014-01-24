@@ -1,11 +1,23 @@
 <div class="gradient colelem" id="u16510"><!-- simple frame --></div>
 
   <%= render 'listings/site_listings_nav', header: "Commercial Real Estate" %>
-
+ <% @listings = Listing.where(active:true,category_id:3, sold:false).order("priority DESC, price DESC") %>
+    <%= render @listings %>
   <div class="clearfix colelem" id="ppu23347"><!-- group -->
+  
    <div class="clearfix grpelem" id="pu23347"><!-- column -->
+
     <div class="colelem" id="u23347"><!-- image -->
+<<<<<<< HEAD
      <img class="block" id="u23347_img" src="/images/288 Sheppard Ave E Pharma.jpg" alt="" width="330" height="240"/>
+=======
+
+
+
+
+
+     <img class="block" id="u23347_img" src="/images/commercial_main.jpg" alt="" width="330" height="240"/>
+>>>>>>> f1a44921e7d4566777b15ec1c77035721a4077c5
     </div>
 <!--     <a class="nonblock nontext clearfix colelem" id="u13566-4" href="commercial-listings.html"><p class="Charitable-work-subtitles">Commercial Listings</p></a>
     <a class="nonblock nontext testimonials-Text clearfix colelem" id="u13567-7" href="/listings/commercial"><p><span id="u13567">Click here</span>&nbsp;for our Commercial listings;</p><p>For Sale or For Lease.</p></a> -->
