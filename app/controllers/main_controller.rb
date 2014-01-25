@@ -6,9 +6,9 @@ class MainController < ApplicationController
 	end
 
 	def contact_us_form
-		#debugger
+		
 
-		if UserMailer.contact_form(params[:Name],params[:Email],params[:Phone],params[:Message]).deliver
+		if UserMailer.contact_form(params[:Name],params[:Email],params[:Phone],params[:Message], params[:recipient]).deliver
 
 			render json: '{"FormResponse": { "success": true}}'
 		else

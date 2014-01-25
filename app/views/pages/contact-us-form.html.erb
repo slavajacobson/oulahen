@@ -25,6 +25,7 @@
 
       <%= form_tag contact_us_sendmail_path, method: 'post', class:"form-grp clearfix colelem", id:'widgetu25844' do %><!-- group -->
 
+       <%= hidden_field_tag :recipient, params[:recipient] %>
        <div class="fld-grp clearfix grpelem" id="widgetu25852" data-required="true"><!-- group -->
         <label class="fld-label actAsDiv clearfix grpelem" id="u25854-4" for="widgetu25852_input"><!-- content -->
          <span class="actAsPara">Name:</span>
