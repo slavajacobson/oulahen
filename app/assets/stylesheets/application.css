@@ -40,3 +40,14 @@
  *= require listing_show.css
  *= require bootstrap-slideshow.min
  */
+#last_div
+{
+	z-index: 685;
+	width: 920px;
+	height: 3px;
+	border-color: #000000;
+	margin-left: 20px;
+	top: -4px;
+	margin-bottom: -3px;
+	position: relative;
+}

@@ -21,5 +21,9 @@ module ApplicationHelper
     end
 	end
 
+	def default_title page
+		"#{page} - Toronto Real Estate - Oulahen Team"
+	end
+
 	
 end
