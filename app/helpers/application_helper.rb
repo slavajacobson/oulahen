@@ -22,7 +22,11 @@ module ApplicationHelper
 	end
 
 	def default_title page
-		"#{page} - Toronto Real Estate - Oulahen Team"
+		"#{page} - #{title}"
+	end
+
+	def title
+		"Toronto Real Estate - Oulahen Team"
 	end
 
 	
