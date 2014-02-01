@@ -1,3 +1,11 @@
+#u31187:hover {
+  box-shadow: 0px 0px 12px black;
+  cursor: pointer;
+}
+#u31187 {
+  z-index:777;
+}
+
 ul.pagination {
 	display: table;
 	float: right;
@@ -491,19 +499,16 @@ ul.pagination li.active a {
 {
 	z-index: 542;
 	width: 78px;
-	background-color: transparent;
-	position: relative;
-	margin-right: -10000px;
+	border:1px solid white;
+	margin-left:9px;
+	margin-bottom: 10px;
 }
 
-#u30892.MuseLinkActive,#u31206:hover
+#u31206:hover
 {
 	border-width: 1px;
 	border-style: solid;
 	border-color: #B1D4E2;
-	width: 78px;
-	min-height: 0px;
-	margin: -1px -10001px -1px -1px;
 }
 
 #u31204
@@ -516,7 +521,7 @@ ul.pagination li.active a {
 	left: 87px;
 }
 
-#u31206.MuseLinkActive,#u31204:hover
+#u31204:hover
 {
 	border-width: 1px;
 	border-style: solid;
@@ -778,10 +783,10 @@ ul.pagination li.active a {
 
 #ppu30974,#ppu31071,#ppu31002,#ppu31016,#ppu31206,#ppu31262
 {
-	width: 0.01px;
+	width: 183px;
 	padding-bottom: 9.5550946945325px;
 	position: relative;
-	left: 10px;
+	left: 0px;
 	padding-top: 9px;
 	z-index: 2;
 }
