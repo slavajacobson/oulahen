@@ -51,3 +51,7 @@
 	margin-bottom: -3px;
 	position: relative;
 }
+
+.active_tab {
+	background-color:#fff;
+}

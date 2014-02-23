@@ -115,22 +115,22 @@ ul.pagination li.active a {
   position: relative;
 }
 
-#u31908:hover {
+/*#u31908:hover {
 	border-color: #EAF3FA;
 	background-color: #EAF3FA;
 	width: 98px;
 	min-height: 0px;
 	margin: 0px -10000px 0px 0px;
-}
+}*/
 #u31908
 {
 	z-index: 586;
 	width: 96px;
 	border-width: 2px;
 	border-style: solid;
-	border-color: #EAF3FA;
+	border-color: black;
 	border-radius: 10px 10px 0px 0px;
-	background-color: #FFFFFF;
+	background-color: #000;
 	padding-bottom: 2px;
 	position: relative;
 	margin-right: -10000px;
@@ -151,7 +151,7 @@ ul.pagination li.active a {
 	width: 83px;
 	min-height: 22px;
 	text-align: center;
-	color: #0D0A31;
+	color: #fff;
 	font-size: 15px;
 	font-weight: bold;
 	position: relative;
@@ -177,21 +177,21 @@ ul.pagination li.active a {
 	border-width: 2px;
 	border-style: solid;
 	border-radius:10px 10px 0px 0px;
-	border-color: #EAF3FA;
-	background-color: #FFFFFF;
+	border-color: #000;
+	background-color: #000;
 	padding-bottom: 2px;
 	position: relative;
 	margin-right: -10000px;
 }
 
-#u31916:hover
+/*#u31916:hover
 {
 	border-color: #EAF3FA;
 	background-color: #EAF3FA;
 	width: 98px;
 	min-height: 0px;
 	margin: 0px -10000px 0px 0px;
-}
+}*/
 
 #u31917-4
 {
@@ -199,7 +199,7 @@ ul.pagination li.active a {
 	width: 86px;
 	min-height: 22px;
 	text-align: center;
-	color: #0D0A31;
+	color: #fff;
 	font-size: 15px;
 	font-weight: bold;
 	position: relative;
@@ -225,14 +225,14 @@ ul.pagination li.active a {
 	border-width: 2px;
 	border-style: solid;
 	border-radius:10px 10px 0px 0px;
-	border-color: #EAF3FA;
-	background-color: #FFFFFF;
+	border-color: #000;
+	background-color: #000;
 	padding-bottom: 2px;
 	position: relative;
 	margin-right: -10000px;
 }
 
-#u31920:hover
+/*#u31920:hover
 {
 	border-color: #EAF3FA;
 	background-color: #EAF3FA;
@@ -240,14 +240,14 @@ ul.pagination li.active a {
 	min-height: 0px;
 	margin: 0px -10000px 0px 0px;
 }
-
+*/
 #u31919-4
 {
 	z-index: 605;
 	width: 95px;
 	min-height: 22px;
 	text-align: center;
-	color: #0D0A31;
+	color: #fff;
 	font-size: 15px;
 	font-weight: bold;
 	position: relative;
