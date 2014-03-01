@@ -1,11 +1,15 @@
 <%= content_for :page_title, default_title('Claire Perusse') %>
 
-<div class="gradient colelem" id="u16510"><!-- simple frame --></div>
+<div class="gradient colelem" id="u16510"></div>
 
   <%= render 'listings/site_listings_nav', header: "Commercial Real Estate" %>
  <% @listings = Listing.where(active:true,category_id:3, sold:false).order("priority DESC, price DESC") %>
+
+
+
+ <br />
     <%= render @listings %>
-  <div class="clearfix colelem" id="ppu23347"><!-- group -->
+  <div class="clearfix colelem" id="ppu23347">
   
    <div class="clearfix grpelem" id="pu23347"><!-- column -->
 
@@ -25,7 +29,7 @@
 <!--     <a class="nonblock nontext clearfix colelem" id="u13569-4" href="commercial-transations.html"><p class="Charitable-work-subtitles">Commercial Transactions</p></a>
     <a class="nonblock nontext testimonials-Text clearfix colelem" id="u13568-5" href="commercial-transations.html"><p><span id="u13568">Click here</span>&nbsp;for the Oulahen Team’s recent commercial sold or leased transactions.</p></a> -->
    </div>
-   <div class="clearfix grpelem" id="u11165-27"><!-- content -->
+   <div class="clearfix grpelem" id="u11165-27">
     <p class="text" id="u11165-2">In addition to our vast knowledge and expertise in the residential real estate field, we are equally adept in commercial real estate. We offer:</p>
     <p class="text" id="u11165-3">&nbsp;</p>
     <p class="text" id="u11165-4">&nbsp;</p>
@@ -48,7 +52,7 @@
     <p class="text" id="u11165-24">Most importantly they represent investors in Toronto and all over the world who are looking for the right commercial product. They have travelled to Dubai and several parts of the Middle East to discuss investment options.</p>
     <p>&nbsp;</p>
    </div>
-   <div class="text clearfix grpelem" id="u13583-24"><!-- content -->
+   <div class="text clearfix grpelem" id="u13583-24">
     <p>&nbsp;• Many years experience with a proven sales record in leasing, acquisition, investment</p>
     <p>&nbsp;&nbsp; and assembly.</p>
     <p>&nbsp;• Information, zoning and details on the North York area with charts, reports,</p>

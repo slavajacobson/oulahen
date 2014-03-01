@@ -29,26 +29,26 @@
 
   <div class="clearfix" id="page"><!-- column -->
    <div class="position_content" id="page_position_content">
-    <div class="clearfix colelem" id="pu27196"><!-- group -->
+    <div class="clearfix colelem" id="pu27196">
      <a class="nonblock nontext grpelem" id="u27196" href="/pages/index.html"><!-- image --><img class="block" id="u27196_img" src="/images/website-team-photo-cropped.jpg" alt="" width="234" height="140"/></a>
      <div class="clearfix grpelem" id="ppu27277"><!-- column -->
-      <div class="clearfix colelem" id="pu27277"><!-- group -->
+      <div class="clearfix colelem" id="pu27277">
        <a class="nonblock nontext grpelem" id="u27277" href="https://www.facebook.com/oulahenteam" target="_blank" title="Like us on Facebook!"><!-- image --><img class="block" id="u27277_img" src="/images/logo_facebook.gif" alt="" width="20" height="20"/></a>
        <a class="nonblock nontext grpelem" id="u27281" href="https://twitter.com/oulahen" target="_blank" title="Follow Us on Twitter!"><!-- image --><img class="block" id="u27281_img" src="/images/twitter-logo.gif" alt="" width="21" height="21"/></a>
        <a class="nonblock nontext grpelem" id="u27289" href="http://www.linkedin.com/profile/view?id=250177723&amp;trk=nav_responsive_tab_profile" target="_blank" title="Visit Our Linked In!"><!-- image --><img class="block" id="u27289_img" src="/images/linkedin_logo.gif" alt="" width="20" height="20"/></a>
        <a class="nonblock nontext grpelem" id="u27285" href="http://blog.oulahen.com/" target="_blank" title="Follow Our Blog!"><!-- image --><img class="block" id="u27285_img" src="/images/wordpress-logo.gif" alt="" width="20" height="20"/></a>
       </div>
-      <div class="clearfix colelem" id="pu27273"><!-- group -->
+      <div class="clearfix colelem" id="pu27273">
        <a class="nonblock nontext grpelem" id="u27273" href="/pages/index.html"><!-- image --><img class="block" id="u27273_img" src="/images/oulahen-logo.gif" alt="" width="222" height="46"/></a>
        <span class="nonblock nontext grpelem" id="u27275"><!-- image --><img class="block" id="u27275_img" src="/images/remax-logo.gif" alt="" width="164" height="50"/></span>
-       <div class="clearfix grpelem" id="u27272-10"><!-- content -->
+       <div class="clearfix grpelem" id="u27272-10">
         <p id="u27272-2">Realtron Realty Inc.</p>
         <p id="u27272-4">Brokerage</p>
         <p id="u27272-6">Independently Owned</p>
         <p id="u27272-8">and Operated</p>
        </div>
        <div class="clearfix grpelem" id="ppu27279"><!-- column -->
-        <div class="clearfix colelem" id="pu27279"><!-- group -->
+        <div class="clearfix colelem" id="pu27279">
          <div class="grpelem" id="u27279" data-mu-ie-matrix="progid:DXImageTransform.Microsoft.Matrix(M11=-1,M12=0,M21=0,M22=-1,SizingMethod='auto expand')" data-mu-ie-matrix-dx="0" data-mu-ie-matrix-dy="-4"><!-- image -->
           <img class="block" id="u27279_img" src="/images/logo_facebook.gif" alt="" width="20" height="20"/>
          </div>
@@ -61,14 +61,14 @@
          <div class="grpelem" id="u27291" data-mu-ie-matrix="progid:DXImageTransform.Microsoft.Matrix(M11=-1,M12=0,M21=0,M22=-1,SizingMethod='auto expand')" data-mu-ie-matrix-dx="0" data-mu-ie-matrix-dy="-2"><!-- image -->
           <img class="block" id="u27291_img" src="/images/linkedin_logo.gif" alt="" width="20" height="20"/>
          </div>
-         <div class="clearfix grpelem" id="u27293-5"><!-- content -->
+         <div class="clearfix grpelem" id="u27293-5">
           <p><span id="u27293">&nbsp;416&#45;222&#45;1212</span></p>
          </div>
         </div>
-        <a class="nonblock nontext clearfix colelem" id="u27304-4" href="/pages/contact-us-form.html"><!-- content --><p>team@oulahen.com</p></a>
+        <a class="nonblock nontext clearfix colelem" id="u27304-4" href="/pages/contact-us-form.html"><p>team@oulahen.com</p></a>
        </div>
       </div>
-      <div class="colelem" id="u16516"><!-- simple frame --></div>
+      <div class="colelem" id="u16516"></div>
 
 
 
@@ -87,8 +87,8 @@
 <div>
 <div>
     <div class="verticalspacer"></div>
-    <div class="colelem" id="u16503"><!-- simple frame --></div>
-    <div class="clearfix colelem" id="pu16505-4"><!-- group -->
+    <div class="colelem" id="u16503"></div>
+    <div class="clearfix colelem" id="pu16505-4">
 <%= render partial: 'layouts/footer' %>
     </div>
    </div>
@@ -156,59 +156,66 @@
        
 
 
+
     if (page.indexOf(".") > -1)
       page = page.substring(0,page.indexOf("."));
 
 
-   
-    // if (controller == "listings" && action == "residential")
-    //   $("#pu31906 > div").eq(0).find("div").css("background-color","#EAF3FA")
 
-    // else if (controller == "listings" && action == "commercial")
-    //   $("#pu31906 > div").eq(1).find("div").css("background-color","#EAF3FA")
+    console.log(page);
+    console.log(action);
+    console.log(controller);
+   
+    if (controller == "listings" && action == "residential")
+      $(".tab_item").eq(0).addClass("active");
+
+    else if (controller == "pages" && page == "commercial")
+      $(".tab_item").eq(1).addClass("active");
 
     
-    // if (controller == "listings" && action == "transactions" && (page == "homes" || page == ""))
-    //   $("#pu31968 > div").eq(0).find("div").css("background-color","#EAF3FA")
+    if (controller == "listings" && action == "transactions" && (page == "homes" || page == ""))
+      $(".tab_item").eq(0).addClass("active");
 
-    // else if (controller == "listings" && action == "transactions" && (page == "condos"))
-    //   $("#pu31968 > div").eq(1).find("div").css("background-color","#EAF3FA")
+    else if (controller == "listings" && action == "transactions" && (page == "condos"))
+      $(".tab_item").eq(1).addClass("active");
 
-    // else if (controller == "listings" && action == "transactions" && (page == "commercial"))
-    //   $("#pu31968 > div").eq(2).find("div").css("background-color","#EAF3FA")
+    else if (controller == "listings" && action == "transactions" && (page == "commercial"))
+      $(".tab_item").eq(2).addClass("active");
 
 
     if (controller == "listings")
       $("ul.MenuBar > li").eq(1).find("a").first().addClass("MuseMenuActive");
     else if (controller == "pages" && page == "about-us")
-      $("#u32271").css("background-color","#EAF3FA");
+      $(".tab_item").eq(0).addClass("active");
     else if (controller == "pages" && page == "awards")
-      $("#u32273").css("background-color","#EAF3FA");
+      $(".tab_item").eq(1).addClass("active");
     else if (controller == "pages" && page == "charitable-work")
-      $("#u32277").css("background-color","#EAF3FA");
+      $(".tab_item").eq(2).addClass("active");
     else if (controller == "pages" && page == "testimonials")
-      $("#u32285").css("background-color","#EAF3FA");
+      $(".tab_item").eq(3).addClass("active");
     else if (controller == "pages" && page == "in-the-news")
-      $("#u32287").css("background-color","#EAF3FA");
-
-
+      $(".tab_item").eq(4).addClass("active");
     else if (page == "commercial")
-      $("#pu31906 > div").eq(1).find("div").css("background-color","#EAF3FA")
+      $("#pu31906 > div").eq(1).find("div").css("background-color","#EAF3FA");
 
     else if (page == 'index') {
       $("ul.MenuBar > li").eq(0).find("a").addClass("MuseMenuActive");
       
     }
     else if (page == 'selling') {
-      $("ul.MenuBar > li").eq(2).find("a").addClass("MuseMenuActive");
+      $(".tab_item").eq(0).addClass("active");
       
     }
-    else if (page == 'marketevaluation') {
-      $("ul.MenuBar > li").eq(2).find("a").addClass("MuseMenuActive");
+    else if (page == 'market-evaluation') {
+      $(".tab_item").eq(1).addClass("active");
       
     }
     else if (page == 'buying') {
-      $("ul.MenuBar > li").eq(3).find("a").addClass("MuseMenuActive");
+      $(".tab_item").eq(2).addClass("active");
+      
+    }
+    else if (page == 'videos') {
+      $("ul.MenuBar > li").eq(4).find("a").addClass("MuseMenuActive");
       
     }
     else if ($.inArray(page,stats) > -1) {
@@ -228,12 +235,14 @@
       
     }
     else if ($.inArray(page,about_us) > -1) {
+
       $("ul.MenuBar > li").eq(8).find("a").addClass("MuseMenuActive");
     
     }
     else if ($.inArray(page,contact_us) > -1) {
       $("ul.MenuBar > li").eq(9).find("a").addClass("MuseMenuActive");
     }
+
 
     <% flash.each do |key, value| %>
         <%= add_gritter(value) %>

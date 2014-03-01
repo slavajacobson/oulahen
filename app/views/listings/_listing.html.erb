@@ -1,7 +1,7 @@
-<div class="clearfix colelem" id="u31294"><!-- group -->
-   <div class="clearfix grpelem" id="u31195"><!-- group -->
+<div class="clearfix colelem" id="u31294">
+   <div class="clearfix grpelem" id="u31195">
     <div class="grpelem" id="pu31210"><!-- inclusion -->
-    <div class="rounded-corners shadow" id="u31210"><!-- simple frame -->
+    <div class="rounded-corners shadow" id="u31210">
       <div class="_u31210 f3s_top" id="_u31210-f3s_top"></div>
       <div class="_u31210 f3s_mid" id="_u31210-f3s_mid"></div>
       <div class="_u31210 f3s_bot" id="_u31210-f3s_bot"></div>
@@ -70,15 +70,15 @@
    <%= link_to listing_path(listing) do %>
 
      <div class="grpelem" id="pu31187"><!-- inclusion -->
-      <div class="rounded-corners shadow" id="u31187"><!-- simple frame -->
+      <div class="rounded-corners shadow" id="u31187">
        <div class="_u31187 f3s_top" id="_u31187-f3s_top"></div>
        <div class="_u31187 f3s_mid" id="_u31187-f3s_mid"></div>
       </div>
       <div class="clearfix" id="pu31190-4"><!-- column -->
-       <div class="clearfix colelem" id="u31190-4"><!-- content -->
+       <div class="clearfix colelem" id="u31190-4">
       <p><%= listing.street_number %> <%= listing.address %>, <%= "Unit #{listing.unit_number}," unless listing.unit_number.blank? %> <%= listing.city_province %></p>
        </div>
-       <div class="clearfix colelem" id="u31188-4"><!-- content -->
+       <div class="clearfix colelem" id="u31188-4">
       <p><%= truncate(listing.description, length: 280, seperator: ' ', omission: ' ...Click to read more!') %></p>
        </div>
       </div>
@@ -96,7 +96,7 @@
    </div>
 
    <% unless listing.price.blank? %>
-     <div class="clearfix grpelem" id="u31191-4"><!-- content -->
+     <div class="clearfix grpelem" id="u31191-4">
       <p>Price:&nbsp; <%= number_to_currency(listing.price, :unit => "$", precision: 0) %></p>
      </div>
    <% end %>

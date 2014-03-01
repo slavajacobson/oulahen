@@ -3,13 +3,13 @@
 <% if current_user %>
   <div id="admin_nav"><span style="font-weight:bold;">Admin:</span> <%= link_to "Edit Listing", edit_listing_path(@listing) %> | <%= link_to "Manage Listings", listings_path %> </div>
 <% end %>
-<div class="clearfix colelem" id="pslideshowu38145"><!-- group -->
+<div class="clearfix colelem" id="pslideshowu38145">
 
 
   <% unless @photos.blank? %>
 
 
-    <div class="SlideShowWidget clearfix widget_invisible grpelem" id="slideshowu38145" ><!-- group -->
+    <div class="SlideShowWidget clearfix widget_invisible grpelem" id="slideshowu38145" >
 
 
 
@@ -44,17 +44,17 @@
 
 
     <div class="popup_anchor" id="u38241-4popup">
-     <div class="SSPreviousButton clearfix" id="u38241-4" style="left: 765px;top: 625px;"><!-- content -->
+     <div class="SSPreviousButton clearfix" id="u38241-4" style="left: 765px;top: 625px;">
       <p>&lt;</p>
      </div>
     </div>
     <div class="popup_anchor" id="u38240-4popup">
-     <div class="SSNextButton clearfix" id="u38240-4" style="left: 870px;top: 625px;"><!-- content -->
+     <div class="SSNextButton clearfix" id="u38240-4" style="left: 870px;top: 625px;">
       <p>&gt;</p>
      </div>
     </div>
     <div class="popup_anchor" id="u38261-4popup">
-     <div class="SlideShowLabel SSSlideCount clearfix" id="u38261-4" style="left: 800px;top: 625px;"><!-- content -->
+     <div class="SlideShowLabel SSSlideCount clearfix" id="u38261-4" style="left: 800px;top: 625px;">
       <p>1 &#45; 18</p>
      </div>
     </div>
@@ -62,8 +62,8 @@
 
 
     <div class="popup_anchor">
-     <div class="SSCloseButton popup_element clearfix" id="u38183"><!-- group -->
-      <div class="clearfix grpelem" id="u38184-4"><!-- content -->
+     <div class="SSCloseButton popup_element clearfix" id="u38183">
+      <div class="clearfix grpelem" id="u38184-4">
        <p>x</p>
       </div>
      </div>
@@ -113,7 +113,7 @@
 </style>
 
  <div class="rounded-corners clearfix grpelem" id="u38142"><!-- column -->
-  <div class="Headings-Submenus clearfix colelem" id="u38136-6"><!-- content -->
+  <div class="Headings-Submenus clearfix colelem" id="u38136-6">
    <h1><%= "#{@listing.street_number}" if @listing.show_street_number %> <%= "#{@listing.address}" %></h1>
    <h1><%= "Unit #{@listing.unit_number}, " unless @listing.unit_number.blank? || !@listing.show_unit_number %><%= "#{@listing.city_province}" %></h1>
    
@@ -128,13 +128,13 @@
   </div>
 
   <% unless @listing.show_price.blank? %>
-    <div class="Headings-Submenus clearfix colelem" id="u38264-4"><!-- content -->
+    <div class="Headings-Submenus clearfix colelem" id="u38264-4">
      <h1 style="font-size:110%;">List Price: <%= number_to_currency(@listing.price, :unit => "$", precision: 0) %></h1>
     </div>
   <% end %>
 
-  <div class="clearfix colelem" id="pu38133-14"><!-- group -->
-   <div class="clearfix grpelem" id="u38133-14"><!-- content -->
+  <div class="clearfix colelem" id="pu38133-14">
+   <div class="clearfix grpelem" id="u38133-14">
       <% unless @listing.address.blank? %>
         <div>
           <label>Address:</label> <span><%= "#{@listing.street_number}" if @listing.show_street_number %> <%= "#{@listing.address}, #{@listing.city_province}" %></span>
@@ -178,8 +178,8 @@
    </div>
   </div>
 
-  <div class="colelem" id="u38141"><!-- simple frame --></div>
-  <div class="clearfix colelem" id="u38137-14"><!-- content -->
+  <div class="colelem" id="u38141"></div>
+  <div class="clearfix colelem" id="u38137-14">
    <p id="u38137-2">Description:</p>
    <p><%= "#{@listing.description}" %></p>
    <% unless @listing.sold %>
@@ -194,9 +194,9 @@
     <% end %>
   </div>
 
-  <div class="colelem" id="u38390"><!-- simple frame --></div>
+  <div class="colelem" id="u38390"></div>
 
-  <div class="clearfix colelem" id="pu38134" style="<%= 'left: -96px;;' if @listing.sold %>"><!-- group -->
+  <div class="clearfix colelem" id="pu38134" style="<%= 'left: -96px;;' if @listing.sold %>">
 
     <% unless @listing.sold %>
 
@@ -236,7 +236,7 @@
     </a>
 
   </div>
-  <div class="clearfix colelem" id="pu38143" style="<%= 'margin-top:-30px;' if @listing.sold %>"><!-- group -->
+  <div class="clearfix colelem" id="pu38143" style="<%= 'margin-top:-30px;' if @listing.sold %>">
 
     <% if @listing.facebook_url.blank? %>
       <div class="nonblock nontext grpelem" id="u38143" style="opacity:0.6">
