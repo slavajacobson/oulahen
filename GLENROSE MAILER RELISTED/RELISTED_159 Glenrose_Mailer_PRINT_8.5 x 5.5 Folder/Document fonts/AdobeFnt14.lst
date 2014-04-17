@@ -1,0 +1,157 @@
+%!Adobe-FontList 1.14
+%Locale:0x1009
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Type1
+FontName:ACaslonPro-Bold
+FamilyName:Adobe Caslon Pro
+StyleName:Bold
+FullName:Adobe Caslon Pro Bold
+MenuName:Adobe Caslon Pro Bold
+StyleBits:0
+WritingScript:Roman
+OutlineFileName:C:\Users\Karuna\Desktop\GLENROSE MAILER RELISTED\RELISTED_159 Glenrose_Mailer_PRINT_8.5 x 5.5 Folder\Document fonts\ACaslonPro-Bold.otf
+DataFormat:sfntData
+UsesStandardEncoding:yes
+isCFF:yes
+FileLength:143368
+FileModTime:1327617482
+WeightClass:700
+WidthClass:5
+AngleClass:0
+DesignSize:120
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Type1
+FontName:ACaslonPro-Regular
+FamilyName:Adobe Caslon Pro
+StyleName:Regular
+FullName:Adobe Caslon Pro
+MenuName:Adobe Caslon Pro
+StyleBits:0
+WritingScript:Roman
+OutlineFileName:C:\Users\Karuna\Desktop\GLENROSE MAILER RELISTED\RELISTED_159 Glenrose_Mailer_PRINT_8.5 x 5.5 Folder\Document fonts\ACaslonPro-Regular.otf
+DataFormat:sfntData
+UsesStandardEncoding:yes
+isCFF:yes
+FileLength:167536
+FileModTime:1327617482
+WeightClass:400
+WidthClass:5
+AngleClass:0
+DesignSize:120
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Type1
+FontName:AGaramondPro-Bold
+FamilyName:Adobe Garamond Pro
+StyleName:Bold
+FullName:Adobe Garamond Pro Bold
+MenuName:Adobe Garamond Pro Bold
+StyleBits:0
+WritingScript:Roman
+OutlineFileName:C:\Users\Karuna\Desktop\GLENROSE MAILER RELISTED\RELISTED_159 Glenrose_Mailer_PRINT_8.5 x 5.5 Folder\Document fonts\AGaramondPro-Bold.otf
+DataFormat:sfntData
+UsesStandardEncoding:yes
+isCFF:yes
+FileLength:75376
+FileModTime:1327617482
+WeightClass:700
+WidthClass:5
+AngleClass:0
+DesignSize:120
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Type1
+FontName:AGaramondPro-Regular
+FamilyName:Adobe Garamond Pro
+StyleName:Regular
+FullName:Adobe Garamond Pro
+MenuName:Adobe Garamond Pro
+StyleBits:0
+WritingScript:Roman
+OutlineFileName:C:\Users\Karuna\Desktop\GLENROSE MAILER RELISTED\RELISTED_159 Glenrose_Mailer_PRINT_8.5 x 5.5 Folder\Document fonts\AGaramondPro-Regular.otf
+DataFormat:sfntData
+UsesStandardEncoding:yes
+isCFF:yes
+FileLength:126904
+FileModTime:1327617482
+WeightClass:400
+WidthClass:5
+AngleClass:0
+DesignSize:120
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Type1
+FontName:MinionPro-Regular
+FamilyName:Minion Pro
+StyleName:Regular
+FullName:Minion Pro
+MenuName:Minion Pro
+StyleBits:0
+WritingScript:Roman
+OutlineFileName:C:\Users\Karuna\Desktop\GLENROSE MAILER RELISTED\RELISTED_159 Glenrose_Mailer_PRINT_8.5 x 5.5 Folder\Document fonts\MinionPro-Regular.otf
+DataFormat:sfntData
+UsesStandardEncoding:yes
+isCFF:yes
+FileLength:217280
+FileModTime:1329329720
+WeightClass:400
+WidthClass:5
+AngleClass:0
+DesignSize:110
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Type1
+FontName:MyriadPro-Bold
+FamilyName:Myriad Pro
+StyleName:Bold
+FullName:Myriad Pro Bold
+MenuName:Myriad Pro
+StyleBits:2
+WritingScript:Roman
+OutlineFileName:C:\Users\Karuna\Desktop\GLENROSE MAILER RELISTED\RELISTED_159 Glenrose_Mailer_PRINT_8.5 x 5.5 Folder\Document fonts\MyriadPro-Bold.otf
+DataFormat:sfntData
+UsesStandardEncoding:yes
+isCFF:yes
+FileLength:103472
+FileModTime:1329329720
+WeightClass:700
+WidthClass:5
+AngleClass:0
+DesignSize:110
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Type1
+FontName:MyriadPro-Semibold
+FamilyName:Myriad Pro
+StyleName:Semibold
+FullName:Myriad Pro Semibold
+MenuName:Myriad Pro Light
+StyleBits:2
+WritingScript:Roman
+OutlineFileName:C:\Users\Karuna\Desktop\GLENROSE MAILER RELISTED\RELISTED_159 Glenrose_Mailer_PRINT_8.5 x 5.5 Folder\Document fonts\MyriadPro-Semibold.otf
+DataFormat:sfntData
+UsesStandardEncoding:yes
+isCFF:yes
+FileLength:103564
+FileModTime:1329329720
+WeightClass:600
+WidthClass:5
+AngleClass:0
+DesignSize:110
+%EndFont
+

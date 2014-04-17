@@ -1,0 +1,95 @@
+ADOBE INDESIGN PRINTING INSTRUCTIONS FOR SERVICE PROVIDER REPORT
+
+PUBLICATION NAME: RELISTED_159 Glenrose_Mailer_PRINT_8.5 x 5.5.indd
+
+PACKAGE DATE: 2014-03-05 5:13 PM
+Creation Date: 2014-03-05
+Modification Date: 2014-03-05
+
+CONTACT INFORMATION
+
+Company Name: 
+Contact: 
+Address: 
+
+
+
+
+
+Phone: 
+Fax: 
+Email: 
+
+SPECIAL INSTRUCTIONS AND OTHER NOTES
+
+
+
+
+
+
+External Plug-ins 0
+Non Opaque Objects :On PagePB, 1, 2
+
+FONTS
+7 Fonts Used; 0 Missing, 0 Embedded, 0 Incomplete, 0 Protected
+
+Fonts Packaged
+- Name: ACaslonPro-Bold; Type: OpenType Type 1, Status: OK
+- Name: ACaslonPro-Regular; Type: OpenType Type 1, Status: OK
+- Name: AGaramondPro-Bold; Type: OpenType Type 1, Status: OK
+- Name: AGaramondPro-Regular; Type: OpenType Type 1, Status: OK
+- Name: MinionPro-Regular; Type: OpenType Type 1, Status: OK
+- Name: MyriadPro-Bold; Type: OpenType Type 1, Status: OK
+- Name: MyriadPro-Semibold; Type: OpenType Type 1, Status: OK
+
+
+COLORS AND INKS
+4 Process Inks; 0 Spot Inks
+
+- Name and Type: Process Cyan; Angle: 0.000; Lines/Inch: 0.000
+- Name and Type: Process Magenta; Angle: 0.000; Lines/Inch: 0.000
+- Name and Type: Process Yellow; Angle: 0.000; Lines/Inch: 0.000
+- Name and Type: Process Black; Angle: 0.000; Lines/Inch: 0.000
+
+
+LINKS AND IMAGES
+(Missing & Embedded Links Only)
+Links and Images: 6 Links Found; 0 Modified, 0 Missing 0 Inaccessible
+Images: 0 Embedded, 4 use RGB color space
+
+
+PRINT SETTINGS
+PPD: N/A, (SHARP)
+Printing To: Printer
+Number of Copies: 1
+Reader Spreads: No
+Even/Odd Pages: Both
+Pages: All
+Proof: No
+Tiling: None
+Scale: 100%, 100%
+Page Position: Center
+Print Layers: Visible & Printable Layers
+Printer's Marks: None
+Bleed: 0 in, 0 in, 0 in, 0 in
+Color: Composite RGB
+Trapping Mode: None
+Send Image Data: Optimized Subsampling
+OPI/DCS Image Replacement: No
+Page Size: Letter - Half
+Paper Dimensions: 8.5 in x 11 in
+Orientation: Portrait
+Negative: No
+Flip Mode: Off
+
+
+FILE PACKAGE LIST
+
+1. RELISTED_159 Glenrose_Mailer_PRINT_8.5 x 5.5.indd; type: Adobe InDesign publication; size: 0K
+2. ACaslonPro-Bold.otf; type: Font file; size: 140K
+3. ACaslonPro-Regular.otf; type: Font file; size: 163K
+4. AGaramondPro-Bold.otf; type: Font file; size: 73K
+5. AGaramondPro-Regular.otf; type: Font file; size: 123K
+6. MinionPro-Regular.otf; type: Font file; size: 212K
+7. MyriadPro-Bold.otf; type: Font file; size: 101K
+8. MyriadPro-Semibold.otf; type: Font file; size: 101K
