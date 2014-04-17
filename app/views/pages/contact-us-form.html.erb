@@ -8,59 +8,74 @@
 }
 
 </style>
-<div class="gradient colelem" id="u16510"><!-- simple frame --></div>
-    <div class="clearfix colelem" id="pu13350-4"><!-- group -->
-     <div class="clearfix grpelem" id="u13350-4"><!-- content -->
+
+
+<div class="gradient colelem" id="u16510"></div>
+
+
+    <div id="tab_menu">
+  <div class="tab_item active">
+    <p>CONTACT US</p>
+  </div>
+</div>
+
+
+    <div class="clearfix colelem" id="pu13350-4">
+
+<!--      <div class="clearfix grpelem" id="u13350-4">
       <p>CONTACT US</p>
      </div>
-     <div class="grpelem" id="u13352"><!-- simple frame --></div>
+     <div class="grpelem" id="u13352"></div> -->
+
+
+
     </div>
-    <div class="clearfix colelem" id="ppu13351-4"><!-- group -->
+    <div class="clearfix colelem" id="ppu13351-4">
      <div class="clearfix grpelem" id="pu13351-4"><!-- column -->
-      <div class="clearfix colelem" id="u13351-4"><!-- content -->
+      <div class="clearfix colelem" id="u13351-4">
        <p>One of the Oulahen Team members will get back to you as soon as possible with any real estate information you need. We value your inquiry and will take the time to consult with your needs.</p>
       </div>
 
 
 
-      <%= form_tag contact_us_sendmail_path, method: 'post', class:"form-grp clearfix colelem", id:'widgetu25844' do %><!-- group -->
+      <%= form_tag contact_us_sendmail_path, method: 'post', class:"form-grp clearfix colelem", id:'widgetu25844' do %>
 
        <%= hidden_field_tag :recipient, params[:recipient] %>
-       <div class="fld-grp clearfix grpelem" id="widgetu25852" data-required="true"><!-- group -->
-        <label class="fld-label actAsDiv clearfix grpelem" id="u25854-4" for="widgetu25852_input"><!-- content -->
+       <div class="fld-grp clearfix grpelem" id="widgetu25852" data-required="true">
+        <label class="fld-label actAsDiv clearfix grpelem" id="u25854-4" for="widgetu25852_input">
          <span class="actAsPara">Name:</span>
         </label>
-        <span class="fld-input NoWrap actAsDiv clearfix grpelem" id="u25853-4" style="border:none;"><!-- content --><input class="wrapped-input" type="text" spellcheck="false" id="widgetu25852_input" name="Name" tabindex="1"/><label class="wrapped-input fld-prompt" id="widgetu25852_prompt" for="widgetu25852_input"><span class="actAsPara">Your Name</span></label></span>
+        <span class="fld-input NoWrap actAsDiv clearfix grpelem" id="u25853-4" style="border:none;"><input class="wrapped-input" type="text" spellcheck="false" id="widgetu25852_input" name="Name" tabindex="1"/><label class="wrapped-input fld-prompt" id="widgetu25852_prompt" for="widgetu25852_input"><span class="actAsPara">Your Name</span></label></span>
        </div>
-       <div class="fld-grp clearfix grpelem" id="widgetu25846" data-required="true" data-type="email"><!-- group -->
-        <label class="fld-label actAsDiv clearfix grpelem" id="u25847-4" for="widgetu25846_input"><!-- content -->
+       <div class="fld-grp clearfix grpelem" id="widgetu25846" data-required="true" data-type="email">
+        <label class="fld-label actAsDiv clearfix grpelem" id="u25847-4" for="widgetu25846_input">
          <span class="actAsPara">Email:</span>
         </label>
-        <span class="fld-input NoWrap actAsDiv clearfix grpelem" id="u25848-4" style="border:none;"><!-- content --><input class="wrapped-input" type="text" spellcheck="false" id="widgetu25846_input" name="Email" tabindex="2"/><label class="wrapped-input fld-prompt" id="widgetu25846_prompt" for="widgetu25846_input"><span class="actAsPara">name@email.com</span></label></span>
+        <span class="fld-input NoWrap actAsDiv clearfix grpelem" id="u25848-4" style="border:none;"><input class="wrapped-input" type="text" spellcheck="false" id="widgetu25846_input" name="Email" tabindex="2"/><label class="wrapped-input fld-prompt" id="widgetu25846_prompt" for="widgetu25846_input"><span class="actAsPara">name@email.com</span></label></span>
        </div>
-       <div class="clearfix grpelem" id="u25851-4"><!-- content -->
+       <div class="clearfix grpelem" id="u25851-4">
         <p>Submitting Form...</p>
        </div>
-       <div class="clearfix grpelem" id="u25863-4"><!-- content -->
+       <div class="clearfix grpelem" id="u25863-4">
         <p>The server encountered an error.</p>
        </div>
-       <div class="clearfix grpelem" id="u25857-4"><!-- content -->
+       <div class="clearfix grpelem" id="u25857-4">
         <p style="font-size:20px">Form received.</p>
        </div>
        <input class="submit-btn NoWrap grpelem" id="u25845-17" type="submit" value="" tabindex="5"/><!-- state-based BG images -->
-       <div class="fld-grp clearfix grpelem" id="widgetu25858" data-required="true"><!-- group -->
-        <label class="fld-label actAsDiv clearfix grpelem" id="u25861-4" for="widgetu25858_input"><!-- content -->
+       <div class="fld-grp clearfix grpelem" id="widgetu25858" data-required="true">
+        <label class="fld-label actAsDiv clearfix grpelem" id="u25861-4" for="widgetu25858_input">
          <span class="actAsPara">Message:</span>
         </label>
-        <span class="fld-textarea actAsDiv clearfix grpelem" id="u25859-4"><!-- content --><textarea class="wrapped-input" id="widgetu25858_input" name="Message" tabindex="4"></textarea><label class="wrapped-input fld-prompt" id="widgetu25858_prompt" for="widgetu25858_input"><span class="actAsPara">Add a brief message...</span></label></span>
+        <span class="fld-textarea actAsDiv clearfix grpelem" id="u25859-4"><textarea class="wrapped-input" id="widgetu25858_input" name="Message" tabindex="4"></textarea><label class="wrapped-input fld-prompt" id="widgetu25858_prompt" for="widgetu25858_input"><span class="actAsPara">Add a brief message...</span></label></span>
        </div>
-       <div class="fld-grp clearfix grpelem" id="widgetu25881" data-required="false"><!-- group -->
+       <div class="fld-grp clearfix grpelem" id="widgetu25881" data-required="false">
 
-        <label class="fld-label actAsDiv clearfix grpelem" id="u25882-4" for="widgetu25881_input"><!-- content -->
+        <label class="fld-label actAsDiv clearfix grpelem" id="u25882-4" for="widgetu25881_input">
           <span class="actAsPara">Phone Number</span>
         </label>
 
-        <span class="fld-input NoWrap actAsDiv clearfix grpelem"  style="border:none;" id="u25884-4"><!-- content --><input class="wrapped-input" type="text" spellcheck="false" id="widgetu25881_input" name="Phone" tabindex="3"/><label class="wrapped-input fld-prompt" id="widgetu25881_prompt" for="widgetu25881_input"><span class="actAsPara">Enter Phone Number</span></label></span>
+        <span class="fld-input NoWrap actAsDiv clearfix grpelem"  style="border:none;" id="u25884-4"><input class="wrapped-input" type="text" spellcheck="false" id="widgetu25881_input" name="Phone" tabindex="3"/><label class="wrapped-input fld-prompt" id="widgetu25881_prompt" for="widgetu25881_input"><span class="actAsPara">Enter Phone Number</span></label></span>
        </div>
       <% end %>
 

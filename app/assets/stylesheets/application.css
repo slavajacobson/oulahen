@@ -55,3 +55,47 @@
 .active_tab {
 	background-color:#fff;
 }
+
+#tab_menu {
+	width: 918px;
+	margin-left: 20px;
+	border-bottom:3px solid black;
+	clear:both;
+	color:black;
+
+}
+
+#tab_menu .tab_item {
+	display:inline-block;
+	border:1px solid black;
+	margin-right:10px;
+	text-align: center;
+	border-radius:15px 15px 0px 0px;
+	background-color: #76080D;
+	position:relative;
+	bottom:-1px;
+	padding: 10px 0px;
+/*	width:160px;*/
+}
+
+#tab_menu .tab_item a {
+	color:white;
+	text-decoration: none;
+	font-weight: bold;
+	padding: 11px 24px;
+}
+
+#tab_menu .tab_item p {
+	color:white;
+	font-weight: bold;
+	padding: 0px 15px;
+	
+}
+
+#tab_menu .tab_item:hover {
+	background-color:#A1696C;
+}
+
+#tab_menu .active {
+	background-color:#A1696C;
+}
