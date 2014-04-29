@@ -72,6 +72,9 @@ GEM
       multi_json (~> 1.0)
     ffi (1.9.0)
     ffi (1.9.0-x86-mingw32)
+    figaro (0.7.0)
+      bundler (~> 1.0)
+      rails (>= 3, < 5)
     formatador (0.2.4)
     google-analytics-rails (0.0.4)
     gritter (1.0.3)
@@ -245,6 +248,7 @@ DEPENDENCIES
   coffee-rails (~> 4.0.0)
   debugger (~> 1.6.3)
   devise
+  figaro
   google-analytics-rails
   gritter
   guard-livereload

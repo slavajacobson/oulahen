@@ -71,3 +71,4 @@ gem 'google-analytics-rails'
 gem 'jquery-migrate-rails'
 gem "recaptcha", :require => "recaptcha/rails"
 gem "letter_opener", :group => :development
+gem 'figaro'
