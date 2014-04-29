@@ -7,9 +7,10 @@ class MainController < ApplicationController
 
 	def contact_us_form
 		
-
-		if UserMailer.contact_form(params[:Name],params[:Email],params[:Phone],params[:Message], params[:recipient]).deliver
-
+		if verify_recaptcha == false
+			puts "Incorrect captcha"
+			render json: '{"MusePHPFormResponse": { "success": false,"error": "Incorrect Captcha Code"}}'
+		elsif UserMailer.contact_form(params[:Name],params[:Email],params[:Phone],params[:Message], params[:recipient]).deliver
 			render json: '{"FormResponse": { "success": true}}'
 		else
 			render json: '{"MusePHPFormResponse": { "success": false,"error": "Failed to send email"}}'

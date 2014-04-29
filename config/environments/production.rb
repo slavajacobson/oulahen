@@ -84,4 +84,6 @@ Oulahen::Application.configure do
 
 
   GA.tracker = "UA-46244834-1"
+
+  config.action_mailer.delivery_method = :mailjet
 end

@@ -257,6 +257,30 @@
 
 
 
+    <script>
+      $(document).ready(function() {
+        $("#widgetu25844").ajaxComplete(function(event, xhr) {
+          Recaptcha.reload();
+          if (typeof(res.MusePHPFormResponse) == "object" && !res.MusePHPFormResponse.success) {
+              
+              $("#u25863-4").html(res.MusePHPFormResponse.error);
+              
+          }
+        });
+
+
+        $.ajaxSetup({
+            dataFilter: function (data, type) {
+                self.res = JSON.parse(data);
+
+
+                return data;
+            }
+        });
+
+      });
+      
+    </script>
 
 
    </body>
