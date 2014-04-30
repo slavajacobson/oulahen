@@ -9,7 +9,7 @@ class MainController < ApplicationController
 		
 		if verify_recaptcha == false
 			puts "Incorrect captcha"
-			render json: '{"MusePHPFormResponse": { "success": false,"error": "Incorrect Captcha Code"}}'
+			render json: '{"MusePHPFormResponse": { "success": false,"error": "' + recaptcha.errors.verification_failed + '"}}'
 		elsif UserMailer.contact_form(params[:Name],params[:Email],params[:Phone],params[:Message], params[:recipient]).deliver
 			render json: '{"FormResponse": { "success": true}}'
 		else
