@@ -62,7 +62,7 @@
        <div class="clearfix grpelem" id="u25857-4">
         <p style="font-size:20px">Form received.</p>
        </div>
-       <input class="submit-btn NoWrap grpelem" id="u25845-17" type="submit" value="" tabindex="5"/><!-- state-based BG images -->
+       <input class="submit-btn NoWrap grpelem" id="u25845-17" type="submit" value="" tabindex="6"/><!-- state-based BG images -->
        <div class="fld-grp clearfix grpelem" id="widgetu25858" data-required="true">
         <label class="fld-label actAsDiv clearfix grpelem" id="u25861-4" for="widgetu25858_input">
          <span class="actAsPara">Message:</span>
@@ -78,7 +78,7 @@
         <span class="fld-input NoWrap actAsDiv clearfix grpelem"  style="border:none;" id="u25884-4"><input class="wrapped-input" type="text" spellcheck="false" id="widgetu25881_input" name="Phone" tabindex="3"/><label class="wrapped-input fld-prompt" id="widgetu25881_prompt" for="widgetu25881_input"><span class="actAsPara">Enter Phone Number</span></label></span>
        </div>
        <div style="margin-top: 337px;margin-left: -2px;">
-         <%= recaptcha_tags :ajax => true %>
+         <%= recaptcha_tags :ajax => true, :display => { tabindex: 5 } %>
        </div>
       <% end %>
 
