@@ -1,5 +1,5 @@
 source 'http://rubygems.org'
-ruby '2.0.0'
+ruby '2.1.1'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.0'
@@ -58,7 +58,7 @@ gem 'carrierwave'
 gem "rmagick", platform: 'ruby'
 gem "gritter"
 # Use debugger
-gem "debugger", "~> 1.6.3", group: [:development, :test]
+gem "debugger", "~> 1.6.6", group: [:development, :test]
 gem 'rails_12factor'
 
 gem "rvm-capistrano", "~> 1.5.1"
