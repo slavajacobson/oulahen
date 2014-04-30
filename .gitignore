@@ -20,3 +20,4 @@
 /public/uploads
 /config/database.yml
 /config/application.yml
+/backup.txt
