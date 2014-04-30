@@ -261,10 +261,10 @@
       $(document).ready(function() {
         $("#widgetu25844").ajaxComplete(function(event, xhr) {
           Recaptcha.reload();
-          if (typeof(res.MusePHPFormResponse) == "object" && !res.MusePHPFormResponse.success) {
+          if (typeof(res) && typeof(res.MusePHPFormResponse) == "object" && !res.MusePHPFormResponse.success) {
               
               $("#u25863-4").html(res.MusePHPFormResponse.error);
-              
+
           }
         });
 
