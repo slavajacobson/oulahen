@@ -53,7 +53,9 @@
       </div>
 
 
-      
+             <div style="margin-top: 337px;margin-left: -1px;" class="fld-grp clearfix grpelem">
+         <%= recaptcha_tags :ajax => true, :display => { tabindex: 5 } %>
+       </div>
      <% end %>
 
      </div>
@@ -69,6 +71,11 @@
 
             
      </div>
+
+     <style>
+       #recaptcha_widget_div { width: 216px; overflow:hidden; } 
+        #recaptcha_image img  { width: 200px; } 
+        </style>
      <div class="grpelem" id="u16205"></div>
      <div class="grpelem" id="u16210"></div>
      <a class="nonblock nontext MuseLinkActive grpelem" id="u27008" href="/pages/index.html"><!-- image --><img class="block" id="u27008_img" src="/images/website-team-photo.jpg" alt="" width="237" height="252"/></a>
