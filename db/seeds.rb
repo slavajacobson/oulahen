@@ -10,9 +10,6 @@ Category.create(name:'Home')
 Category.create(name:'Condominium')
 Category.create(name:'Commercial')
 
-User.create(email:'vs.jacobson@gmail.com', password:'12344321', password_confirmation:'12344321')
-User.create(email:'team@oulahen.com', password:'oulahen1234!@#$', password_confirmation:'oulahen1234!@#$')
-
 500.times do |i|
 
 
