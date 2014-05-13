@@ -1,10 +1,15 @@
 require "rvm/capistrano"
 require "bundler/capistrano"
 
-set :default_environment, {
 
-'PATH' => "$HOME/.rbenv/shims:$HOME/.rbenv/bin:$PATH"
-}
+
+set :rvm_ruby_string, :local
+
+
+# set :default_environment, {
+
+# 'PATH' => "$HOME/.rbenv/shims:$HOME/.rbenv/bin:$PATH"
+# }
 
 server "198.98.52.43", :web, :app, :db, primary: true
  
@@ -19,7 +24,7 @@ set :scm, "git"
 set :repository, "git@github.com:slavajacobson/oulahen.git"
 set :branch, "master"
 set :dbname, "oulahen"
- 
+set :rake, 'bundle exec rake'
  
 set :shared_children, shared_children + %w{public/uploads}
 
