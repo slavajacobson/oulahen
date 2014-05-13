@@ -3,7 +3,7 @@ require "bundler/capistrano"
 
 
 
-set :rvm_ruby_string, :local
+#set :rvm_ruby_string, :local
 
 
 # set :default_environment, {
