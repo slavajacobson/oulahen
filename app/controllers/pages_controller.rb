@@ -15,7 +15,7 @@ class PagesController < HighVoltage::PagesController
     if params[:id].nil?
       params[:id] = params[:action]
     end
-    #debugger
+    
     case params[:id]
 
       when 'index'
@@ -29,6 +29,7 @@ class PagesController < HighVoltage::PagesController
       when 'accaday.html'
         false
       else
+        #debugger
         'application'
       end
    end
