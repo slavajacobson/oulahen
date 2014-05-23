@@ -104,5 +104,117 @@
         });
       });
      </script>
+
+
+
+     <style>
+
+</style>
+
+
+      <div id="u6474">
+
+
+
+
+
+     
+       <div class="clearfix grpelem" id="u26985"><!-- column -->
+        <div class="clearfix colelem" id="u6470-6">
+         <p>HAVE A QUESTION?</p>
+        </div>
+        <div class="colelem" id="u6571">
+
+    <%= form_tag contact_us_sendmail_path, method: 'post', class:"form-grp clearfix grpelem", id:'widgetu6528' do %>
+    	<div id="close_contact">X</div>
+      <div class="fld-grp clearfix grpelem" id="widgetu6543" data-required="true">
+       <label class="fld-label actAsDiv clearfix grpelem" id="u6546-4" for="widgetu6543_input">
+        <span class="actAsPara">Name:</span>
+       </label>
+       <span class="fld-input NoWrap actAsDiv clearfix grpelem" id="u6547-4"><input class="wrapped-input" type="text" spellcheck="false" id="widgetu6543_input" name="Name" tabindex="1"/><label class="wrapped-input fld-prompt" id="widgetu6543_prompt" for="widgetu6543_input"><span class="actAsPara">Your Name</span></label></span>
+      </div>
+      
+      <div class="fld-grp clearfix grpelem" id="widgetu6534" data-required="true" data-type="email">
+       <label class="fld-label actAsDiv clearfix grpelem" id="u6536-4" for="widgetu6534_input">
+        <span class="actAsPara">Email:</span>
+       </label>
+
+       <span class="fld-input NoWrap actAsDiv clearfix grpelem" id="u6538-4"><input class="wrapped-input" type="text" spellcheck="false" id="widgetu6534_input" name="Email" tabindex="2"/><label class="wrapped-input fld-prompt" id="widgetu6534_prompt" for="widgetu6534_input"><span class="actAsPara">name@email.com</span></label></span>
+      </div>
+      <div class="clearfix grpelem" id="u6540-4">
+       <p>Submitting Form...</p>
+      </div>
+      <div class="clearfix grpelem" id="u6541-4">
+       The server encountered an error.
+      </div>
+      <div class="clearfix grpelem" id="u6542-4">
+      Form received.
+      </div>
+      <input class="submit-btn NoWrap grpelem" id="u6539-17" type="submit" value="" tabindex="5"/><!-- state-based BG images -->
+      <div class="fld-grp clearfix grpelem" id="widgetu6529" data-required="false">
+       <label class="fld-label actAsDiv clearfix grpelem" id="u6533-4" for="widgetu6529_input">
+        <span class="actAsPara">Message:</span>
+       </label>
+
+       	<textarea style="width: 302px;height: 86px;margin-top: 20px;border: 1px solid #cccccc;padding: 5px;" rows="5" id="" name="Message" tabindex="3" placeholder="Enter a message"></textarea>
+
+      </div>
+
+
+       <div style="margin-top:243px; margin-left: -2px;" class="fld-grp clearfix grpelem">
+         <%= recaptcha_tags :ajax => true, :display => { tabindex: 4 } %>
+       </div>
+     <% end %>
+
+     </div>
+       </div>
+     
+            </div>
+
+
+    <script>
+      $(document).ready(function() {
+
+      	$("#u6470-6, #close_contact").on('click',  function() {
+      		
+      		if (parseInt($("#u6474").css("bottom")) < -2) {
+      			$("#u6474").stop().animate({bottom: -1}, 500);
+      		}
+      		else {
+      			$("#u6474").stop().animate({bottom: -428}, 500);
+      			
+      		}
+      	});
+
+
+        $("#widgetu6528").ajaxComplete(function(event, xhr) {
+          Recaptcha.reload();
+          if (typeof(res) && typeof(res.MusePHPFormResponse) == "object" && !res.MusePHPFormResponse.success) {
+              
+              $("#u6541-4").html(res.MusePHPFormResponse.error);
+              $("#u6541-4").css("color","red");
+          }
+          // else (typeof(res) && typeof(res.FormResponse) == "object" && res.FormResponse.success) {
+          // 	alert("YES");
+          // }
+
+
+
+        });
+
+
+        $.ajaxSetup({
+            dataFilter: function (data, type) {
+                self.res = JSON.parse(data);
+
+
+                return data;
+            }
+        });
+
+      });
+      
+    </script>
+
 	</body>
 </html>

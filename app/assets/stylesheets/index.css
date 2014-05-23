@@ -39,29 +39,22 @@ html
 #pu6474
 {
 	z-index: 320;
-	width: 0.01px;
-	position: relative;
-	margin-bottom: -584px;
-	margin-right: -10000px;
-	margin-top: 862px;
-	left: 23px;
+
 }
 
 #u6474
 {
-	z-index: 0;
-	width: 211px;
+	z-index: 3000000;
 	border-width: 1px;
 	border-style: solid;
 	border-color: #7F7F7F;
-	background-color: transparent;
-	opacity: 0.5;
-	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
-	filter: alpha(opacity=50);
-	position: absolute;
-	top: 12px;
-	bottom: 0px;
-	height: 451px;
+	background-color: white;
+	position: fixed;
+	right: 50px;
+	bottom: -428px;
+	height: 450px;
+	width: 312px;
+	padding: 12px;
 }
 
 #pu26985
@@ -77,30 +70,39 @@ html
 #u26985
 {
 	z-index: 321;
-	width: 194px;
+	width: 321px;
 	padding-bottom: 0px;
 	position: relative;
 	margin-right: -10000px;
+	cursor:pointer;
 }
 
+#close_contact {
+	position: absolute;
+	left: 293px;
+	top: 2px;
+	font-size: 19px;
+	font-weight: bold;
+}
 #u6470-6
 {
 	z-index: 323;
-	width: 167px;
+	width: 300px;
 	min-height: 34px;
-	line-height: 1.3;
+	line-height: 2.3;
 	color: #000000;
 	font-size: 12px;
 	font-family: Arial, Helvetica Neue, Helvetica, sans-serif;
 	font-weight: bold;
 	margin-left: 1px;
 	position: relative;
+	text-align: center;
 }
 
 #u6571
 {
 	z-index: 322;
-	width: 194px;
+	width: 306px;
 	height: 1px;
 	border-color: #000000;
 	background-color: #7F7F7F;
@@ -1777,7 +1779,7 @@ html
 	height: 273px;
 	position: relative;
 	margin-right: -10000px;
-	margin-top: 20px;
+	margin-top: 10px;
 	left: -1px;
 }
 
@@ -2034,7 +2036,7 @@ html
 
 #widgetu6543_input,#widgetu6543_prompt,#widgetu6534_input,#widgetu6534_prompt
 {
-	width: 184px;
+	width: 230px;
 	min-height: 14px;
 	color: #C4C4C4;
 	font-family: Geneva, Verdana, Lucida Sans, Lucida Sans Unicode, sans-serif;
@@ -2084,8 +2086,8 @@ html
 	font-family: Geneva, Verdana, Lucida Sans, Lucida Sans Unicode, sans-serif;
 	position: relative;
 	margin-right: -10000px;
-	margin-top: 240px;
-	left: 141px;
+	margin-top: 380px;
+	left: 110px;
 }
 
 #widgetu6528.frm-subm-err-st #u6541-4
@@ -2116,13 +2118,14 @@ html
 	filter: alpha(opacity=0);
 	padding-top: 4px;
 	line-height: 1;
-	color: #00FF00;
+	color: green;
 	font-size: 12px;
 	font-family: Geneva, Verdana, Lucida Sans, Lucida Sans Unicode, sans-serif;
 	position: relative;
 	margin-right: -10000px;
-	margin-top: 240px;
-	left: 110px;
+	margin-top: 380px;
+	left: 115px;
+	font-size: 15px;
 }
 
 #widgetu6528.frm-sub-st #u6540-4,#widgetu6528.frm-subm-ok-st #u6542-4
@@ -2149,7 +2152,7 @@ html
 	background: url("../images/u34669-17.png") no-repeat 0px 0px;
 	position: relative;
 	margin-right: -10000px;
-	margin-top: 350px;
+	margin-top: 378px;
 	left: 1px;
 }
 
@@ -2242,7 +2245,7 @@ html
 #u6531-4
 {
 	z-index: 316;
-	width: 184px;
+	width: 306px;
 	min-height: 192px;
 	border-width: 1px;
 	border-style: solid;
@@ -2325,7 +2328,7 @@ html
 
 #widgetu6529_input,#widgetu6529_prompt
 {
-	width: 184px;
+	width: 304px;
 	min-height: 68px;
 	color: #C4C4C4;
 	font-family: Geneva, Verdana, Lucida Sans, Lucida Sans Unicode, sans-serif;
@@ -2362,8 +2365,8 @@ html
 
 	position: relative;
 	margin-right: -10000px;
-	left: 228px;
-		height:454px;
+	left: -3px;
+	height:454px;
 }
 
 #u26984-4
@@ -2571,3 +2574,7 @@ body
 	clear: both;
 }
 
+#rssincl-box-842357 {
+	border: 1px solid rgb(196, 196, 196);
+	width: 448px !important;
+}
