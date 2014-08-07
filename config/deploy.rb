@@ -11,8 +11,8 @@ require "bundler/capistrano"
 # 'PATH' => "$HOME/.rbenv/shims:$HOME/.rbenv/bin:$PATH"
 # }
 
-server "198.98.52.43", :web, :app, :db, primary: true
- 
+server "209.162.249.44", :web, :app, :db, primary: true
+set :port, "922"
 set :application, "oulahen"
 set :user, "deployer"
 set :deploy_to, "/home/#{user}/apps/#{application}"
