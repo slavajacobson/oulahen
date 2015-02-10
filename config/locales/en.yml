@@ -21,6 +21,10 @@
 
 en:
   hello: "Hello world"
-  date:
   formats:
     default: "%m/%d/%Y"
+  date: #Throws an exception otherwise.
+    order:
+      - "year"
+      - "month"
+      - "day"

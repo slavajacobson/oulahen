@@ -220,7 +220,7 @@
 
     <div class="clearfix">
         <div class="actions pull-right" style="display:inline-block; margin-left:15px;">
-          <%= f.submit @listing.draft ? "Create Listing" : nil, class: 'btn btn-success' %>
+          <%= f.submit @listing.draft ? "Create Listing" : nil, class: 'btn btn-success', confirm: 'Did you remember to save any changes done to the Photos?' %>
         </div>
         <%= link_to 'Cancel', listings_path, class:'btn btn-danger pull-right' %>
     </div>

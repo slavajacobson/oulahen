@@ -1,0 +1,25 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  address: MyString
+  built_on: 2015-02-01
+  floors: 1
+  units: 1
+  corporation: MyString
+  management: MyString
+  school_zone: MyString
+  distance_from_transit: MyString
+  total_rented: 1
+  total_owned: 1
+
+two:
+  address: MyString
+  built_on: 2015-02-01
+  floors: 1
+  units: 1
+  corporation: MyString
+  management: MyString
+  school_zone: MyString
+  distance_from_transit: MyString
+  total_rented: 1
+  total_owned: 1

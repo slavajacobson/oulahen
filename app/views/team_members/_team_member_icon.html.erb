@@ -1,0 +1,5 @@
+<li class="staff-icon">
+  <%- if team_member.photos.where(main_photo: true).first.present? %>
+    <%= image_tag team_member.photos.where(main_photo: true).first.image_url(:team_member_slide_thumb) %>
+  <% end %>
+</li>

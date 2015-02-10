@@ -1,0 +1,30 @@
+
+
+<% unless photo.image_url.nil? %>
+  <div class="image_frame" id="<%= photo.id %>">
+    <%= link_to photo.image_url, :'data-lightbox' => 'photos' do %>
+      <%= image_tag photo.image_url(:thumb), class:'img-thumbnail' %>
+    <% end %>
+
+    <% if photo.main_photo %>
+      <div class="main_photo_label">Main Image</div>
+    <% end %>
+
+    <% unless defined?(hide_check_box) %>
+      <div>
+        <label><%= check_box_tag "photo_ids[]", photo.id %> Select</label>
+        <label><%= check_box_tag "featured[]", photo.id, photo.featured %> Featured</label>
+        <%= hidden_field_tag "order[]", "{\"photo_id\": \"#{photo.id}\", \"order\": \"#{photo.order_priority}\"}" %>
+      </div>
+    <% end %>
+  </div>
+<% end %>
+
+
+
+
+
+
+
+
+

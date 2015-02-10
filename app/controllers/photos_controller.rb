@@ -13,6 +13,15 @@ class PhotosController < ApplicationController
 
   def create
     @photo = Photo.create(photo_params)
+
+    if photo_params[:listing_id]
+      @render_layout = 'photos/photo'
+    elsif photo_params[:team_member_id]
+      @render_layout = 'photos/team_photo'
+    elsif photo_params[:condo_profile_id]
+      @render_layout = 'photos/condoprofile_photo'
+    end
+
   end
 
   def edit
@@ -39,7 +48,17 @@ class PhotosController < ApplicationController
 
   def manipulate
 
-   
+    if photo_params[:listing_id]
+      @render_layout = 'photos/photo'
+      model_specific_query = {listing_id: photo_params[:listing_id]}
+    elsif photo_params[:team_member_id]
+      @render_layout = 'photos/team_photo'
+      model_specific_query = {team_member_id: photo_params[:team_member_id]}
+    elsif photo_params[:condo_profile_id]
+      @render_layout = 'photos/condoprofile_photo'
+      model_specific_query = {condo_profile_id: photo_params[:condo_profile_id]}
+    end
+
 
     if params[:delete_photos]
       
@@ -62,7 +81,7 @@ class PhotosController < ApplicationController
       
     elsif params[:set_main_photo]
       #debugger
-      @current_main_photo = Photo.where(main_photo: true, listing_id: photo_params[:listing_id]).first
+      @current_main_photo = Photo.where({main_photo: true}.merge(model_specific_query)).first
 
       unless @current_main_photo.blank?
         #debugger
@@ -76,18 +95,28 @@ class PhotosController < ApplicationController
       @photo.save
 
     elsif params[:save_photo_order]
-      params[:order].each do |photo|
+
+      params[:order].each_with_index do |photo, i|
+      
         photo = JSON.parse photo
 
-        Photo.find(photo['photo_id']).update_attributes(order_priority: photo['order'])
-        #debugger
+        if params[:description].present?
+          description = params[:description][i] 
+        end
+
+        if params['featured'].present?
+          is_featured = params['featured'].include?(photo['photo_id'])
+        end 
+        Photo.find(photo['photo_id']).update_attributes(order_priority: photo['order'], description: description, featured: is_featured)
+        
 
       end
 
     end
 
 
-    @photos = Photo.where(listing_id: photo_params[:listing_id]).order("order_priority ASC")
+
+    @photos = Photo.where(model_specific_query).order("order_priority ASC")
 
   end
 
@@ -100,7 +129,7 @@ class PhotosController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def photo_params
-      params.require(:photo).permit(:image, :id, :listing_id)
+      params.require(:photo).permit(:image, :id, :listing_id, :team_member_id, :condo_profile_id, :description, :featured)
     end
 
 end

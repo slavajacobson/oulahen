@@ -16,6 +16,29 @@
  *= require bootstrap-icons
  */
 
+@-webkit-keyframes greenPulse {
+  from { border-color: #D61A1A; -webkit-box-shadow: 0 0 9px #D61A1A; }
+  50% { border-color: #FF2424; -webkit-box-shadow: 0 0 18px #FF2424; }
+  to { border-color: #D61A1A; -webkit-box-shadow: 0 0 9px #D61A1A; }
+}
+
+input.glow {
+  -webkit-animation-name: greenPulse;
+  -webkit-animation-duration: 2s;
+  -webkit-animation-iteration-count: infinite;
+}
+
+body .nav-tabs {
+  border-bottom: none;
+  position: relative;
+  top: 3px;
+}
+body .nav-tabs > li.active > a {
+  background-color:#f5f5f5;
+}
+.has-switch {
+  top: 11px;
+}
 #admin_logo {
 	margin:25px auto;
 	width:222px;
@@ -47,6 +70,9 @@
 .form-group > label {
   width:120px;
 }
+.form-control.input-small {
+  width:200px;
+}
 #photos_tab {
   display:none;
 }
@@ -74,3 +100,33 @@
 	margin-right: 35px;
 }
 
+
+.custom_field .form-control {
+
+    width:48%;
+    display:inline-block;
+
+}
+.custom_field .remove_field {
+  display:block;
+}
+
+.description label {
+  width:100%;
+}
+
+.image_frame {
+  margin-top:25px;
+}
+
+.well .form-control:focus {
+  border-color: rgba(107, 0, 0, 0.8);
+  outline: 0;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(136, 15, 15, 0.6);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(136, 15, 15, 0.6);
+}
+
+body a, body a:hover, body a:focus {
+  color: #8B0000;
+  text-decoration: none;
+}

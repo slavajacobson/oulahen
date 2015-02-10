@@ -1,0 +1,51 @@
+/* about us */
+.body-content {
+  margin: 15px;
+  margin-top: 10px;
+}
+
+.staff-frame {
+  width: 298px;
+  height:130px;
+  display:inline-block;
+  border:1px solid #C1C1C1;
+  font-family: Helvetica, Helvetica Neue, Arial, sans-serif;
+  margin: 5px;
+  img {
+    float: left;
+  }
+  .staff-info {
+    display: inline-block;
+    width: 178px;
+    text-align:center;
+    a {
+      text-decoration: none;
+    }
+    .title, .name {
+      color: #76080D;
+    }
+    .name {
+      font-size: 16px;
+      font-weight: bold;
+      text-transform: uppercase;
+      margin-top: 10px;
+    }
+    .title {
+      font-size: 13px;
+      margin-top:-2px;
+    }
+    .mini_bio {
+      font-size: 12px;
+      height: 58px;
+      margin: 4px 10px;
+      margin-top: 7px;
+    }
+    .link {
+      color: #000000;
+      font-size: 11px;
+      font-weight: bold;
+    }
+  }
+
+}
+

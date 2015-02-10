@@ -11,10 +11,41 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131220210352) do
+ActiveRecord::Schema.define(version: 20150203014253) do
 
   create_table "categories", force: true do |t|
     t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "condo_profiles", force: true do |t|
+    t.string   "address"
+    t.date     "built_on"
+    t.integer  "floors"
+    t.integer  "units"
+    t.string   "corporation"
+    t.string   "management"
+    t.string   "school_zone"
+    t.string   "distance_from_transit"
+    t.integer  "total_rented"
+    t.integer  "total_owned"
+    t.text     "slug"
+    t.boolean  "draft",                 default: true
+    t.integer  "draft_by"
+    t.integer  "priority"
+    t.boolean  "active"
+    t.integer  "category_id"
+    t.string   "lon"
+    t.string   "lat"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "custom_fields", force: true do |t|
+    t.string   "field_name"
+    t.string   "value"
+    t.integer  "team_member_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -33,7 +64,10 @@ ActiveRecord::Schema.define(version: 20131220210352) do
     t.integer  "listing_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "condo_profile_id"
   end
+
+  add_index "floor_plans", ["condo_profile_id"], name: "index_floor_plans_on_condo_profile_id"
 
   create_table "listings", force: true do |t|
     t.string   "address"
@@ -70,7 +104,7 @@ ActiveRecord::Schema.define(version: 20131220210352) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "slug"
-    t.date     "posted_on",                      default: '2014-05-12'
+    t.date     "posted_on",                      default: '2015-02-03'
   end
 
   add_index "listings", ["slug"], name: "index_listings_on_slug"
@@ -78,12 +112,18 @@ ActiveRecord::Schema.define(version: 20131220210352) do
   create_table "photos", force: true do |t|
     t.string   "image"
     t.text     "description"
-    t.boolean  "main_photo",     default: false
+    t.boolean  "main_photo",       default: false
     t.integer  "listing_id"
-    t.integer  "order_priority", default: 0
+    t.integer  "order_priority",   default: 0
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "team_member_id"
+    t.integer  "condo_profile_id"
+    t.boolean  "featured",         default: false
   end
+
+  add_index "photos", ["condo_profile_id"], name: "index_photos_on_condo_profile_id"
+  add_index "photos", ["team_member_id"], name: "index_photos_on_team_member_id"
 
   create_table "slide_show_images", force: true do |t|
     t.string   "image"
@@ -96,6 +136,18 @@ ActiveRecord::Schema.define(version: 20131220210352) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "order",             default: 0
+  end
+
+  create_table "team_members", force: true do |t|
+    t.string   "name"
+    t.string   "title"
+    t.text     "bio"
+    t.text     "mini_bio"
+    t.text     "slug"
+    t.boolean  "draft",      default: true
+    t.integer  "draft_by"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "users", force: true do |t|

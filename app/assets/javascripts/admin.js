@@ -19,7 +19,8 @@
 //= require lightbox-2.6.min
 //= require gritter
 //= require listings
-//= require jquery.ui.all
+//= require jquery-ui
+//= require condo_profiles
 function make_images_sortable() {
 	    var sortable_list = $( "#photos > .row" ).sortable({
         start: function(event, ui) {
@@ -41,8 +42,8 @@ function make_images_sortable() {
 }
 $(document).ready(function() {
 
-		
-		make_images_sortable();
+		if ($( "#photos > .row" ).length > 0)
+		  make_images_sortable();
 
 		//add this to listings.js on upload complete...
 

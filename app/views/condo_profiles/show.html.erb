@@ -1,0 +1,54 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @condo_profile.address %>
+</p>
+
+<p>
+  <strong>Built on:</strong>
+  <%= @condo_profile.built_on %>
+</p>
+
+<p>
+  <strong>Floors:</strong>
+  <%= @condo_profile.floors %>
+</p>
+
+<p>
+  <strong>Units:</strong>
+  <%= @condo_profile.units %>
+</p>
+
+<p>
+  <strong>Corporation:</strong>
+  <%= @condo_profile.corporation %>
+</p>
+
+<p>
+  <strong>Management:</strong>
+  <%= @condo_profile.management %>
+</p>
+
+<p>
+  <strong>School zone:</strong>
+  <%= @condo_profile.school_zone %>
+</p>
+
+<p>
+  <strong>Distance from transit:</strong>
+  <%= @condo_profile.distance_from_transit %>
+</p>
+
+<p>
+  <strong>Total rented:</strong>
+  <%= @condo_profile.total_rented %>
+</p>
+
+<p>
+  <strong>Total owned:</strong>
+  <%= @condo_profile.total_owned %>
+</p>
+
+<%= link_to 'Edit', edit_condo_profile_path(@condo_profile) %> |
+<%= link_to 'Back', condo_profiles_path %>

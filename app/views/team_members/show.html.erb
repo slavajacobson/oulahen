@@ -1,0 +1,79 @@
+<%= content_for :page_title, default_title(@team_member.name) %>
+
+<div class="gradient colelem" id="u16510"></div>
+    
+<div class="member-content">
+  <div class="main-photo">
+    <%- if image_tag @team_member.photos.where(main_photo:true).first %>
+      <%= image_tag @team_member.photos.where(main_photo:true).first.image_url(:team_member) %>
+    <% end %>
+
+
+    <div id="gallery" class="content">
+      
+      <div class="slideshow-container">
+        <div id="slideshow" class="slideshow"></div>
+        <div id="loading" class="loader"></div>
+        <div id="controls" class="controls"></div>
+        
+        <div id="caption"></div>
+      </div>
+    </div>
+
+    <div id='thumbs'>
+
+
+      <ul class="thumbs noscript">
+
+        <%- @team_member.photos.where.not(main_photo: true).order(:order_priority).each do |photo| %>
+          
+
+
+          <li>
+              <a class="thumb" name="optionalCustomIdentifier" href="<%= photo.image_url(:team_member) %>" title="your image title">
+                <%= image_tag photo.image_url(:team_member_thumb) %>
+              </a>
+              <%- if photo.description.present? %>
+                <div class="caption">
+                  <%= photo.description %>
+                </div>
+              <% end %>
+          </li>
+        <% end %>
+         
+       
+      </ul>
+      
+    </div>
+  </div>
+
+  <div class="side-content">
+    <div class='name'>
+      <%= @team_member.name %>
+    </div>
+    <div class='title'>
+      <%= @team_member.title %>
+    </div>
+    <div class='bio'>
+      <%= @team_member.bio %>
+    </div>
+    <%- @team_member.custom_fields.each do |custom_field| %>
+      <div class="row">
+        <div class="field_name">
+          <%= custom_field.field_name %>
+        </div>
+        <div class="field_value">
+          <%= custom_field.value.html_safe %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+  <ul class="team_member_icons">
+    <%= render partial: 'team_member_icon', collection: TeamMember.all, as: 'team_member' %>
+  </ul>
+</div>
+
+    
+
+
+

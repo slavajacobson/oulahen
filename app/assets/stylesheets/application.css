@@ -39,6 +39,11 @@
  *= require bootstrap_button.min
  *= require listing_show.css
  *= require bootstrap-slideshow.min
+ *= require team-member
+ *= require site
+ *= require jquery-ui/core
+ *= require jquery-ui/theme
+ *= require jquery-ui/autocomplete
  */
 #last_div
 {

@@ -5,6 +5,6 @@
 		$("#photos").append("<div class='row'></div>");
 	}
 
-	$("#photos .row").last().append("<%= j render(@photo, as: 'photo') %>");
+	$("#photos .row").last().append("<%= j render partial: @render_layout, object: @photo, as: :photo %>");
 
 <% end %>

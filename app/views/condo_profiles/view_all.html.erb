@@ -1,0 +1,45 @@
+<h1>Listing condo_profiles</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Address</th>
+      <th>Built on</th>
+      <th>Floors</th>
+      <th>Units</th>
+      <th>Corporation</th>
+      <th>Management</th>
+      <th>School zone</th>
+      <th>Distance from transit</th>
+      <th>Total rented</th>
+      <th>Total owned</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @condo_profiles.each do |condo_profile| %>
+      <tr>
+        <td><%= condo_profile.address %></td>
+        <td><%= condo_profile.built_on %></td>
+        <td><%= condo_profile.floors %></td>
+        <td><%= condo_profile.units %></td>
+        <td><%= condo_profile.corporation %></td>
+        <td><%= condo_profile.management %></td>
+        <td><%= condo_profile.school_zone %></td>
+        <td><%= condo_profile.distance_from_transit %></td>
+        <td><%= condo_profile.total_rented %></td>
+        <td><%= condo_profile.total_owned %></td>
+        <td><%= link_to 'Show', condo_profile %></td>
+        <td><%= link_to 'Edit', edit_condo_profile_path(condo_profile) %></td>
+        <td><%= link_to 'Destroy', condo_profile, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Condo profile', new_condo_profile_path %>

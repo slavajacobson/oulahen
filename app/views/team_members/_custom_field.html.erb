@@ -1,0 +1,24 @@
+
+
+<% random_id = rand(99911..99999999) %>
+<div class="form-group custom_field">  
+
+
+
+  <input id="team_member_custom_fields_attributes_<%= random_id %>_field_name" name="team_member[custom_fields_attributes][<%= random_id %>][field_name]" placeholder="Activity" type="text" class='form-control input-small'>  
+
+
+  <input id="team_member_custom_fields_attributes_<%= random_id %>_value" name="team_member[custom_fields_attributes][<%= random_id %>][value]" placeholder="Story" type="text" class='form-control input-small'>  
+
+
+  <input name="team_member[custom_fields_attributes][<%= random_id %>][_destroy]" type="hidden" value="0">
+
+
+  <div class="remove_field">
+    <input id="team_member_custom_fields_attributes_<%= random_id %>__destroy" name="team_member[custom_fields_attributes][<%= random_id %>][_destroy]" type="checkbox" value="1">  
+
+
+
+    <label for="team_member_custom_fields_attributes_<%= random_id %>__destroy">Remove</label>
+  </div>
+</div>

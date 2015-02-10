@@ -1,0 +1,160 @@
+/* member */
+.member-content {
+  margin: 0px 20px;
+  margin-top: 30px;
+
+  .main-photo {
+    width:338px;
+    height:297px;
+    display: inline-block;
+    vertical-align: top;
+    img {
+      border-radius: 10px 0px 10px 0px;
+      border: 1px solid #E6E6E6;
+    }
+
+    #gallery {
+      #controls {
+        position: absolute;
+        top: 50%;
+        width:100%;
+        .ss-controls {
+          display:none;
+
+        }
+        .prev, .next {
+          text-decoration: none;
+          background-color: rgba(240, 240, 240, 0.66);
+          color: rgb(80, 80, 80);
+          font-size: 40px;
+          margin-top: -15px;
+          display: inline-block;
+          position:absolute;
+          padding:0px 5px;
+        }  
+        .prev {
+
+
+        }
+        .next {
+          right:-1px;
+        }
+      }
+
+
+
+    }
+    .slideshow-container {
+      position:relative;
+      height: 318px;
+      #slideshow {
+        position:relative;
+        .image-wrapper {
+          position:absolute;
+          a {
+            text-decoration: none;
+          }
+        }
+      }
+      #caption {
+        position: absolute;
+        bottom: 60px;
+        background-color: rgba(240, 240, 240, 0.66);
+        width: 100%;
+        left: 1px;
+
+        .image-caption {
+          bottom: -56px;
+          position: absolute;
+          .caption {
+
+            background-color: rgba(240, 240, 240, 0.66);
+            width: 318px;
+            padding: 12px 10px;
+          }
+
+        }
+      }
+    }
+    .thumbs {
+
+      li {
+        display:inline-block;
+        img {
+          width:61px;
+          height:52px;
+        }
+      }
+
+    }
+  }
+  .side-content {
+    display: inline-block;
+    width: 555px;
+    margin-left: 20px;
+    .name {
+      color: #76080D;
+      font-family: Geneva, Verdana, Lucida Sans, Lucida Sans Unicode, sans-serif;
+      font-size: 20px;
+      font-weight: bold;
+      padding: 0px;
+      text-transform: uppercase;
+    }
+    .title {
+      font-weight: bold;
+      font-size: 14px;
+      line-height: 1.2;
+    }
+    .bio {
+      color: #76080D;
+      font-family: Arial, Helvetica Neue, Helvetica, sans-serif;
+      font-size: 14px;
+      line-height: 1.3;
+      text-align: left;
+
+      margin-top: 20px;
+      padding-bottom: 8px;
+      border-bottom: 2px solid #E4E4E4;
+
+    }
+    .row {
+      margin-top:25px;
+      .field_name {
+        display:inline-block;
+        font-size: 13px;
+        line-height: 1.3;
+        font-weight: bold;
+        width: 160px;
+        vertical-align: top;
+      }
+      .field_value {
+        display:inline-block;
+        width: 350px;
+        margin-left: 35px;
+        vertical-align: top;
+        a {
+          color: #76080D;
+          text-decoration: none;
+        }
+      }
+
+    }
+
+
+  }
+  .team_member_icons {
+    border-top: 2px solid #D8D8D8;
+    margin-top: 20px;
+    padding-top: 10px;
+    width: 562px;
+    float: right;
+    .staff-icon {
+      float:right;
+      img {
+        width:43px;
+        height:49px;
+      }
+    }
+  }
+
+}

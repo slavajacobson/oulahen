@@ -26,3 +26,25 @@
 //= require landtransfer_calculator
 //= require gritter
 //= require bootstrap-slideshow.min
+//= require gallerific
+//= require twitter/typeahead.min
+//= require search
+
+jQuery(document).ready(function($) {
+  if ($('#thumbs').length > 0) {
+    $('#thumbs').galleriffic({
+      imageContainerSel:      '#slideshow',
+      controlsContainerSel:   '#controls',
+      captionContainerSel: '#caption',
+      delay:                     5000, // in milliseconds
+      numThumbs:                 20, // The number of thumbnails to show page
+      preloadAhead:              40, // Set to -1 to preload all images
+      autoStart: true,
+      prevLinkText:              '<',
+      nextLinkText:              '>',
+      syncTransitions: true
+    });
+
+  }
+
+});

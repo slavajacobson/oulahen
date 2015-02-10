@@ -29,7 +29,7 @@ gem 'coffee-rails', '~> 4.0.0'
 
 # Use jquery as the JavaScript library
 gem "jquery-rails"
-gem 'jquery-ui-rails'
+gem 'jquery-ui-rails', '~> 5.0.3'
 gem 'jquery-fileupload-rails'
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 gem 'turbolinks'
@@ -72,3 +72,5 @@ gem 'jquery-migrate-rails'
 gem "recaptcha", :require => "recaptcha/rails"
 gem "letter_opener", :group => :development
 gem 'figaro'
+gem 'rails-i18n'
+gem 'twitter-typeahead-rails'

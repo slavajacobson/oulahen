@@ -1,4 +1,21 @@
 Oulahen::Application.routes.draw do
+  resources :condo_profiles do
+    collection do
+      get 'get_coordinates', as: 'get_coordinates'
+      get 'search(/:q)', action: 'search', as: 'search'
+      get 'view_all', as: 'view_all'
+    end
+  end
+
+  resources :custom_fields
+
+  resources :team_members do
+    collection do
+      post 'add_custom_field', as: 'add_custom_field'
+      get 'about_us'
+    end
+  end
+
   resources :slide_show_images do
      collection do
         post 'update_order', as: 'update_order' 

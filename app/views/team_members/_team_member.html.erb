@@ -1,0 +1,19 @@
+<li class='staff-frame'>
+
+  <%- if team_member.photos.where(main_photo:true).first %>
+    <%= link_to team_member do %>
+      <%= image_tag team_member.photos.where(main_photo:true).first.image_url(:team_member_thumb) %>
+    <% end %>
+  <% end %>
+  <div class='staff-info'>
+    <%= link_to team_member do %>
+      <div class='name'><%= team_member.name %></div>
+    <% end %>
+    <div class='title'><%= team_member.title %></div>
+    <div class='mini_bio'><%= team_member.mini_bio %></div>
+    <%= link_to team_member do %>
+      <div class='link'>Read More</div>
+    <% end %>
+  </div>
+
+</li>
