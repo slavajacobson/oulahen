@@ -1,0 +1,47 @@
+<h1><%= @neighbourhood.name %></h1>
+<p>
+  <%= @neighbourhood.description %>
+</p>
+<p>
+  <strong>Schools:</strong>
+  <%= @neighbourhood.schools %>
+</p>
+<p>
+  <strong>Buildings:</strong>
+  <ul>
+  <%- @neighbourhood.condo_profiles.each do |condo| %>
+    <li>
+      <%= link_to condo_profile_path(condo) do %>
+        <%= condo.address %>
+
+      <% end %>
+    </li>
+  <% end %>
+  </ul>
+</p>
+
+
+<div id="donutchart" style="width: 900px; height: 500px;"></div>
+
+<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+<script type="text/javascript">
+      google.load("visualization", "1", {packages:["corechart"]});
+      google.setOnLoadCallback(drawChart);
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Task', 'Hours per Day'],
+          ['Condo Apartments',     <%= @neighbourhood.condo_apts %>],
+          ['Detached',      <%= @neighbourhood.detached %>],
+          ['Condo towns',  <%= @neighbourhood.condo_towns %>],
+          ['Condo other',  <%= @neighbourhood.condo_other %>]
+        ]);
+
+        var options = {
+          title: 'Area Stats',
+          pieHole: 0.4,
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('donutchart'));
+        chart.draw(data, options);
+      }
+</script>

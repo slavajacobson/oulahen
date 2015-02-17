@@ -1,0 +1,64 @@
+<%= form_for(@neighbourhood) do |f| %>
+  <% if @neighbourhood.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@neighbourhood.errors.count, "error") %> prohibited this neighbourhood from being saved:</h2>
+
+      <ul>
+      <% @neighbourhood.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+
+
+  <div class="well well-large">
+
+
+    <div class="row">
+      <div class="col-lg-6">
+
+        <div class="form-group">
+          <%= f.label :name %><br>
+          <%= f.text_field :name, class: 'form-control input-small' %>
+        </div>
+        <div class="form-group">
+          <%= f.label :description %><br>
+          <%= f.text_area :description, class: 'form-control' %>
+        </div>
+        <div class="form-group">
+          <%= f.label :schools %><br>
+          <%#= f.text_field :schools  %>
+          <%= f.select(:schools, @neighbourhood.schools.to_a, {selected: @neighbourhood.schools.to_a}, multiple: true, class: 'form-control input-small', style:'width:100%;') %>
+        </div>
+        <h3> Statistics: </h3>
+        <div class="form-group">
+          <%= f.label :condo_apts %><br>
+          <%= f.number_field :condo_apts, class: 'form-control input-small' %>
+        </div>
+
+        <div class="form-group">
+          <%= f.label :detached %><br>
+          <%= f.number_field :detached, class: 'form-control input-small' %>
+        </div>
+
+        <div class="form-group">
+          <%= f.label :condo_towns %><br>
+          <%= f.number_field :condo_towns, class: 'form-control input-small' %>
+        </div>        
+        <div class="form-group">
+          <%= f.label :condo_other %><br>
+          <%= f.number_field :condo_other, class: 'form-control input-small' %>
+        </div>   
+
+        <div class="actions">
+          <%= f.submit @neighbourhood.new_record? ? 'Create' : 'Update' , class:'btn btn-primary' %> 
+          <%= link_to 'Back', slide_show_images_path, class:'btn btn-warning'  %>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+<% end %>

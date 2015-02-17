@@ -1,9 +1,10 @@
 class CondoProfile < ActiveRecord::Base
+  belongs_to :neighbourhood
 
   has_many :photos
 
   before_validation :generate_slug
-
+  serialize :amenities
 
   validates :slug, uniqueness: true, presence: true
   belongs_to :category

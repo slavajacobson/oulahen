@@ -47,4 +47,22 @@ jQuery(document).ready(function($) {
 
   }
 
+  // if ($(".condo_profile").length > 0) {
+  //   var lon = $(".condo_profile").data("lon");
+  //   var lat = $(".condo_profile").data("lat");
+  //   var address = encodeURIComponent($(".condo_profile").data("address"));
+
+  //   var path = "http://api.walkscore.com/score?format=json&address=" + address + "&lat=" + lat + "&lon=" + lon + "&wsapikey=b84b6a85455d2fe8fd04f93ce048518c"
+  //   console.log(path);
+
+  //   $.ajax({ 
+  //     type: 'GET', 
+  //     url: path,
+  //     contentType: "application/json",
+  //     success: function(data) {
+  //       console.log(data);
+  //     }
+
+  //   })
+  // }
 });

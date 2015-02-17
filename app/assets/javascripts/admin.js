@@ -19,8 +19,10 @@
 //= require lightbox-2.6.min
 //= require gritter
 //= require listings
+//= require neighbourhoods
 //= require jquery-ui
 //= require condo_profiles
+//= require select2
 function make_images_sortable() {
 	    var sortable_list = $( "#photos > .row" ).sortable({
         start: function(event, ui) {
@@ -138,3 +140,5 @@ $(document).ready(function() {
     $("#listing_lot").parent().show();
     $("#listing_maintenance_fee").parent().show();
   }
+
+

@@ -1,0 +1,28 @@
+<h1>Listing neighbourhoods</h1>
+
+<table style="width:100%;">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>URL</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @neighbourhoods.each do |neighbourhood| %>
+      <tr>
+        <td><%= neighbourhood.name %></td>
+        <td><%= neighbourhood_path(neighbourhood) %></td>
+
+        <td><%= link_to 'Show', neighbourhood %></td>
+        <td><%= link_to 'Edit', edit_neighbourhood_path(neighbourhood) %></td>
+        <td><%= link_to 'Destroy', neighbourhood, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br /><br />

@@ -20,42 +20,45 @@
 
     <div id="general_tab">
         <%= f.hidden_field :draft, value: "false" %>
-
-
+    
+    
         <div class="form-group">
-          <span style="font-weight:bold;">Select listing type:</span> 
-          <% Category.all.each do |cat| %>
-            <%= f.radio_button :category_id, cat.id %>
-            <%= cat.name %>
+          <span style="font-weight:bold;">Select Neighbourhood:</span> 
+          <% Neighbourhood.all.each do |neighbourhood| %>
+            <label class='radio-button-label'>
+              <%= f.radio_button :neighbourhood_id, neighbourhood.id %>
+              <%= neighbourhood.name %>
+            </label>
           <% end %>
         </div>
-
+        
+        
         <div class="row">
           <div class="col-lg-6">
-
+    
               <div class="form-group">
                 <%= f.label :active, "Enable profile" %>
-
+    
                 <div class="make-switch" data-on-label="Yes" data-off-label="No" data-off="danger" data-on="success" style="margin-right:25px;">
                    <%= f.check_box :active %> 
                 </div> 
               </div>
-
+    
               <div class="form-group">
                 <%= f.label :priority %>
-
+    
                 <%= f.select :priority, (1..10).collect {|r| [ r, r ] }, {}, { class:'form-control input-small', style:'display:inline-block; width:100px' } %> (Listings and slideshow sorted by this field)
            
               </div>
               <div class="form-group">
                 <%= f.label :built_on %>
-
+    
                 <%= f.date_field :built_on, class:'form-control input-small', style:'display:inline-block' %> (Transactions sorted by this field)
            
               </div>
-
-
-
+    
+    
+    
               <div class="form-group">
                 <%= f.label :address %>
                 <%= f.text_field :address, class: 'form-control input-small', style:'display:inline-block' %>
@@ -81,12 +84,12 @@
                 <%= f.label :corporation %>
                 <%= f.text_field :corporation, class: 'form-control input-small', style:'display:inline-block' %>
               </div>
-
-
-
-
+    
+    
+    
+    
           </div>
-
+    
           <div class="col-lg-6">
            
               <div class="form-group">
@@ -109,28 +112,30 @@
                 <%= f.label :total_owned %>
                 <%= f.number_field :total_owned, class: 'form-control input-small', style:'display:inline-block' %>
               </div>
-
-
-          
-
+    
+              <div class="form-group">
+      
+              <%= f.collection_check_boxes(:amenities, Amenity.all, :id, :label, checked: @condo_profile.amenities ) %>
+              </div>          
+    
               
-                <div class="form-group">
-                  <%= f.label :floor_plan %>
-                  <%  unless @condo_profile.floor_plan.new_record? %>
-                    <%= check_box_tag :delete_floor_plan %> Delete? <br />
-                    <%= link_to "View current Floorplan", @condo_profile.floor_plan.file_url, :target => "_blank" %> or Upload a different one:
-                  <% end %>
-                  <%= f.fields_for :floor_plan do |floor_plan| %>
-                    <%= floor_plan.file_field :file, style: 'display:inline-block' %>
-                  <% end %>
-                </div>
+              <div class="form-group">
+                <%= f.label :floor_plan %>
+                <%  unless @condo_profile.floor_plan.new_record? %>
+                  <%= check_box_tag :delete_floor_plan %> Delete? <br />
+                  <%= link_to "View current Floorplan", @condo_profile.floor_plan.file_url, :target => "_blank" %> or Upload a different one:
+                <% end %>
+                <%= f.fields_for :floor_plan do |floor_plan| %>
+                  <%= floor_plan.file_field :file, style: 'display:inline-block' %>
+                <% end %>
+              </div>
               
-
+    
           </div>
         </div>
-
+    
         
-
+    
     </div>
 
     <div class="clearfix">

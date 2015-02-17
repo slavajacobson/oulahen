@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  schools: MyText
+  condo_apts: 1
+  detached: 1
+  condo_towns: 1
+  condo_other: 1
+
+two:
+  schools: MyText
+  condo_apts: 1
+  detached: 1
+  condo_towns: 1
+  condo_other: 1

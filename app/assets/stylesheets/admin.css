@@ -14,8 +14,20 @@
  *= require lightbox
  *= require gritter
  *= require bootstrap-icons
+ *= require select2
  */
 
+body .select2-dropdown {
+  display:none;
+}
+
+body #neighbourhood_schools {
+  width:100%;
+}
+body textarea.form-control {
+  width:100%;
+  height:150px;
+}
 @-webkit-keyframes greenPulse {
   from { border-color: #D61A1A; -webkit-box-shadow: 0 0 9px #D61A1A; }
   50% { border-color: #FF2424; -webkit-box-shadow: 0 0 18px #FF2424; }
@@ -27,7 +39,11 @@ input.glow {
   -webkit-animation-duration: 2s;
   -webkit-animation-iteration-count: infinite;
 }
-
+.form-group > label.radio-button-label {
+  width:auto;
+  font-weight:normal;
+  margin-left:20px;
+}
 body .nav-tabs {
   border-bottom: none;
   position: relative;
@@ -129,4 +145,17 @@ body .nav-tabs > li.active > a {
 body a, body a:hover, body a:focus {
   color: #8B0000;
   text-decoration: none;
+}
+
+
+body .dropdown-menu > li > a:hover, .dropdown-menu > li > a:focus {
+  color: #ffffff;
+  text-decoration: none;
+  background-color: #961B1B;
+  background-image: -webkit-gradient(linear, left 0%, left 100%, from(#CA4242), to(#961B1B));
+  background-image: -webkit-linear-gradient(top, #CA4242, 0%, #961B1B, 100%);
+  background-image: -moz-linear-gradient(top, #CA4242 0%, #961B1B 100%);
+  background-image: linear-gradient(to bottom, #CA4242 0%, #961B1B 100%);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffCA4242', endColorstr='#ff961B1B', GradientType=0);
 }

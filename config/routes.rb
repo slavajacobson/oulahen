@@ -1,4 +1,8 @@
 Oulahen::Application.routes.draw do
+  resources :neighbourhoods
+
+  resources :amenities
+
   resources :condo_profiles do
     collection do
       get 'get_coordinates', as: 'get_coordinates'

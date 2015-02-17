@@ -1,7 +1,7 @@
 class CondoProfilesController < ApplicationController
   before_action :set_condo_profile, only: [:show, :edit, :update, :destroy]
 
-  layout 'admin', only: [:new,:edit, :update, :destroy]
+  layout 'admin', only: [:new,:edit, :update, :destroy, :view_all]
   before_filter :authenticate_user!, only: [:new, :index, :edit, :update, :destroy] 
 
   # GET /condo_profiles
@@ -16,6 +16,8 @@ class CondoProfilesController < ApplicationController
   # GET /condo_profiles/1
   # GET /condo_profiles/1.json
   def show
+    @walk_score = get_walk_score
+    @transit_score = get_transit_score
   end
 
   # GET /condo_profiles/new
@@ -104,15 +106,16 @@ class CondoProfilesController < ApplicationController
 
   def search
     #debugger
-    @result = CondoProfile.where("lower(address) like ?", "%#{params[:term]}%")
+    @result = CondoProfile.where("lower(address) like ?", "%#{params[:q]}%")
     #debugger
-    render json: @result.map(&:address)
+    render json: @result.map { |r| {address: r.address, url: condo_profile_path(r) }}
   end
+
 
   def get_coordinates
     respond_to do |format|
       format.js {
-        @address = params[:address]
+        @address = params[:address] + ' Toronto, Canada'
         
         google_api = JSON.load(open("http://maps.googleapis.com/maps/api/geocode/json?address=#{URI.encode(@address)}"))
 
@@ -125,6 +128,19 @@ class CondoProfilesController < ApplicationController
 
   end
   private
+    def get_walk_score
+      url = "http://api.walkscore.com/score?format=json&address=#{URI.encode(@condo_profile.address)}&lat=#{URI.encode(@condo_profile.lat)}&lon=#{URI.encode(@condo_profile.lon)}&wsapikey=b84b6a85455d2fe8fd04f93ce048518c"
+      JSON.load(open(url))
+    end
+
+    def get_transit_score
+      #http://transit.walkscore.com/transit/score/?lat=47.6101359&lon=-122.3420567&city=Seattle&state=WA&wsapikey=your_key
+      #"http://api.walkscore.com/score?format=json&address=#{URI.encode(@condo_profile.address)}&lat=#{URI.encode(@condo_profile.lat)}&lon=#{URI.encode(@condo_profile.lon)}&wsapikey=b84b6a85455d2fe8fd04f93ce048518c"
+      url = "http://transit.walkscore.com/transit/score/?lat=#{URI.encode(@condo_profile.lat)}&lon=#{URI.encode(@condo_profile.lon)}&city=toronto&country=CA&wsapikey=b84b6a85455d2fe8fd04f93ce048518c"
+      JSON.load(open(url))
+
+    end
+
     # Use callbacks to share common setup or constraints between actions.
     def set_condo_profile
       @condo_profile = CondoProfile.find_by_slug!(params[:id])
@@ -132,6 +148,6 @@ class CondoProfilesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def condo_profile_params
-      params.require(:condo_profile).permit(:address, :built_on, :floors, :units, :corporation, :management, :school_zone, :distance_from_transit, :total_rented, :total_owned, {floor_plan_attributes: [:id,:file]})
+      params.require(:condo_profile).permit(:draft, :neighbourhood_id, :active, :priority, :lon, :lat, :address, :built_on, :floors, :units, :corporation, { :amenities => [] }, :management, :school_zone, :distance_from_transit, :total_rented, :total_owned, {floor_plan_attributes: [:id,:file]})
     end
 end

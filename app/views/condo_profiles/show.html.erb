@@ -1,4 +1,4 @@
-<p id="notice"><%= notice %></p>
+<div class="condo_profile" data-lon="<%= @condo_profile.lon %>" data-lat="<%= @condo_profile.lat %>" data-address="<%= @condo_profile.address %>"></div>
 
 <p>
   <strong>Address:</strong>
@@ -34,14 +34,24 @@
   <strong>School zone:</strong>
   <%= @condo_profile.school_zone %>
 </p>
-
 <p>
-  <strong>Distance from transit:</strong>
-  <%= @condo_profile.distance_from_transit %>
+  <strong>Walk score:</strong>
+  <%= link_to @transit_score['ws_link'], target: '_blank' do %>
+    <%= @walk_score['walkscore'] %>
+  <% end %> 
+  (<%= @walk_score['description'] %>)
+</p>
+<p>
+  <strong>Transit Score:</strong>
+  <%= link_to @transit_score['ws_link'], target: '_blank' do %>
+    <%= @transit_score['transit_score'] %>
+  <% end %> 
+  (<%= @transit_score['description'] %>)
 </p>
 
 <p>
   <strong>Total rented:</strong>
+
   <%= @condo_profile.total_rented %>
 </p>
 
@@ -50,5 +60,4 @@
   <%= @condo_profile.total_owned %>
 </p>
 
-<%= link_to 'Edit', edit_condo_profile_path(@condo_profile) %> |
-<%= link_to 'Back', condo_profiles_path %>
+

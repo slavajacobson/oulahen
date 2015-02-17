@@ -9,6 +9,7 @@ class CreateCondoProfiles < ActiveRecord::Migration
       t.string :management
       t.string :school_zone
       t.string :distance_from_transit
+      t.string :walk_score
       t.integer :total_rented
       t.integer :total_owned
       t.text :slug, index: true
@@ -16,9 +17,11 @@ class CreateCondoProfiles < ActiveRecord::Migration
       t.integer :draft_by
       t.integer :priority
       t.boolean :active
-      t.references :category
+      t.references :neighbourhood
+
       t.string :lon
       t.string :lat
+      t.string :amenities
       t.timestamps
     end
   end
