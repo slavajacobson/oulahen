@@ -61,7 +61,7 @@ gem "gritter"
 gem "debugger", "~> 1.6.6", group: [:development, :test]
 gem 'rails_12factor'
 
-gem "rvm-capistrano", "~> 1.5.1"
+gem "rvm-capistrano", "~> 1.5.1", :require => false
 gem 'mailjet'
 
 gem 'kaminari'

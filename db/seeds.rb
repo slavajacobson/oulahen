@@ -44,6 +44,16 @@ total_neighbourhoods = Neighbourhood.count
 
 # end
 
+# pi = ProductImage.create!(:product => product)
+# pi.image.store!(File.open(File.join(Rails.root, 'test.jpg')))
+# product.product_images << pi
+# product.save!
+
+
+# restaurant = Restaurant.create!(name: "McDonald's")
+# restaurant.logo = Rails.root.join("db/images/mcdonalds_logo.png").open
+# restaurant.save!
+
 
 200.times do |i|
 
@@ -56,7 +66,9 @@ total_neighbourhoods = Neighbourhood.count
   address = street_number.to_s + ' ' + street_names[Random.rand(street_names.length)]
 
 
-  CondoProfile.create(address: address, draft:false, neighbourhood: Neighbourhood.offset(rand(total_neighbourhoods)).first, total_rented: rand(350), total_owned: rand(350))
+  condo_profile = CondoProfile.create!(address: address, draft:false, neighbourhood: Neighbourhood.offset(rand(total_neighbourhoods)).first, total_rented: rand(350), total_owned: rand(350))
+  condo_profile.photos << Rails.root.join("db/files/1.jpg").open
+  condo_profile.save!
   print "#{i}-"
 
 end
