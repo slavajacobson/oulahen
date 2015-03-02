@@ -8,6 +8,7 @@ class CreateNeighbourhoods < ActiveRecord::Migration
       t.integer :detached
       t.integer :condo_towns
       t.integer :condo_other
+      t.string :image
       t.text :slug, index: true
       t.timestamps
     end

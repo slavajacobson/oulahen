@@ -16,8 +16,8 @@ class CondoProfilesController < ApplicationController
   # GET /condo_profiles/1
   # GET /condo_profiles/1.json
   def show
-    @walk_score = get_walk_score
-    @transit_score = get_transit_score
+    @walk_score = get_walk_score if @condo_profile.lat.present?
+    @transit_score = get_transit_score if @condo_profile.lat.present?
   end
 
   # GET /condo_profiles/new
