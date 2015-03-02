@@ -12,10 +12,10 @@
 
 schools = ('School Name Public School,'*10).split(',')
 
-Neighbourhood.create(name: 'Yonge & Finch', description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis fuga beatae quaerat dolor porro perspiciatis rerum, temporibus, ipsum repellat, aliquid nisi itaque sunt. Omnis temporibus, mollitia odit voluptate dolor dolorem?', condo_apts: rand(50), detached: rand(50), condo_towns: rand(50), condo_other: rand(50), schools: schools)
-Neighbourhood.create(name: 'Yonge & Sheppard', description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis fuga beatae quaerat dolor porro perspiciatis rerum, temporibus, ipsum repellat, aliquid nisi itaque sunt. Omnis temporibus, mollitia odit voluptate dolor dolorem?', condo_apts: rand(50), detached: rand(50), condo_towns: rand(50), condo_other: rand(50), schools: schools)
-Neighbourhood.create(name: 'Avondale', description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis fuga beatae quaerat dolor porro perspiciatis rerum, temporibus, ipsum repellat, aliquid nisi itaque sunt. Omnis temporibus, mollitia odit voluptate dolor dolorem?', condo_apts: rand(50), detached: rand(50), condo_towns: rand(50), condo_other: rand(50), schools: schools)
-Neighbourhood.create(name: 'Bayview & Sheppard', description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis fuga beatae quaerat dolor porro perspiciatis rerum, temporibus, ipsum repellat, aliquid nisi itaque sunt. Omnis temporibus, mollitia odit voluptate dolor dolorem?', condo_apts: rand(50), detached: rand(50), condo_towns: rand(50), condo_other: rand(50), schools: schools)
+Neighbourhood.create(image: Rails.root.join("db/files/1.jpg").open, name: 'Yonge & Finch', description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis fuga beatae quaerat dolor porro perspiciatis rerum, temporibus, ipsum repellat, aliquid nisi itaque sunt. Omnis temporibus, mollitia odit voluptate dolor dolorem?', condo_apts: rand(50), detached: rand(50), condo_towns: rand(50), condo_other: rand(50), schools: schools)
+Neighbourhood.create(image: Rails.root.join("db/files/1.jpg").open, name: 'Yonge & Sheppard', description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis fuga beatae quaerat dolor porro perspiciatis rerum, temporibus, ipsum repellat, aliquid nisi itaque sunt. Omnis temporibus, mollitia odit voluptate dolor dolorem?', condo_apts: rand(50), detached: rand(50), condo_towns: rand(50), condo_other: rand(50), schools: schools)
+Neighbourhood.create(image: Rails.root.join("db/files/1.jpg").open, name: 'Avondale', description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis fuga beatae quaerat dolor porro perspiciatis rerum, temporibus, ipsum repellat, aliquid nisi itaque sunt. Omnis temporibus, mollitia odit voluptate dolor dolorem?', condo_apts: rand(50), detached: rand(50), condo_towns: rand(50), condo_other: rand(50), schools: schools)
+Neighbourhood.create(image: Rails.root.join("db/files/1.jpg").open, name: 'Bayview & Sheppard', description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis fuga beatae quaerat dolor porro perspiciatis rerum, temporibus, ipsum repellat, aliquid nisi itaque sunt. Omnis temporibus, mollitia odit voluptate dolor dolorem?', condo_apts: rand(50), detached: rand(50), condo_towns: rand(50), condo_other: rand(50), schools: schools)
 
 User.create(email:'vs.jacobson@gmail.com', password:'12344321', password_confirmation:'12344321')
 User.create(email:'team@oulahen.com', password:'oulahen1234!@#$', password_confirmation:'oulahen1234!@#$')
@@ -55,7 +55,7 @@ total_neighbourhoods = Neighbourhood.count
 # restaurant.save!
 
 
-200.times do |i|
+70.times do |i|
 
 
   street_number = 1 + Random.rand(300)
@@ -67,8 +67,12 @@ total_neighbourhoods = Neighbourhood.count
 
 
   condo_profile = CondoProfile.create!(address: address, draft:false, neighbourhood: Neighbourhood.offset(rand(total_neighbourhoods)).first, total_rented: rand(350), total_owned: rand(350))
-  condo_profile.photos << Rails.root.join("db/files/1.jpg").open
-  condo_profile.save!
+  
+  # photo = Photo.create!(image: Rails.root.join("db/files/1.jpg").open)
+
+
+  # condo_profile.photos << photo
+  # condo_profile.save!
   print "#{i}-"
 
 end

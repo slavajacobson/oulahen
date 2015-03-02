@@ -4,7 +4,9 @@
   <strong>Address:</strong>
   <%= @condo_profile.address %>
 </p>
-
+<p>
+  <%= image_tag @condo_profile.photos.first.image.url %>
+</p>
 <p>
   <strong>Built on:</strong>
   <%= @condo_profile.built_on %>
@@ -34,6 +36,7 @@
   <strong>School zone:</strong>
   <%= @condo_profile.school_zone %>
 </p>
+<% if @walk_score.present? %>
 <p>
   <strong>Walk score:</strong>
   <%= link_to @transit_score['ws_link'], target: '_blank' do %>
@@ -48,6 +51,7 @@
   <% end %> 
   (<%= @transit_score['description'] %>)
 </p>
+<% end %>
 
 <p>
   <strong>Total rented:</strong>

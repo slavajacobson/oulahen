@@ -1,3 +1,42 @@
 // Place all the styles related to the CondoProfiles controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+h2 {
+  color: #8E060C;
+  font-weight: bold;
+  font-size: 1.1em;
+  margin-top: 40px;
+}
+.neighbourhoods-map {
+  width:45%;
+  margin-right: 30px;
+  display:inline-block;
+  vertical-align: top;
+  text-align: left;
+  height: 563px;
+  iframe {
+    height:100%;
+  }
+}
+.team-album-container {
+  width:50%;
+  display:inline-block;
+  margin-left: -8px;
+  .team-album {
+    height:300px;
+    border:1px solid black;
+  }
+  .description {
+    padding-top:25px;
+    text-align: left;
+  }
+}
+.featured-condos {
+  border:1px solid red;
+}
+
+#u21707-5 {
+  display:block;
+}

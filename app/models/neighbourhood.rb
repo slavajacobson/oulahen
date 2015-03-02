@@ -3,6 +3,9 @@ class Neighbourhood < ActiveRecord::Base
   serialize :schools
   validates :slug, uniqueness: true, presence: true
   before_validation :generate_slug
+
+  mount_uploader :image, ImageUploader
+
   def to_param
     slug
   end

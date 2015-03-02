@@ -116,7 +116,7 @@ ActiveRecord::Schema.define(version: 20150215191051) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "slug"
-    t.date     "posted_on",                      default: '2015-02-17'
+    t.date     "posted_on",                      default: '2015-02-23'
   end
 
   add_index "listings", ["slug"], name: "index_listings_on_slug"
@@ -129,6 +129,7 @@ ActiveRecord::Schema.define(version: 20150215191051) do
     t.integer  "detached"
     t.integer  "condo_towns"
     t.integer  "condo_other"
+    t.string   "image"
     t.text     "slug"
     t.datetime "created_at"
     t.datetime "updated_at"
