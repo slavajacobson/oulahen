@@ -1,0 +1,41 @@
+
+
+
+<%= form_for(@team_photo) do |f| %>
+  <% if @team_photo.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@team_photo.errors.count, "error") %> prohibited this team_photo from being saved:</h2>
+
+      <ul>
+      <% @team_photo.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="row">
+      <div class="col-lg-6">
+
+       
+
+        <div class="form-group" id="image_field">
+          <%= f.label :image %><br>
+          <%= f.file_field :image %>
+        </div>
+
+
+
+        <div class="form-group">
+          <%= f.label :description %><br>
+          <%= f.text_field :description, style:'width:700px;', class: 'form-control input-small' %>
+        </div>
+        
+        <div class="actions">
+          <%= f.submit @team_photo.new_record? ? 'Create' : 'Update' , class:'btn btn-primary' %> <%= link_to 'Back', team_photos_path, class:'btn btn-warning'  %>
+        </div>
+
+      </div>
+  </div>
+  
+<% end %>

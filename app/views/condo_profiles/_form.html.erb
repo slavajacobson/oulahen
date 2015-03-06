@@ -114,10 +114,21 @@
               </div>
     
               <div class="form-group">
-      
-              <%= f.collection_check_boxes(:amenities, Amenity.all, :id, :label, checked: @condo_profile.amenities ) %>
+                <h2>Select Amenities</h2>
+                <%= f.collection_check_boxes(:amenities, Amenity.all, :id, :label, checked: @condo_profile.amenities )  do |b| %>
+                  
+                  <%= b.label(class: "check_box") { b.check_box(class: "check_box") + b.text } %>
+
+                <% end %>
               </div>          
-    
+              <div class="form-group">
+                <h2>Select Maintenance</h2>
+                <%= f.collection_check_boxes(:maintenances, Maintenance.all, :id, :label, checked: @condo_profile.maintenances )  do |b| %>
+                  
+                  <%= b.label(class: "check_box") { b.check_box(class: "check_box") + b.text } %>
+
+                <% end %>
+              </div>   
               
               <div class="form-group">
                 <%= f.label :floor_plan %>

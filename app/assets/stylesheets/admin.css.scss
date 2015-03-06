@@ -16,11 +16,20 @@
  *= require bootstrap-icons
  *= require select2
  */
-
+body {
+  padding-bottom:100px;
+}
 body .select2-dropdown {
   display:none;
 }
-
+label.check_box {
+  vertical-align:top;
+  
+  margin-bottom:10px;
+  input {
+    margin-right:5px;
+  }
+}
 body #neighbourhood_schools {
   width:100%;
 }
@@ -34,6 +43,17 @@ body textarea.form-control {
   to { border-color: #D61A1A; -webkit-box-shadow: 0 0 9px #D61A1A; }
 }
 
+table td:last-child {
+  text-align:right;
+}
+
+table.full {
+  width:100%;
+}
+table.full td:last-child {
+  border-left:1px solid grey; 
+  padding-left:100px;
+}
 input.glow {
   -webkit-animation-name: greenPulse;
   -webkit-animation-duration: 2s;

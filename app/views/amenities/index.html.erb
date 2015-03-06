@@ -1,12 +1,18 @@
 <h1>Listing amenities</h1>
 
-<table>
+
+
+
+<%= link_to 'New Amenity Icon', new_amenity_path, class:'pull-right btn btn-default btn-small'  %>
+
+
+
+<table class="table table-striped table-hover">
   <thead>
     <tr>
-      <th>Condo profile</th>
-      <th></th>
-      <th></th>
-      <th></th>
+      <th>Label</th>
+      <th>Preview</th>
+
       <th></th>
     </tr>
   </thead>
@@ -15,15 +21,16 @@
     <% @amenities.each do |amenity| %>
       <tr>
         <td><%= amenity.label %></td>
-        <td><%= image_tag amenity.amenity_icon %></td>
-        <td><%= link_to 'Show', amenity %></td>
-        <td><%= link_to 'Edit', edit_amenity_path(amenity) %></td>
-        <td><%= link_to 'Destroy', amenity, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= image_tag amenity.icon %></td>
+        <td>
+          
+          <%= link_to 'Edit', edit_amenity_path(amenity), class: 'btn btn-primary'  %>
+          <%= link_to 'Destroy', amenity, method: :delete, data: { confirm: 'Are you sure?' }, class:'btn btn-danger'  %>
+        </td>
       </tr>
     <% end %>
   </tbody>
 </table>
 
-<br>
 
-<%= link_to 'New Amenity', new_amenity_path %>
+

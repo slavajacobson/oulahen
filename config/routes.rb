@@ -1,4 +1,13 @@
 Oulahen::Application.routes.draw do
+
+  resources :maintenances
+
+  resources :team_photos do
+     collection do
+        post 'update_order', as: 'update_order' 
+     end
+      
+  end
   resources :neighbourhoods
 
   resources :amenities

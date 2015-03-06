@@ -1,0 +1,72 @@
+<h1>Manage Slideshow</h1>
+
+
+<script>
+
+  $(function() {
+    $( "#slideshows" ).sortable({
+      placeholder: "ui-state-highlight",
+        helper: function(e, tr)
+          {
+            var $originals = tr.children();
+            var $helper = tr.clone();
+            $helper.children().each(function(index)
+            {
+              // Set helper cell sizes to match the original sizes
+              $(this).width($originals.eq(index).width());
+            });
+            return $helper;
+          },
+          cursor: 'pointer'
+    }).disableSelection();
+  
+  });
+  
+  $(document).ready(function() { 
+    $('#slideshow_update_order').click(function(event){
+        event.preventDefault();
+        $.post('<%= update_order_team_photos_path  %>', $('#slideshows').sortable('serialize') );
+        return false;
+        alert("ok");
+    });
+});
+
+</script>
+
+
+<div class="span12">
+    
+    <%= button_to "Save Order", nil, id:'slideshow_update_order', class:'pull-right btn btn-success btn-small' %>
+    <div class="pull-right" style="display: table; margin-top: 5px; margin-right: 11px; font-style: italic;">Drag rows vertically to sort and then click on:</div>
+</div>
+
+
+<table class="table table-striped table-hover">
+  <thead>
+    <tr>
+      <th style="min-width:700px">Description</th>
+      <th>Action</th>
+    </tr>
+  </thead>
+
+  <tbody id="slideshows">
+    <% @team_photos.each do |team_photo| %>
+      <tr id="team_photo_<%= team_photo.id %>">
+        <td>
+            <i class="icon-resize-vertical"></i>
+            <%= link_to team_photo.description, team_photo %>
+        </td>
+        <td>
+          <%= link_to 'Edit', edit_team_photo_path(team_photo), class: 'btn btn-primary' %>
+          <%= link_to 'Remove', team_photo, method: :delete, data: { confirm: 'Are you sure?' }, class:'btn btn-danger' %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+
+
+
+
+<%= link_to 'New Team photo', new_team_photo_path, class:'pull-right btn btn-default btn-small'  %>

@@ -1,9 +1,9 @@
 class CreateAmenities < ActiveRecord::Migration
   def change
     create_table :amenities do |t|
-      t.references :condo_profile, index: true
+      #t.references :condo_profile, index: true
       t.string :label
-      t.string :amenity_icon
+      t.string :icon
       
       t.timestamps
     end

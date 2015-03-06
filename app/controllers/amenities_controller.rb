@@ -72,6 +72,6 @@ class AmenitiesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def amenity_params
-      params.require(:amenity).permit(:condo_profile_id, :amenity_icon, :label)
+      params.require(:amenity).permit(:condo_profile_id, :icon, :label)
     end
 end

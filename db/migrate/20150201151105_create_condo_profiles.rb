@@ -22,6 +22,7 @@ class CreateCondoProfiles < ActiveRecord::Migration
       t.string :lon
       t.string :lat
       t.string :amenities
+      t.string :maintenances
       t.timestamps
     end
   end

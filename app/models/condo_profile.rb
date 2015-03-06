@@ -5,6 +5,7 @@ class CondoProfile < ActiveRecord::Base
 
   before_validation :generate_slug
   serialize :amenities
+  serialize :maintenances
 
   validates :slug, uniqueness: true, presence: true
   belongs_to :category

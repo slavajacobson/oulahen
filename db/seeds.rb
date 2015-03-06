@@ -55,24 +55,43 @@ total_neighbourhoods = Neighbourhood.count
 # restaurant.save!
 
 
-70.times do |i|
+# 70.times do |i|
 
 
-  street_number = 1 + Random.rand(300)
-  street_names = ['Islington Road','Bathurst Street','Steeles Avenue','Weston Road', 'Yonge Street','King Street', 'Queen Street', 'Bloor Street', 
-                  'Finch Street', 'Allen Road', 'Dufferin Street', 'Brett Avenue', 'Hoover Crescent', 'Macnaughton Road','Pawnee Avenue', 'Stafford Road', 
-                  'Valentine Drive', 'Valey Crescent']
+#   street_number = 1 + Random.rand(300)
+#   street_names = ['Islington Road','Bathurst Street','Steeles Avenue','Weston Road', 'Yonge Street','King Street', 'Queen Street', 'Bloor Street', 
+#                   'Finch Street', 'Allen Road', 'Dufferin Street', 'Brett Avenue', 'Hoover Crescent', 'Macnaughton Road','Pawnee Avenue', 'Stafford Road', 
+#                   'Valentine Drive', 'Valey Crescent']
 
-  address = street_number.to_s + ' ' + street_names[Random.rand(street_names.length)]
+#   address = street_number.to_s + ' ' + street_names[Random.rand(street_names.length)]
 
 
-  condo_profile = CondoProfile.create!(address: address, draft:false, neighbourhood: Neighbourhood.offset(rand(total_neighbourhoods)).first, total_rented: rand(350), total_owned: rand(350))
+#   condo_profile = CondoProfile.create!(address: address, draft:false, neighbourhood: Neighbourhood.offset(rand(total_neighbourhoods)).first, total_rented: rand(350), total_owned: rand(350))
   
-  # photo = Photo.create!(image: Rails.root.join("db/files/1.jpg").open)
+#   # photo = Photo.create!(image: Rails.root.join("db/files/1.jpg").open)
 
 
-  # condo_profile.photos << photo
-  # condo_profile.save!
-  print "#{i}-"
+#   # condo_profile.photos << photo
+#   # condo_profile.save!
+#   print "#{i}-"
+
+# end
+
+amenities_folder = "#{Rails.root}/db/files/amenities"
+puts "folder is " + amenities_folder
+Dir.glob("#{amenities_folder}/*.jpg") do |file|
+
+  label = File.basename(file, ".*")
+  amenity = Amenity.create!(label: label, icon: Rails.root.join(file).open)
+
+end
+
+
+maintenance_folder = "#{Rails.root}/db/files/maintenance"
+puts "folder is " + maintenance_folder
+Dir.glob("#{maintenance_folder}/*.jpg") do |file|
+
+  label = File.basename(file, ".*")
+  maintenance = Maintenance.create!(label: label, icon: Rails.root.join(file).open)
 
 end

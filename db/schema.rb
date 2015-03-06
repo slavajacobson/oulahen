@@ -11,17 +11,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150215191051) do
+ActiveRecord::Schema.define(version: 20150303002410) do
 
   create_table "amenities", force: true do |t|
-    t.integer  "condo_profile_id"
     t.string   "label"
-    t.string   "amenity_icon"
+    t.string   "icon"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
-
-  add_index "amenities", ["condo_profile_id"], name: "index_amenities_on_condo_profile_id"
 
   create_table "categories", force: true do |t|
     t.string   "name"
@@ -50,6 +47,7 @@ ActiveRecord::Schema.define(version: 20150215191051) do
     t.string   "lon"
     t.string   "lat"
     t.string   "amenities"
+    t.string   "maintenances"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -116,14 +114,17 @@ ActiveRecord::Schema.define(version: 20150215191051) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "slug"
-<<<<<<< HEAD
-    t.date     "posted_on",                      default: '2015-02-18'
-=======
-    t.date     "posted_on",                      default: '2015-02-23'
->>>>>>> 2927fc0a9e2f8cee988162199cde464161c34166
+    t.date     "posted_on",                      default: '2015-03-06'
   end
 
   add_index "listings", ["slug"], name: "index_listings_on_slug"
+
+  create_table "maintenances", force: true do |t|
+    t.string   "label"
+    t.string   "icon"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "neighbourhoods", force: true do |t|
     t.string   "name"
@@ -176,6 +177,14 @@ ActiveRecord::Schema.define(version: 20150215191051) do
     t.text     "slug"
     t.boolean  "draft",      default: true
     t.integer  "draft_by"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "team_photos", force: true do |t|
+    t.string   "image"
+    t.integer  "order"
+    t.string   "description"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
