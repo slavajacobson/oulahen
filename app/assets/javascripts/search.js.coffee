@@ -5,14 +5,20 @@ $ ->
     #   Bloodhound.tokenizers.whitespace d.value
     datumTokenizer: Bloodhound.tokenizers.obj.whitespace('value')
     queryTokenizer: Bloodhound.tokenizers.whitespace
+    limit: 8
     remote:
       url: $('#condo-profile-search').data('autoCompleteSource') + '/%QUERY'
       filter: (streets) ->
-        return $.map streets, (street) ->
-          return {
-            value: street.address
-            id: street.url
-          }
+        if streets.length == 0
+          return [{
+            value: 'No Results'
+          }]
+        else
+          return $.map streets, (street) ->
+            return {
+              value: street.address
+              id: street.url
+            }
   )
 
   condoProfiles.initialize();
@@ -38,4 +44,12 @@ $ ->
       autoselect: true
       displayKey: 'value'
       source: condoProfiles.ttAdapter()).bind 'typeahead:selected', (obj, datum, name) ->
-        window.location.href = datum.id
+        
+        if (datum.id != undefined)
+          window.location.href = datum.id
+        else
+          
+          $('.twitter-typeahead input').eq(0).val('')
+          $('.twitter-typeahead input').eq(1).val('')
+          obj.preventDefault()
+          return false

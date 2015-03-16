@@ -1,7 +1,7 @@
 class CondoProfilesController < ApplicationController
   before_action :set_condo_profile, only: [:show, :edit, :update, :destroy]
 
-  layout 'admin', only: [:new,:edit, :update, :destroy, :view_all]
+  layout 'admin', only: [:new,:edit, :update, :destroy]
   before_filter :authenticate_user!, only: [:new, :index, :edit, :update, :destroy] 
 
   # GET /condo_profiles
@@ -11,7 +11,8 @@ class CondoProfilesController < ApplicationController
   end
 
   def view_all
-    @condo_profiles = CondoProfile.all
+
+    @condo_profiles = CondoProfile.all.page(params[:page]).per(50)
   end
   # GET /condo_profiles/1
   # GET /condo_profiles/1.json

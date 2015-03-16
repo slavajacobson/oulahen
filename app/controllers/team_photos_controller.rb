@@ -51,7 +51,7 @@ class TeamPhotosController < ApplicationController
 
     respond_to do |format|
       if @team_photo.save
-        format.html { redirect_to @team_photo, notice: 'Team photo was successfully created.' }
+        format.html { redirect_to team_photos_path, notice: 'Team photo was successfully created.' }
         format.json { render action: team_photos_path, status: :created, location: @team_photo }
       else
         format.html { render action: 'new' }

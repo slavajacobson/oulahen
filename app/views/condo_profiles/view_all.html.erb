@@ -1,45 +1,51 @@
-<h1>Listing condo_profiles</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Address</th>
-      <th>Built on</th>
-      <th>Floors</th>
-      <th>Units</th>
-      <th>Corporation</th>
-      <th>Management</th>
-      <th>School zone</th>
-      <th>Distance from transit</th>
-      <th>Total rented</th>
-      <th>Total owned</th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
+<div class="gradient colelem" id="u16510"></div>
 
-  <tbody>
-    <% @condo_profiles.each do |condo_profile| %>
-      <tr>
-        <td><%= condo_profile.address %></td>
-        <td><%= condo_profile.built_on %></td>
-        <td><%= condo_profile.floors %></td>
-        <td><%= condo_profile.units %></td>
-        <td><%= condo_profile.corporation %></td>
-        <td><%= condo_profile.management %></td>
-        <td><%= condo_profile.school_zone %></td>
-        <td><%= condo_profile.distance_from_transit %></td>
-        <td><%= condo_profile.total_rented %></td>
-        <td><%= condo_profile.total_owned %></td>
-        <td><%= link_to 'Show', condo_profile %></td>
-        <td><%= link_to 'Edit', edit_condo_profile_path(condo_profile) %></td>
-        <td><%= link_to 'Destroy', condo_profile, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
 
-<br>
+<style>
+  .pagination_container {
+    margin-top: 30px;
+    margin-bottom: 15px;
+  }
+  ul.pagination {
+    float: none;
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
 
-<%= link_to 'New Condo profile', new_condo_profile_path %>
+  .obutton {
+    float: right;
+    border: 2px solid #EAF3FA;
+    padding: 7px 10px;
+    margin-top: -25px;
+    color:black;
+  }
+  .obutton a {
+    color:black;
+    text-decoration: none;
+  }
+  .obutton:hover {
+    background-color: rgb(246, 246, 246);
+  }
+</style>
+
+
+<div class="transactions_container">
+  <%= render partial: 'condo_profile_thumb', collection: @condo_profiles, as: 'condo' %>
+</div>
+
+
+<div class="pagination_container">
+
+  <% unless params[:show_all] %>
+
+    
+    
+    <%= paginate @condo_profiles %>
+
+    <div class="obutton">
+      <%= link_to "Show All", "#{params[:action]}?show_all=true" %>
+    </div>
+  <% end %>
+
+</div>

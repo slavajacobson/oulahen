@@ -1,11 +1,13 @@
-<%= form_tag nil do %>
-  <%= text_field_tag :condo_profile_search, nil, data: { auto_complete_source: search_condo_profiles_path }, id:'condo-profile-search' %>
-<% end %>
 
-
+<div class="search_wrapper">
+  <%= form_tag nil do %>
+    <%= text_field_tag :condo_profile_search, nil, data: { auto_complete_source: search_condo_profiles_path }, placeholder: 'Search Condo Profiles', id:'condo-profile-search' %>
+  <% end %>
+</div>
+<%= link_to "View All", view_all_condo_profiles_path, class: 'button' %>
 <%= content_for :page_title, default_title('Condo Profiles') %>
 
-<div class="gradient colelem" id="u16510"></div>
+
 
 <div class="clearfix colelem" id="u21691-4">
  <p>North York Condos</p>
