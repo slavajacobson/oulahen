@@ -95,3 +95,14 @@ Dir.glob("#{maintenance_folder}/*.jpg") do |file|
   maintenance = Maintenance.create!(label: label, icon: Rails.root.join(file).open)
 
 end
+
+
+
+team_photos_folder = "#{Rails.root}/db/files/team_photos"
+puts "folder is " + team_photos_folder
+Dir.glob("#{team_photos_folder}/*.jpg") do |file|
+
+  label = File.basename(file, ".*")
+  team_photos = TeamPhoto.create!(image: Rails.root.join(file).open)
+
+end

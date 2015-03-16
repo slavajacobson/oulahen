@@ -7,7 +7,7 @@ class CondoProfilesController < ApplicationController
   # GET /condo_profiles
   # GET /condo_profiles.json
   def index
-    
+    @team_photos = TeamPhoto.all
   end
 
   def view_all
