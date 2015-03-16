@@ -2,7 +2,7 @@ class CondoProfilesController < ApplicationController
   before_action :set_condo_profile, only: [:show, :edit, :update, :destroy]
 
   layout 'admin', only: [:new,:edit, :update, :destroy]
-  before_filter :authenticate_user!, only: [:new, :index, :edit, :update, :destroy] 
+  before_filter :authenticate_user!, only: [:new, :edit, :update, :destroy] 
 
   # GET /condo_profiles
   # GET /condo_profiles.json

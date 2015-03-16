@@ -1,3 +1,3 @@
 class TeamPhoto < ActiveRecord::Base
-	mount_uploader :image, SlideShowImageUploader
+	mount_uploader :image, ImageUploader
 end
