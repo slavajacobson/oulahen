@@ -74,3 +74,49 @@ h2 {
     }
   }
 }
+.codno_profiles {
+  .slideshow-container {
+    position:relative;
+    height: 318px;
+    #slideshow {
+      position:relative;
+      .image-wrapper {
+        position:absolute;
+        a {
+          text-decoration: none;
+        }
+      }
+    }
+    #caption {
+      position: absolute;
+      bottom: 60px;
+      background-color: rgba(240, 240, 240, 0.66);
+      width: 100%;
+      left: 1px;
+
+      .image-caption {
+        bottom: -56px;
+        position: absolute;
+        .caption {
+
+          background-color: rgba(240, 240, 240, 0.66);
+          width: 318px;
+          padding: 12px 10px;
+        }
+
+      }
+    }
+  }
+  .thumbs {
+
+    li {
+      display:inline-block;
+      img {
+        width:61px;
+        height:52px;
+      }
+    }
+
+  }
+
+}

@@ -13,38 +13,51 @@
       border: 1px solid #E6E6E6;
     }
 
-    #gallery {
-      #controls {
-        position: absolute;
-        top: 50%;
-        width:100%;
-        .ss-controls {
-          display:none;
-
-        }
-        .prev, .next {
-          text-decoration: none;
-          background-color: rgba(240, 240, 240, 0.66);
-          color: rgb(80, 80, 80);
-          font-size: 40px;
-          margin-top: -15px;
-          display: inline-block;
+    
+    .slideshow-container {
+      position:relative;
+      height: 318px;
+      #slideshow {
+        position:relative;
+        .image-wrapper {
           position:absolute;
-          padding:0px 5px;
-        }  
-        .prev {
+          a {
+            text-decoration: none;
+          }
+        }
+      }
+      #caption {
+        position: absolute;
+        bottom: 60px;
+        background-color: rgba(240, 240, 240, 0.66);
+        width: 100%;
+        left: 1px;
 
+        .image-caption {
+          bottom: -56px;
+          position: absolute;
+          .caption {
+
+            background-color: rgba(240, 240, 240, 0.66);
+            width: 318px;
+            padding: 12px 10px;
+          }
 
         }
-        .next {
-          right:-1px;
+      }
+    }
+    .thumbs {
+
+      li {
+        display:inline-block;
+        img {
+          width:61px;
+          height:52px;
         }
       }
 
-
-
     }
-   
+  }
   .side-content {
     display: inline-block;
     width: 555px;
@@ -115,47 +128,36 @@
   }
 
 }
- .slideshow-container {
-      position:relative;
-      height: 318px;
-      #slideshow {
-        position:relative;
-        .image-wrapper {
-          position:absolute;
-          a {
-            text-decoration: none;
-          }
-        }
-      }
-      #caption {
+
+
+#gallery {
+      #controls {
         position: absolute;
-        bottom: 60px;
-        background-color: rgba(240, 240, 240, 0.66);
-        width: 100%;
-        left: 1px;
-
-        .image-caption {
-          bottom: -56px;
-          position: absolute;
-          .caption {
-
-            background-color: rgba(240, 240, 240, 0.66);
-            width: 318px;
-            padding: 12px 10px;
-          }
+        top: 50%;
+        width:100%;
+        .ss-controls {
+          display:none;
 
         }
-      }
-    }
-    .thumbs {
+        .prev, .next {
+          text-decoration: none;
+          background-color: rgba(240, 240, 240, 0.66);
+          color: rgb(80, 80, 80);
+          font-size: 40px;
+          margin-top: -15px;
+          display: inline-block;
+          position:absolute;
+          padding:0px 5px;
+        }  
+        .prev {
+          left:0px;
 
-      li {
-        display:inline-block;
-        img {
-          width:61px;
-          height:52px;
+        }
+        .next {
+          right:-1px;
         }
       }
 
+
+
     }
-  }

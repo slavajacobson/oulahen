@@ -50,6 +50,9 @@ class ImageUploader < CarrierWave::Uploader::Base
   version :team_member_minithumb do
     process :resize_to_fill => [43, 49]
   end
+  version :team_slide do
+    process :resize_to_fill => [458, 318]
+  end
 
 
   # Add a white list of extensions which are allowed to be uploaded.
