@@ -74,3 +74,4 @@ gem "letter_opener", :group => :development
 gem 'figaro'
 gem 'rails-i18n'
 gem 'twitter-typeahead-rails'
+gem 'chosen-rails'

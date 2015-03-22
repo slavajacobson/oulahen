@@ -23,6 +23,7 @@
 //= require jquery-ui
 //= require condo_profiles
 //= require select2
+//= require chosen-jquery
 function make_images_sortable() {
 	    var sortable_list = $( "#photos > .row" ).sortable({
         start: function(event, ui) {

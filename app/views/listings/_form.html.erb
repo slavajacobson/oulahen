@@ -48,6 +48,10 @@
            
               </div>
               <div class="form-group">
+                <%= f.label :condo_profile_id, "Condo Profile" %>
+                <%= f.select :condo_profile_id, CondoProfile.all.collect {|c| [c.address, c.id]}, selected: @listing.condo_profile_id %>
+              </div>
+              <div class="form-group">
                 <%= f.label :posted_on %>
 
                 <%= f.date_field :posted_on, class:'form-control input-small', style:'display:inline-block' %> (Transactions sorted by this field)

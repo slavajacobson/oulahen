@@ -21,4 +21,12 @@ jQuery ->
       #   dataType: 'script'
       #   type: 'GET'
 
-      
+  if ($("#listing_condo_profile_id").length > 0)
+    $('#listing_condo_profile_id').chosen
+      no_results_text: 'No results matched'
+      width: '200px'
+
+    # $("#listing_condo_profile_id").select2
+    #   placeholder: "Select a Profile"
+    #   allowClear: true
+

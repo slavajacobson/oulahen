@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150303002410) do
+ActiveRecord::Schema.define(version: 20150317133723) do
 
   create_table "amenities", force: true do |t|
     t.string   "label"
@@ -115,8 +115,10 @@ ActiveRecord::Schema.define(version: 20150303002410) do
     t.datetime "updated_at"
     t.string   "slug"
     t.date     "posted_on",                      default: '2015-03-14'
+    t.integer  "condo_profile_id"
   end
 
+  add_index "listings", ["condo_profile_id"], name: "index_listings_on_condo_profile_id"
   add_index "listings", ["slug"], name: "index_listings_on_slug"
 
   create_table "maintenances", force: true do |t|

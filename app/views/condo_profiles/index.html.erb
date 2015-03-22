@@ -6,8 +6,9 @@
     <%= text_field_tag :condo_profile_search, nil, data: { auto_complete_source: search_condo_profiles_path }, placeholder: 'Search Condo Profiles', id:'condo-profile-search' %>
   <% end %>
 </div>
-<%= link_to "View All", view_all_condo_profiles_path, class: 'button' %>
-
+<div class="controls-wrapper">
+  <%= link_to "View All", view_all_condo_profiles_path, class: 'button' %>
+</div>
 
 
 

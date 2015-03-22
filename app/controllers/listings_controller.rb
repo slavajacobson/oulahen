@@ -197,6 +197,6 @@ class ListingsController < ApplicationController
                                       :active, :address, :street_number, :show_street_number, :unit_number, :show_unit_number, 
                                       :postal_code, :neighbourhood, :lot, :sqft, :bedrooms, :bathrooms, :price, :sold_price, :priority,
                                       :show_price, :sold, :sold_status, :maintenance_fee, :virtual_tour_url, :map_url, :realtor_url, :facebook_url, 
-                                      :description, :inclusions, :exclusions, :posted_on, :category_id, :featured_listing, :city_province, :transaction_label)
+                                      :description, :inclusions, :exclusions, :condo_profile_id, :posted_on, :category_id, :featured_listing, :city_province, :transaction_label)
     end
 end
