@@ -1,6 +1,7 @@
 class Neighbourhood < ActiveRecord::Base
   has_many :condo_profiles
-  serialize :schools
+  has_many :schools
+  #serialize :schools
   validates :slug, uniqueness: true, presence: true
   before_validation :generate_slug
 

@@ -18,7 +18,7 @@ class NeighbourhoodsController < ApplicationController
   # GET /neighbourhoods/new
   def new
     @neighbourhood = Neighbourhood.new
-    @neighbourhood.schools = ''
+    #@neighbourhood.schools = ''
   end
 
   # GET /neighbourhoods/1/edit
@@ -78,6 +78,6 @@ class NeighbourhoodsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def neighbourhood_params
-      params.require(:neighbourhood).permit({:schools => []}, :condo_apts, :detached, :condo_towns, :condo_other, :name, :description)
+      params.require(:neighbourhood).permit(:condo_apts, :detached, :condo_towns, :condo_other, :name, :description)
     end
 end

@@ -27,11 +27,7 @@
           <%= f.label :description %><br>
           <%= f.text_area :description, class: 'form-control' %>
         </div>
-        <div class="form-group">
-          <%= f.label :schools %><br>
-          <%#= f.text_field :schools  %>
-          <%= f.select(:schools, @neighbourhood.schools.to_a, {selected: @neighbourhood.schools.to_a}, multiple: true, class: 'form-control input-small', style:'width:100%;') %>
-        </div>
+ 
         <h3> Statistics: </h3>
         <div class="form-group">
           <%= f.label :condo_apts %><br>

@@ -7,7 +7,9 @@
 </p>
 <p>
   <strong>Schools:</strong>
-  <%= @neighbourhood.schools %>
+  <%- @neighbourhood.schools.each do |school| %>
+    <%= link_to school.name, school.url %>
+  <% end %>
 </p>
 <p>
   <strong>Buildings:</strong>

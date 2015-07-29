@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150317133723) do
+ActiveRecord::Schema.define(version: 20150406141614) do
 
   create_table "amenities", force: true do |t|
     t.string   "label"
@@ -114,7 +114,7 @@ ActiveRecord::Schema.define(version: 20150317133723) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "slug"
-    t.date     "posted_on",                      default: '2015-03-14'
+    t.date     "posted_on",                      default: '2015-04-06'
     t.integer  "condo_profile_id"
   end
 
@@ -131,7 +131,6 @@ ActiveRecord::Schema.define(version: 20150317133723) do
   create_table "neighbourhoods", force: true do |t|
     t.string   "name"
     t.text     "description"
-    t.text     "schools"
     t.integer  "condo_apts"
     t.integer  "detached"
     t.integer  "condo_towns"
@@ -157,6 +156,16 @@ ActiveRecord::Schema.define(version: 20150317133723) do
 
   add_index "photos", ["condo_profile_id"], name: "index_photos_on_condo_profile_id"
   add_index "photos", ["team_member_id"], name: "index_photos_on_team_member_id"
+
+  create_table "schools", force: true do |t|
+    t.string   "name"
+    t.string   "url"
+    t.integer  "neighbourhood_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "schools", ["neighbourhood_id"], name: "index_schools_on_neighbourhood_id"
 
   create_table "slide_show_images", force: true do |t|
     t.string   "image"

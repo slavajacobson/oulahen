@@ -3,7 +3,7 @@ class CreateNeighbourhoods < ActiveRecord::Migration
     create_table :neighbourhoods do |t|
       t.string :name
       t.text :description
-      t.text :schools
+      #t.text :schools
       t.integer :condo_apts
       t.integer :detached
       t.integer :condo_towns

@@ -1,5 +1,7 @@
 Oulahen::Application.routes.draw do
 
+  resources :schools
+
   resources :maintenances
 
   resources :team_photos do

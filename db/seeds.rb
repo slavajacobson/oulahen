@@ -10,12 +10,18 @@ Category.create(name:'Home')
 Category.create(name:'Condominium')
 Category.create(name:'Commercial')
 
-schools = ('School Name Public School,'*10).split(',')
 
-Neighbourhood.create(image: Rails.root.join("db/files/1.jpg").open, name: 'Yonge & Finch', description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis fuga beatae quaerat dolor porro perspiciatis rerum, temporibus, ipsum repellat, aliquid nisi itaque sunt. Omnis temporibus, mollitia odit voluptate dolor dolorem?', condo_apts: rand(50), detached: rand(50), condo_towns: rand(50), condo_other: rand(50), schools: schools)
-Neighbourhood.create(image: Rails.root.join("db/files/1.jpg").open, name: 'Yonge & Sheppard', description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis fuga beatae quaerat dolor porro perspiciatis rerum, temporibus, ipsum repellat, aliquid nisi itaque sunt. Omnis temporibus, mollitia odit voluptate dolor dolorem?', condo_apts: rand(50), detached: rand(50), condo_towns: rand(50), condo_other: rand(50), schools: schools)
-Neighbourhood.create(image: Rails.root.join("db/files/1.jpg").open, name: 'Avondale', description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis fuga beatae quaerat dolor porro perspiciatis rerum, temporibus, ipsum repellat, aliquid nisi itaque sunt. Omnis temporibus, mollitia odit voluptate dolor dolorem?', condo_apts: rand(50), detached: rand(50), condo_towns: rand(50), condo_other: rand(50), schools: schools)
-Neighbourhood.create(image: Rails.root.join("db/files/1.jpg").open, name: 'Bayview & Sheppard', description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis fuga beatae quaerat dolor porro perspiciatis rerum, temporibus, ipsum repellat, aliquid nisi itaque sunt. Omnis temporibus, mollitia odit voluptate dolor dolorem?', condo_apts: rand(50), detached: rand(50), condo_towns: rand(50), condo_other: rand(50), schools: schools)
+
+Neighbourhood.create(image: Rails.root.join("db/files/1.jpg").open, name: 'Yonge & Finch', description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis fuga beatae quaerat dolor porro perspiciatis rerum, temporibus, ipsum repellat, aliquid nisi itaque sunt. Omnis temporibus, mollitia odit voluptate dolor dolorem?', condo_apts: rand(50), detached: rand(50), condo_towns: rand(50), condo_other: rand(50))
+Neighbourhood.create(image: Rails.root.join("db/files/1.jpg").open, name: 'Yonge & Sheppard', description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis fuga beatae quaerat dolor porro perspiciatis rerum, temporibus, ipsum repellat, aliquid nisi itaque sunt. Omnis temporibus, mollitia odit voluptate dolor dolorem?', condo_apts: rand(50), detached: rand(50), condo_towns: rand(50), condo_other: rand(50))
+Neighbourhood.create(image: Rails.root.join("db/files/1.jpg").open, name: 'Avondale', description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis fuga beatae quaerat dolor porro perspiciatis rerum, temporibus, ipsum repellat, aliquid nisi itaque sunt. Omnis temporibus, mollitia odit voluptate dolor dolorem?', condo_apts: rand(50), detached: rand(50), condo_towns: rand(50), condo_other: rand(50))
+Neighbourhood.create(image: Rails.root.join("db/files/1.jpg").open, name: 'Bayview & Sheppard', description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis fuga beatae quaerat dolor porro perspiciatis rerum, temporibus, ipsum repellat, aliquid nisi itaque sunt. Omnis temporibus, mollitia odit voluptate dolor dolorem?', condo_apts: rand(50), detached: rand(50), condo_towns: rand(50), condo_other: rand(50))
+
+
+
+30.times do |i|
+  School.create(name: "School Name Public School", neighbourhood_id: Random.rand(3) + 1)
+end
 
 User.create(email:'vs.jacobson@gmail.com', password:'12344321', password_confirmation:'12344321')
 User.create(email:'team@oulahen.com', password:'oulahen1234!@#$', password_confirmation:'oulahen1234!@#$')
