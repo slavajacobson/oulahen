@@ -22,7 +22,7 @@ set :use_sudo, false
  
 set :scm, "git"
 set :repository, "git@github.com:slavajacobson/oulahen.git"
-set :branch, "master"
+set :branch, "v1"
 set :dbname, "oulahen"
 set :rake, 'bundle exec rake'
  
