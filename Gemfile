@@ -2,8 +2,8 @@ source 'http://rubygems.org'
 ruby '2.0.0'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.0.0'
-
+gem 'rails', '~> 4.0.13'
+gem 'actionmailer', '~> 4.0.13'
 # Use sqlite3 as the database for Active Record
 gem "sqlite3", "~> 1.3.8", group: [:development, :test]
 group :development do
@@ -16,13 +16,13 @@ group :production do
 end
 
 # Use SCSS for stylesheets
-gem 'sass-rails', '~> 4.0.0'
+gem 'sass-rails'
 
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 
 # Use CoffeeScript for .js.coffee assets and views
-gem 'coffee-rails', '~> 4.0.0'
+gem 'coffee-rails'
 
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
@@ -53,7 +53,7 @@ gem 'unicorn', group: :production, platform: 'ruby'
 gem 'capistrano', group: :development
 
 gem 'high_voltage'
-gem 'devise'
+gem 'devise', '~> 2.2.3'
 gem 'carrierwave'
 gem "rmagick", platform: 'ruby'
 gem "gritter"
@@ -75,3 +75,4 @@ gem 'figaro'
 gem 'rails-i18n'
 gem 'twitter-typeahead-rails'
 gem 'chosen-rails'
+gem 'refinerycms', '~> 2.1.5'
