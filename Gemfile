@@ -55,7 +55,8 @@ gem 'capistrano', group: :development
 gem 'high_voltage'
 gem 'devise'
 gem 'carrierwave'
-gem "rmagick", platform: 'ruby'
+#gem "rmagick", platform: 'ruby'
+gem 'rmagick', '2.15.0'
 gem "gritter"
 # Use debugger
 gem "debugger", "~> 1.6.6", group: [:development, :test]
@@ -72,3 +73,5 @@ gem 'jquery-migrate-rails'
 gem "recaptcha", :require => "recaptcha/rails"
 gem "letter_opener", :group => :development
 gem 'figaro'
+
+gem 'seed_dump'
