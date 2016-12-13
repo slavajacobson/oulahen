@@ -59,7 +59,7 @@ gem 'carrierwave'
 gem 'rmagick', '2.15.0'
 gem "gritter"
 # Use debugger
-gem "debugger", "~> 1.6.6", group: [:development, :test]
+gem "byebug", group: [:development]
 gem 'rails_12factor'
 
 gem "rvm-capistrano", "~> 1.5.1",  require: false
